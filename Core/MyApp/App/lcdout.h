@@ -10,6 +10,8 @@
 #ifndef MYAPP_APP_LCDOUT_H_
 #define MYAPP_APP_LCDOUT_H_
 
+/* PUBLIC FUNCTIONS */
+
 /**
 * @brief Init
 * @return void
