@@ -35,7 +35,7 @@ typedef struct _GNRMC
 // enum voor NMEA protocolstrings (starting 'e' for enum)
 enum NMEA
 {
-	eGNRMC,
+	eGNRMC=1,
 	eGPGSA,
 	eGNGGA
 };

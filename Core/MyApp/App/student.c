@@ -11,7 +11,7 @@
 #include "cmsis_os.h"
 #include "gps.h"
 #include "lcd.h"
-
+#include "buzzer.h"
 /**
 * @brief Oefentask voor studenten
 * @param argument, kan evt vanuit tasks gebruikt worden
@@ -65,18 +65,24 @@ void test_gps_coords()
 {
 	GNRMC latestgnrmc;
 	gps_get_GNRMC(&latestgnrmc);
+	if(latestgnrmc.status!='A')
+	{
+		LCD_print_fix("NO GPS LOCK");
+		return;
+	}
+	BUZZER_put(1000);
 	double x, y;
 	x = lonDMtoM(&latestgnrmc);
 	y = latDMtoM(&latestgnrmc);
 	char msg[128];
-	sprintf(msg, "X: %2.2f\nY: %2.2f\n", x, y);
+	sprintf(msg, "X: %f\nY: %f\n", x, y);
 	LCD_print_fix(msg);
 
 }
 
 void Student_task1 (void *argument)
 {
-	student_SemaphoreWaypoints = xSemaphoreCreateBinary();
+	student_SemaphoreWaypoints = xSemaphoreCreateMutex();
 	waypointsReset();
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 	globalVec.x=0;
@@ -84,7 +90,6 @@ void Student_task1 (void *argument)
 	char buf[80];
 	unsigned int i = 0;
 
-	uint8_t testvar=0;
 	while(TRUE)
 	{
        	osDelay(1000);
@@ -137,8 +142,7 @@ void waypointSet()
 void waypointGet(vector2d_t* vec)
 {
 	xSemaphoreTake(student_SemaphoreWaypoints, portMAX_DELAY);
-//	vec->x=globalVec.x;
-//	vec->y=globalVec.y;
+
 	xSemaphoreGive(student_SemaphoreWaypoints);
 }
 
