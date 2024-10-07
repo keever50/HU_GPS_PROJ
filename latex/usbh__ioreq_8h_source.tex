@@ -1,0 +1,84 @@
+\doxysection{usbh\+\_\+ioreq.\+h}
+\hypertarget{usbh__ioreq_8h_source}{}\label{usbh__ioreq_8h_source}\index{Middlewares/ST/STM32\_USB\_Host\_Library/Core/Inc/usbh\_ioreq.h@{Middlewares/ST/STM32\_USB\_Host\_Library/Core/Inc/usbh\_ioreq.h}}
+\mbox{\hyperlink{usbh__ioreq_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ \_\_USBH\_IOREQ\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ \_\_USBH\_IOREQ\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usbh__conf_8h}{usbh\_conf.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usbh__core_8h}{usbh\_core.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ USBH\_PID\_SETUP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ USBH\_PID\_DATA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1U}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ USBH\_EP\_CONTROL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0U}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ USBH\_EP\_ISO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1U}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ USBH\_EP\_BULK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2U}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ USBH\_EP\_INTERRUPT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3U}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ USBH\_SETUP\_PKT\_SIZE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 8U}}
+\DoxyCodeLine{00089\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga174168b7bf3efbe5052b9337d036e168}{USBH\_CtlSendSetup}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga97b326e21dbe08e436d2953634d9f284}{USBH\_CtlSendData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ length,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ do\_ping);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_gaae5faaa4aaed0c0ff68eb0c40a93c90b}{USBH\_CtlReceiveData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ length,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga832ed1e4938daafe6c49b7a80f8bfa35}{USBH\_BulkReceiveData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ length,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga1dcaf35bec574557e46b902364d4c35b}{USBH\_BulkSendData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ length,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ do\_ping);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga0d68a8cdbd33f21cf31dd0baa3b90edf}{USBH\_InterruptReceiveData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ *buff,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ length,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ pipe\_num);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_gab9fb0efb93cee153bad15486b61d5635}{USBH\_InterruptSendData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ length,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_gab210c2c38b01baf953c24fc7fe7d1a75}{USBH\_IsocReceiveData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ length,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___i_o_r_e_q___exported___functions_prototype_ga9c5ac11dfbedaeefdce63daeaf82b454}{USBH\_IsocSendData}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *buff,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ length,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_USBH\_IOREQ\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00158\ \textcolor{comment}{/************************\ (C)\ COPYRIGHT\ STMicroelectronics\ *****END\ OF\ FILE****/}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ }
+
+\end{DoxyCode}

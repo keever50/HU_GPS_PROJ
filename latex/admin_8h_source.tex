@@ -1,0 +1,101 @@
+\doxysection{admin.\+h}
+\hypertarget{admin_8h_source}{}\label{admin_8h_source}\index{Core/MyApp/App/admin.h@{Core/MyApp/App/admin.h}}
+\mbox{\hyperlink{admin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}freeRTOS.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}event\_groups.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}queue.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}task.h"{}}\ \textcolor{comment}{//\ taskYield}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}semphr.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}message\_buffer.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}stdio.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}string.h"{}}\ \textcolor{comment}{//\ strtok,\ strcpy}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}\ \textcolor{comment}{//\ atoi}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}ctype.h"{}}\ \ \textcolor{comment}{//\ toupper}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ TRUE\ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ FALSE\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ QSIZE\_UART\ 10}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TIMER1\_DELAY\ 500}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ GPS\_MAXLEN\ 79+4\ }}
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_task_data}{TaskData}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ osThreadFunc\_t\ \ \ \ \ \ \ func;\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_task_data_aa77988455b06d56b4b1b54b272efdbb1}{argument}};\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structos_thread_attr__t}{osThreadAttr\_t}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct_task_data_a158302b7866c800c8bef26227e275d6b}{attr}};\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ osThreadId\_t\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_task_data_aac11dd095b7ef45ad8cc8f3c5c9fe7e3}{hTask}};\ \ \ \ }
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{admin_8h_a7f8e353159968ff0f0becfe26d3bf630}{TASKDATA}},\ *\mbox{\hyperlink{struct_task_data}{PTASKDATA}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}}\ \ \ \ \ \mbox{\hyperlink{admin_8h_a1db415a0f7c5ecff145e4bb53cc54dbe}{hUART\_Queue}};}
+\DoxyCodeLine{00054\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_queue_definition}{QueueHandle\_t}}\ \ \ \ \ \mbox{\hyperlink{admin_8h_a77d12f838c966d96a18a31e503b7955c}{hGPS\_Queue}};}
+\DoxyCodeLine{00056\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_queue_definition}{SemaphoreHandle\_t}}\ \ \mbox{\hyperlink{admin_8h_a011b1349f4d8c02977b852c7587f0581}{hLED\_Sem}};}
+\DoxyCodeLine{00058\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_event_group_def__t}{EventGroupHandle\_t}}\ \mbox{\hyperlink{admin_8h_ada55e3a3cc32b9d16e1bbc08d83431c9}{hKEY\_Event}};}
+\DoxyCodeLine{00060\ \textcolor{keyword}{extern}\ TimerHandle\_t\ \ \ \ \ \ \mbox{\hyperlink{admin_8h_af1a9410a47225cac12eb96a84b51b035}{hTimer1}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{admin_8h_a952449da34b356e2651de547daf4312c}{Uart\_debug\_out}};}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ DEBUG\_OUT\_NONE\ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ DEBUG\_OUT\_ALL\ \ \ \ \ \ \ 0xff}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ LEDS\_DEBUG\_OUT\ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ ARMKEYS\_DEBUG\_OUT\ \ \ 0x02}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ UART\_DEBUG\_OUT\ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ STUDENT\_DEBUG\_OUT\ \ \ 0x08}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ GPS\_DEBUG\_OUT\ \ \ \ \ \ \ 0x10}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ RES1\_DEBUG\_OUT\ \ \ \ \ \ 0x24}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ LEDGREEN\ \ GPIO\_PIN\_12}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ LEDRED\ \ \ \ GPIO\_PIN\_13}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ LEDORANGE\ GPIO\_PIN\_14}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ LEDBLUE\ \ \ GPIO\_PIN\_15}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{//\ my\_app.c}}
+\DoxyCodeLine{00095\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a9dec45875121142b6466b9475691b40a}{DisplayVersion}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00096\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a93467475af28d4b75cafb508f95578bf}{DisplayMenu}}\ \ \ \ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00097\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_ac7a60a0c0a7a24b63849288395b81b59}{error\_HaltOS}}\ \ \ (\textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{//\ tasks.c}}
+\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{admin_8h_a8d78f01ecc2ff5ebf5c8c6450b175671}{DisplayTaskData}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00101\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{admin_8h_a7f983159a50cdcaaad786c6c7a216cd9}{CreateTasks}}\ \ \ \ \ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ osThreadId\_t\ \mbox{\hyperlink{admin_8h_af3fcde4e5fc023f9a6b398139143c657}{GetTaskhandle}}\ \ \ (\textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00103\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{admin_8h_a16ba23da293f6f319ffbc502a4cb7d5c}{SetTaskPriority}}\ (\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{admin_8h_a0c9aab30edaac2fecc7fd1c21f5763a2}{StartStopTask}}\ \ \ (\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{//\ handles.c}}
+\DoxyCodeLine{00107\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{admin_8h_a183387e08a88262f831be8b883ce8754}{CreateHandles}}\ \ \ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ LEDS.c}}
+\DoxyCodeLine{00110\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a8fa46093b138efd9f745379e50aaebb1}{LED\_Task1}}\ \ \ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00111\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_aa6578679005e0ded1868835daa8fbede}{LED\_Task2}}\ \ \ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00112\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a379c01dd4fb15e45ca6e00a95c761cc7}{LED\_Task3}}\ \ \ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00113\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a549798a0f2a6d88c91a8297567a018c1}{LED\_Task4}}\ \ \ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{comment}{//\ ARM\_keys.c}}
+\DoxyCodeLine{00116\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a0c660e87fd3fb5216355c32e3a72f95e}{ARM\_keys\_IRQ}}\ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00117\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_af21164a48742d972455d2ce8c6317262}{ARM\_keys\_task}}(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{comment}{//\ UART\_keys.c}}
+\DoxyCodeLine{00120\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a390831b4b34c463c81b188d9973d2a52}{UART\_keys\_poll}}(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00121\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_af42059fd155a512774c89e7fc38bc03c}{UART\_keys\_IRQ}}\ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00122\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_af909ca669055035da2246051d81ae747}{UART\_menu}}\ \ \ \ \ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ gps.c}}
+\DoxyCodeLine{00125\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_aa858cc1bd518e1f551603a78e90c53be}{GPS\_getNMEA}}\ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ student.c}}
+\DoxyCodeLine{00128\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ Student\_task1\ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ timer.c}}
+\DoxyCodeLine{00131\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{admin_8h_a96c9e7d4608bbcbb1f89460ea7d8da6f}{Timer1\_Handler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+
+\end{DoxyCode}

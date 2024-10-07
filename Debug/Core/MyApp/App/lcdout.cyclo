@@ -1,0 +1,2 @@
+../Core/MyApp/App/lcdout.c:32:6:lcdout_init	1
+../Core/MyApp/App/lcdout.c:37:6:lcdout_printf	4

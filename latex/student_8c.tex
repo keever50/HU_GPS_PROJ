@@ -1,0 +1,95 @@
+\doxysection{Core/\+My\+App/\+App/student.c File Reference}
+\hypertarget{student_8c}{}\label{student_8c}\index{Core/MyApp/App/student.c@{Core/MyApp/App/student.c}}
+
+
+Hier kunnen studenten hun eigen tasks aanmaken.  
+
+
+{\ttfamily \#include $<$admin.\+h$>$}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include "{}gps.\+h"{}}\newline
+{\ttfamily \#include "{}lcd.\+h"{}}\newline
+{\ttfamily \#include "{}buzzer.\+h"{}}\newline
+{\ttfamily \#include "{}lcdout.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{student_8c_aa77f8bba4388250b35a6dd5baaf5cd1f}\label{student_8c_aa77f8bba4388250b35a6dd5baaf5cd1f} 
+typedef struct \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+s}} {\bfseries vector2d\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{student_8c_a94752975a5474c37e39f4f93529e392e}{lon\+DMtoM}} (\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}gnrmc)
+\begin{DoxyCompactList}\small\item\em Oefentask voor studenten. \end{DoxyCompactList}\item 
+\Hypertarget{student_8c_a37b7c2e13f92ba72ae600c31aea13654}\label{student_8c_a37b7c2e13f92ba72ae600c31aea13654} 
+double {\bfseries lat\+DMtoM} (\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}gnrmc)
+\item 
+\Hypertarget{student_8c_a4cefa220befc6ac5b41b32559d40a0bd}\label{student_8c_a4cefa220befc6ac5b41b32559d40a0bd} 
+void {\bfseries waypoints\+Reset} ()
+\item 
+\Hypertarget{student_8c_aa82c355e081297404d10feecb9ab99fb}\label{student_8c_aa82c355e081297404d10feecb9ab99fb} 
+void {\bfseries LCD\+\_\+print\+\_\+fix} (char \texorpdfstring{$\ast$}{*}msg)
+\item 
+\Hypertarget{student_8c_a292efb44fdf9fc4c2ff7a60513cd97bd}\label{student_8c_a292efb44fdf9fc4c2ff7a60513cd97bd} 
+void {\bfseries test\+\_\+gps\+\_\+coords} ()
+\item 
+\Hypertarget{student_8c_a282e21c3f1a0eb3054bbb9e40ffa9cc6}\label{student_8c_a282e21c3f1a0eb3054bbb9e40ffa9cc6} 
+void {\bfseries Student\+\_\+task1} (void \texorpdfstring{$\ast$}{*}argument)
+\item 
+\Hypertarget{student_8c_a54f345008105d79340880470b3b4e55e}\label{student_8c_a54f345008105d79340880470b3b4e55e} 
+void {\bfseries waypoint\+Set} ()
+\item 
+\Hypertarget{student_8c_a2c7bbe6d98da379bc0caeaa6e0a5c2d1}\label{student_8c_a2c7bbe6d98da379bc0caeaa6e0a5c2d1} 
+void {\bfseries waypoint\+Get} (\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}vec)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{student_8c_a8277754f25f3e1ac4a3236b8fdb92194}\label{student_8c_a8277754f25f3e1ac4a3236b8fdb92194} 
+\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} {\bfseries waypoints} \mbox{[}20\mbox{]}
+\item 
+\Hypertarget{student_8c_ad683d20f8c8f3dd5c70a7da875804f55}\label{student_8c_ad683d20f8c8f3dd5c70a7da875804f55} 
+\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} {\bfseries global\+Vec}
+\item 
+\Hypertarget{student_8c_a6621b8f3b3943c9d9bb7525f83d9f7ac}\label{student_8c_a6621b8f3b3943c9d9bb7525f83d9f7ac} 
+\mbox{\hyperlink{struct_queue_definition}{Semaphore\+Handle\+\_\+t}} {\bfseries student\+\_\+\+Semaphore\+Waypoints}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hier kunnen studenten hun eigen tasks aanmaken. 
+
+\begin{DoxyAuthor}{Author}
+MSC
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+5/5/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{student_8c_a94752975a5474c37e39f4f93529e392e}\index{student.c@{student.c}!lonDMtoM@{lonDMtoM}}
+\index{lonDMtoM@{lonDMtoM}!student.c@{student.c}}
+\doxysubsubsection{\texorpdfstring{lonDMtoM()}{lonDMtoM()}}
+{\footnotesize\ttfamily \label{student_8c_a94752975a5474c37e39f4f93529e392e} 
+double lon\+DMtoM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}}]{gnrmc}{}\end{DoxyParamCaption})}
+
+
+
+Oefentask voor studenten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument,kan} & evt vanuit tasks gebruikt worden \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

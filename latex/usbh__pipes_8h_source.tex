@@ -1,0 +1,48 @@
+\doxysection{usbh\+\_\+pipes.\+h}
+\hypertarget{usbh__pipes_8h_source}{}\label{usbh__pipes_8h_source}\index{Middlewares/ST/STM32\_USB\_Host\_Library/Core/Inc/usbh\_pipes.h@{Middlewares/ST/STM32\_USB\_Host\_Library/Core/Inc/usbh\_pipes.h}}
+\mbox{\hyperlink{usbh__pipes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ \_\_USBH\_PIPES\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ \_\_USBH\_PIPES\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{usbh__core_8h}{usbh\_core.h}}"{}}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00077\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___p_i_p_e_s___exported___functions_prototype_ga95e4dd6f05ca2c5943a7b63348b61d56}{USBH\_OpenPipe}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ epnum,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ dev\_address,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ speed,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ep\_type,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ mps);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___p_i_p_e_s___exported___functions_prototype_gae0b745be17f5d3e5ef19032602f81b6f}{USBH\_ClosePipe}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ pipe\_num);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ uint8\_t\ \mbox{\hyperlink{group___u_s_b_h___p_i_p_e_s___exported___functions_prototype_ga35bd197654f5477fb9436eba06e9cad3}{USBH\_AllocPipe}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ ep\_addr);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ USBH\_StatusTypeDef\ \mbox{\hyperlink{group___u_s_b_h___p_i_p_e_s___exported___functions_prototype_gae5a6f5bd4f58b827e719c11835980966}{USBH\_FreePipe}}(\mbox{\hyperlink{struct___u_s_b_h___handle_type_def}{USBH\_HandleTypeDef}}\ *phost,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ idx);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00103\ \}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_USBH\_PIPES\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{/************************\ (C)\ COPYRIGHT\ STMicroelectronics\ *****END\ OF\ FILE****/}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+
+\end{DoxyCode}

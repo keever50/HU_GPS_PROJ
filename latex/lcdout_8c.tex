@@ -1,0 +1,81 @@
+\doxysection{Core/\+My\+App/\+App/lcdout.c File Reference}
+\hypertarget{lcdout_8c}{}\label{lcdout_8c}\index{Core/MyApp/App/lcdout.c@{Core/MyApp/App/lcdout.c}}
+
+
+Thread safe printf like printing to LCD.  
+
+
+{\ttfamily \#include $<$lcdout.\+h$>$}\newline
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include $<$lcd.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$semphr.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{lcdout_8c_abd14956b85bb5dd6428607c94a2a13fe}\label{lcdout_8c_abd14956b85bb5dd6428607c94a2a13fe} 
+\#define {\bfseries LCDOUT\+\_\+\+BUFFER\+\_\+\+SIZE}~128
+\item 
+\Hypertarget{lcdout_8c_a134f45907486fef0862ab88018c0c24d}\label{lcdout_8c_a134f45907486fef0862ab88018c0c24d} 
+\#define {\bfseries LCDOUT\+\_\+\+SM\+\_\+\+GIVE}~x\+Semaphore\+Give(\+\_\+lcdout\+\_\+semaphore)
+\item 
+\Hypertarget{lcdout_8c_a0ef01fa844f92b0844928077da68247d}\label{lcdout_8c_a0ef01fa844f92b0844928077da68247d} 
+\#define {\bfseries LCDOUT\+\_\+\+SM\+\_\+\+TAKE}~x\+Semaphore\+Take(\+\_\+lcdout\+\_\+semaphore, port\+MAX\+\_\+\+DELAY)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lcdout_8c_a7a128b78186ecace3048c61d1e2fefe6}{lcdout\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Init. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcdout_8c_a4995c470c69b1f8020c62fcc3086d38c}{lcdout\+\_\+printf}} (char \texorpdfstring{$\ast$}{*}format,...)
+\begin{DoxyCompactList}\small\item\em Thread safe printf like printing to LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{lcdout_8c_afaaf83bea8f06b2ef011322943c8a6b6}\label{lcdout_8c_afaaf83bea8f06b2ef011322943c8a6b6} 
+x\+Semaphore\+Handle {\bfseries \+\_\+lcdout\+\_\+semaphore}
+\item 
+\Hypertarget{lcdout_8c_a7e6318f144ab74f58db2ecb80a934acf}\label{lcdout_8c_a7e6318f144ab74f58db2ecb80a934acf} 
+char {\bfseries lcdout\+\_\+buffer} \mbox{[}LCDOUT\+\_\+\+BUFFER\+\_\+\+SIZE\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thread safe printf like printing to LCD. 
+
+\begin{DoxyAuthor}{Author}
+Kevin Witteveen
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/10/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lcdout_8c_a7a128b78186ecace3048c61d1e2fefe6}\index{lcdout.c@{lcdout.c}!lcdout\_init@{lcdout\_init}}
+\index{lcdout\_init@{lcdout\_init}!lcdout.c@{lcdout.c}}
+\doxysubsubsection{\texorpdfstring{lcdout\_init()}{lcdout\_init()}}
+{\footnotesize\ttfamily \label{lcdout_8c_a7a128b78186ecace3048c61d1e2fefe6} 
+void lcdout\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Init. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{lcdout_8c_a4995c470c69b1f8020c62fcc3086d38c}\index{lcdout.c@{lcdout.c}!lcdout\_printf@{lcdout\_printf}}
+\index{lcdout\_printf@{lcdout\_printf}!lcdout.c@{lcdout.c}}
+\doxysubsubsection{\texorpdfstring{lcdout\_printf()}{lcdout\_printf()}}
+{\footnotesize\ttfamily \label{lcdout_8c_a4995c470c69b1f8020c62fcc3086d38c} 
+void lcdout\+\_\+printf (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+Thread safe printf like printing to LCD. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
