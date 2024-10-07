@@ -1,8 +1,7 @@
-../Core/MyApp/App/student.c:37:6:waypointsReset	32	static
-../Core/MyApp/App/student.c:48:6:LCD_print_fix	32	static
-../Core/MyApp/App/student.c:64:6:test_gps_coords	232	static
-../Core/MyApp/App/student.c:83:6:Student_task1	104	static
-../Core/MyApp/App/student.c:108:8:lonDMtoM	48	static
-../Core/MyApp/App/student.c:123:8:latDMtoM	48	static
-../Core/MyApp/App/student.c:136:6:waypointSet	8	static
-../Core/MyApp/App/student.c:143:6:waypointGet	16	static
+../Core/MyApp/App/student.c:38:6:waypointsReset	32	static
+../Core/MyApp/App/student.c:50:6:test_gps_coords	104	static
+../Core/MyApp/App/student.c:72:6:Student_task1	104	static
+../Core/MyApp/App/student.c:97:8:lonDMtoM	48	static
+../Core/MyApp/App/student.c:112:8:latDMtoM	48	static
+../Core/MyApp/App/student.c:125:6:waypointSet	8	static
+../Core/MyApp/App/student.c:132:6:waypointGet	16	static

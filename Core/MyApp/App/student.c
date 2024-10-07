@@ -12,6 +12,7 @@
 #include "gps.h"
 #include "lcd.h"
 #include "buzzer.h"
+#include "lcdout.h"
 /**
 * @brief Oefentask voor studenten
 * @param argument, kan evt vanuit tasks gebruikt worden
@@ -45,44 +46,33 @@ void waypointsReset()
     }
 }
 
-void LCD_print_fix(char* msg)
-{
-	uint8_t line=0;
-	LCD_clear();
-	for(uint8_t i=0;i<strlen(msg);i++)
-	{
-		if(msg[i]=='\0') break;
-		if(msg[i]=='\n')
-		{
-			LCD_XY(0, ++line);
-			continue;
-		}
-		LCD_putchar(msg[i]);
-	}
-}
 
 void test_gps_coords()
 {
+	static char last_status='\0';
 	GNRMC latestgnrmc;
 	gps_get_GNRMC(&latestgnrmc);
+
 	if(latestgnrmc.status!='A')
 	{
-		LCD_print_fix("NO GPS LOCK");
+		if(latestgnrmc.status!=last_status)
+			lcdout_printf("NO GPS LOCK %d", 12);
+		last_status=latestgnrmc.status;
 		return;
 	}
+	last_status=latestgnrmc.status;
+
 	BUZZER_put(1000);
 	double x, y;
-	x = lonDMtoM(&latestgnrmc);
-	y = latDMtoM(&latestgnrmc);
-	char msg[128];
-	sprintf(msg, "X: %f\nY: %f\n", x, y);
-	LCD_print_fix(msg);
-
+	x = lonDMtoM(&latestgnrmc)/60.0;
+	y = latDMtoM(&latestgnrmc)/60.0;
+	lcdout_printf("X: %f\nY: %f\n", x, y);
 }
 
 void Student_task1 (void *argument)
 {
 	student_SemaphoreWaypoints = xSemaphoreCreateMutex();
+	lcdout_init();
 	waypointsReset();
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 	globalVec.x=0;

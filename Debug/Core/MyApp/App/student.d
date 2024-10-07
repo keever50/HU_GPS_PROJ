@@ -57,7 +57,8 @@ Core/MyApp/App/student.o: ../Core/MyApp/App/student.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Core/MyApp/Ports/lcd.h ../Core/MyApp/Ports/keys.h \
  ../Core/MyApp/Ports/leds.h ../Core/MyApp/Ports/uart.h \
- ../Core/MyApp/Ports/buzzer.h ../Core/MyApp/App/gps.h
+ ../Core/MyApp/Ports/buzzer.h ../Core/MyApp/App/gps.h \
+ ../Core/MyApp/App/lcdout.h
 ../Core/MyApp/App/admin.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/freeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -121,3 +122,4 @@ Core/MyApp/App/student.o: ../Core/MyApp/App/student.c \
 ../Core/MyApp/Ports/uart.h:
 ../Core/MyApp/Ports/buzzer.h:
 ../Core/MyApp/App/gps.h:
+../Core/MyApp/App/lcdout.h:

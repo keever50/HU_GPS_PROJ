@@ -31,6 +31,7 @@ Revision:	5
 
 #include "main.h"
 #include "lcd.h"
+#include "cmsis_os.h"
 
 static void LCD_writenibble(unsigned char data);
 static void LCD_writebyte(unsigned char data);
@@ -48,7 +49,7 @@ void ClearBits(void)
 void LCD_cursor_home(void)
 {
    LCD_writecontrol(0x02); // cursur home
-   curpos=0;               // reset position
+   curpos=0;
 }
 
 void LCD_clear(void)
@@ -57,7 +58,6 @@ void LCD_clear(void)
    curpos=0;               // reset position
    HAL_Delay(5);
 //   busyflag();
-
 }
 
 void LCD_XY(unsigned int x, unsigned int y)
@@ -79,6 +79,7 @@ void LCD_XY(unsigned int x, unsigned int y)
 // Display wordt gebruikt in 4bits modus,2 regels, 5x7 dots font.
 void LCD_init(void)
 {
+
 	GPIO_InitTypeDef gpio;	// GPIO init structure
 	__HAL_RCC_GPIOE_CLK_ENABLE();
 	__HAL_RCC_GPIOC_CLK_ENABLE();
@@ -156,6 +157,7 @@ void LCD_put(char *string)
 #endif
         LCD_putchar(string[k]);
     }
+
 }
 
 void LCD_puts(char *c)
@@ -210,19 +212,22 @@ static void LCD_writenibble(unsigned char data)
 // Stuurt een 8-bits commando naar het display
 static void LCD_writebyte(unsigned char data)
 {
+	const TickType_t xDelay = 2 / portTICK_PERIOD_MS;
+
     /* hoogste 4 bits */
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_SET);
     LCD_writenibble((data>>4)&0x0F);
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_RESET);
 
-    HAL_Delay(2);
-
+    //HAL_Delay(2);
+    vTaskDelay(xDelay);
     /* laagste 4 bits */
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_SET);
     LCD_writenibble(data&0x0F);
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_RESET);
 
-    HAL_Delay(2);
+    //HAL_Delay(2);
+    vTaskDelay(xDelay);
 }
 
 // Stuurt een commando naar het display

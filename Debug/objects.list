@@ -2,6 +2,7 @@
 "./Core/MyApp/App/UART_keys.o"
 "./Core/MyApp/App/admin.o"
 "./Core/MyApp/App/gps.o"
+"./Core/MyApp/App/lcdout.o"
 "./Core/MyApp/App/ledjes.o"
 "./Core/MyApp/App/student.o"
 "./Core/MyApp/Ports/buzzer.o"

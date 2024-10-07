@@ -1,8 +1,7 @@
-../Core/MyApp/App/student.c:37:6:waypointsReset	2
-../Core/MyApp/App/student.c:48:6:LCD_print_fix	4
-../Core/MyApp/App/student.c:64:6:test_gps_coords	2
-../Core/MyApp/App/student.c:83:6:Student_task1	2
-../Core/MyApp/App/student.c:108:8:lonDMtoM	2
-../Core/MyApp/App/student.c:123:8:latDMtoM	2
-../Core/MyApp/App/student.c:136:6:waypointSet	1
-../Core/MyApp/App/student.c:143:6:waypointGet	1
+../Core/MyApp/App/student.c:38:6:waypointsReset	2
+../Core/MyApp/App/student.c:50:6:test_gps_coords	3
+../Core/MyApp/App/student.c:72:6:Student_task1	2
+../Core/MyApp/App/student.c:97:8:lonDMtoM	2
+../Core/MyApp/App/student.c:112:8:latDMtoM	2
+../Core/MyApp/App/student.c:125:6:waypointSet	1
+../Core/MyApp/App/student.c:132:6:waypointGet	1
