@@ -26,11 +26,15 @@
 
 xSemaphoreHandle _lcdout_semaphore;
 char lcdout_buffer[LCDOUT_BUFFER_SIZE];
+char lcdout_initialized=0;
 
 /* PUBLIC FUNCTIONS */
 
 void lcdout_init()
 {
+	if(lcdout_initialized) return;
+	lcdout_initialized=1;
+	LCD_init();
 	_lcdout_semaphore=xSemaphoreCreateMutex();
 }
 

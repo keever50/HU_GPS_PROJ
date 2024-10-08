@@ -71,7 +71,7 @@ TASKDATA tasks[] =
 // ----------------------------------------------------------------------------------------------------------------------------
   // in ARM_keys.c
 { ARM_keys_IRQ, NULL, .attr.name = "ARM_keys_IRQ", .attr.stack_size = 128 * 6, .attr.priority = osPriorityNormal1 },
-{ ARM_keys_task,NULL, .attr.name = "ARM_keys_task",.attr.stack_size = 128 * 6, .attr.priority = osPriorityNormal2 },
+{ ARM_keys_task,NULL, .attr.name = "ARM_keys_task",.attr.stack_size = 128 * 12, .attr.priority = osPriorityNormal2 },
 
   // UART_keys.c
 { UART_keys_IRQ,NULL, .attr.name = "UART_keys_IRQ",.attr.stack_size = 128 * 6, .attr.priority = osPriorityBelowNormal5 },
@@ -124,8 +124,6 @@ met de UART-comport gebruikt.\r\n\
 Zie verder de Doxygen documentatie van de applicatie.\r\n\
 Michiel Scager (update: april 2023)\r\n";
 
-	LCD_clear();
-	LCD_puts(app_nameLCD);
 
 	UART_puts(app_name);
 	UART_puts(functionality);
@@ -189,7 +187,7 @@ key: function\r\n\
 */
 void error_HaltOS(char *msg)
 {
-	LCD_puts(msg);
+	lcdout_printf(msg);
 	UART_puts(msg); UART_puts(". Application halted\r\n");
 
 	BUZZER_put(1000);

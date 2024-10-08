@@ -13,38 +13,21 @@
 #include "lcd.h"
 #include "buzzer.h"
 #include "lcdout.h"
+#include "student.h"
 /**
 * @brief Oefentask voor studenten
 * @param argument, kan evt vanuit tasks gebruikt worden
 * @return void
 */
 
-double lonDMtoM(GNRMC *gnrmc);
-double latDMtoM(GNRMC *gnrmc);
-
-struct vector2d_s
-{
-    double x,y;
-};
-
-typedef struct vector2d_s vector2d_t;
-
-vector2d_t waypoints[20];
-
 vector2d_t globalVec;
 
 SemaphoreHandle_t student_SemaphoreWaypoints;
 
-void waypointsReset()
-{
-    for(int i=0;i<20;i++)
-    {
-        vector2d_t vec;
-        vec.x=0;
-        vec.y=0;
-        waypoints[i]=vec;
-    }
-}
+double lonDMtoM(GNRMC *gnrmc);
+double latDMtoM(GNRMC *gnrmc);
+
+
 
 
 void test_gps_coords()
@@ -73,7 +56,6 @@ void Student_task1 (void *argument)
 {
 	student_SemaphoreWaypoints = xSemaphoreCreateMutex();
 	lcdout_init();
-	waypointsReset();
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 	globalVec.x=0;
 	globalVec.y=0;
@@ -82,7 +64,7 @@ void Student_task1 (void *argument)
 
 	while(TRUE)
 	{
-       	osDelay(100);
+       	osDelay(1000);
 
 		if (Uart_debug_out & STUDENT_DEBUG_OUT)
 		{
@@ -90,6 +72,7 @@ void Student_task1 (void *argument)
 			UART_puts(buf);
     	}
 		test_gps_coords();
+		Setglobalvector();
 
 	}
 }

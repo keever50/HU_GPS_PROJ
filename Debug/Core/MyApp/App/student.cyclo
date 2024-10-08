@@ -1,7 +1,0 @@
-../Core/MyApp/App/student.c:38:6:waypointsReset	2
-../Core/MyApp/App/student.c:50:6:test_gps_coords	3
-../Core/MyApp/App/student.c:72:6:Student_task1	2
-../Core/MyApp/App/student.c:97:8:lonDMtoM	2
-../Core/MyApp/App/student.c:112:8:latDMtoM	2
-../Core/MyApp/App/student.c:125:6:Setglobalvector	1
-../Core/MyApp/App/student.c:139:6:Getglobalvector	1
