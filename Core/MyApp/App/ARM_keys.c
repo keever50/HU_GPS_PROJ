@@ -52,6 +52,12 @@ void ARM_keys_IRQ (void *argument)
 	}
 }
 
+void waypointcreate()
+{
+    BUZZER_put (500);
+	osDelay(500);
+	UART_puts("\nFunctie functioneert\n");
+}
 
 /**
 * @brief Task krijgt ARM-key met notificatie binnen, en zet ledjes op die waarde.
@@ -78,6 +84,8 @@ void ARM_keys_task (void *argument)
     	LED_put((unsigned char)key); // set 8 leds-byte to key-value
 	    BUZZER_put (500);
 		osDelay(500);
+		if(key==1)
+			waypointcreate();
 
 		if (Uart_debug_out & ARMKEYS_DEBUG_OUT)
 		{

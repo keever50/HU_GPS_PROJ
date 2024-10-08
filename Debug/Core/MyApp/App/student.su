@@ -3,5 +3,5 @@
 ../Core/MyApp/App/student.c:72:6:Student_task1	104	static
 ../Core/MyApp/App/student.c:97:8:lonDMtoM	48	static
 ../Core/MyApp/App/student.c:112:8:latDMtoM	48	static
-../Core/MyApp/App/student.c:125:6:waypointSet	8	static
-../Core/MyApp/App/student.c:132:6:waypointGet	16	static
+../Core/MyApp/App/student.c:125:6:Setglobalvector	96	static
+../Core/MyApp/App/student.c:139:6:Getglobalvector	32	static

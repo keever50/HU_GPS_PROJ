@@ -3,5 +3,5 @@
 ../Core/MyApp/App/student.c:72:6:Student_task1	2
 ../Core/MyApp/App/student.c:97:8:lonDMtoM	2
 ../Core/MyApp/App/student.c:112:8:latDMtoM	2
-../Core/MyApp/App/student.c:125:6:waypointSet	1
-../Core/MyApp/App/student.c:132:6:waypointGet	1
+../Core/MyApp/App/student.c:125:6:Setglobalvector	1
+../Core/MyApp/App/student.c:139:6:Getglobalvector	1

@@ -82,7 +82,7 @@ void Student_task1 (void *argument)
 
 	while(TRUE)
 	{
-       	osDelay(1000);
+       	osDelay(100);
 
 		if (Uart_debug_out & STUDENT_DEBUG_OUT)
 		{
@@ -122,17 +122,27 @@ double latDMtoM(GNRMC *gnrmc)
     	minY=minY*-1;
     return minY;
 }
-void waypointSet()
+void Setglobalvector()
 {
 	xSemaphoreTake(student_SemaphoreWaypoints, portMAX_DELAY);
+	GNRMC latestgnrmc;
+	gps_get_GNRMC(&latestgnrmc);
+	double x, y;
+	x = lonDMtoM(&latestgnrmc)/60.0;
+	y = latDMtoM(&latestgnrmc)/60.0;
+	globalVec.x= x;
+	globalVec.y= y;
 
 	xSemaphoreGive(student_SemaphoreWaypoints);
 }
 
-void waypointGet(vector2d_t* vec)
+void Getglobalvector(vector2d_t* vec)
 {
 	xSemaphoreTake(student_SemaphoreWaypoints, portMAX_DELAY);
-
+	double x = globalVec.x;
+	double y = globalVec.y;
+	vec->x=x;
+	vec->y=y;
 	xSemaphoreGive(student_SemaphoreWaypoints);
 }
 
