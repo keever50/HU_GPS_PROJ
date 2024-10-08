@@ -7,7 +7,7 @@
 *
 * @date 5/5/2022
 */
-#include "freeRTOS.h"
+#include "FreeRTOS.h"
 #include "event_groups.h"
 #include "queue.h"
 #include "task.h" // taskYield
