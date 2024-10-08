@@ -1,2 +1,0 @@
-../Core/MyApp/App/lcdout.c:32:6:lcdout_init	8	static
-../Core/MyApp/App/lcdout.c:37:6:lcdout_printf	24	static

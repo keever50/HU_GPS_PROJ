@@ -1,5 +1,0 @@
-../Core/MyApp/App/ARM_keys.c:24:6:toggle_led	16	static
-../Core/MyApp/App/ARM_keys.c:37:6:ARM_keys_IRQ	32	static
-../Core/MyApp/App/ARM_keys.c:60:6:waypointcreate	32	static
-../Core/MyApp/App/ARM_keys.c:73:6:waypointread	312	static
-../Core/MyApp/App/ARM_keys.c:92:6:ARM_keys_task	32	static,ignoring_inline_asm
