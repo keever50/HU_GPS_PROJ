@@ -1,4 +1,5 @@
-../Core/MyApp/App/ARM_keys.c:23:6:toggle_led	1
-../Core/MyApp/App/ARM_keys.c:36:6:ARM_keys_IRQ	2
-../Core/MyApp/App/ARM_keys.c:55:6:waypointcreate	1
-../Core/MyApp/App/ARM_keys.c:69:6:ARM_keys_task	6
+../Core/MyApp/App/ARM_keys.c:24:6:toggle_led	1
+../Core/MyApp/App/ARM_keys.c:37:6:ARM_keys_IRQ	2
+../Core/MyApp/App/ARM_keys.c:60:6:waypointcreate	2
+../Core/MyApp/App/ARM_keys.c:73:6:waypointread	2
+../Core/MyApp/App/ARM_keys.c:92:6:ARM_keys_task	6

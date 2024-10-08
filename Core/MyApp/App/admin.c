@@ -71,7 +71,7 @@ TASKDATA tasks[] =
 // ----------------------------------------------------------------------------------------------------------------------------
   // in ARM_keys.c
 { ARM_keys_IRQ, NULL, .attr.name = "ARM_keys_IRQ", .attr.stack_size = 128 * 6, .attr.priority = osPriorityNormal1 },
-{ ARM_keys_task,NULL, .attr.name = "ARM_keys_task",.attr.stack_size = 128 * 6, .attr.priority = osPriorityNormal2 },
+{ ARM_keys_task,NULL, .attr.name = "ARM_keys_task",.attr.stack_size = 128 * 12, .attr.priority = osPriorityNormal2 },
 
   // UART_keys.c
 { UART_keys_IRQ,NULL, .attr.name = "UART_keys_IRQ",.attr.stack_size = 128 * 6, .attr.priority = osPriorityBelowNormal5 },

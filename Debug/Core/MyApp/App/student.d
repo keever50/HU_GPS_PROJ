@@ -58,7 +58,7 @@ Core/MyApp/App/student.o: ../Core/MyApp/App/student.c \
  ../Core/MyApp/Ports/lcd.h ../Core/MyApp/Ports/keys.h \
  ../Core/MyApp/Ports/leds.h ../Core/MyApp/Ports/uart.h \
  ../Core/MyApp/Ports/buzzer.h ../Core/MyApp/App/gps.h \
- ../Core/MyApp/App/lcdout.h
+ ../Core/MyApp/App/lcdout.h ../Core/MyApp/App/student.h
 ../Core/MyApp/App/admin.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/freeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -123,3 +123,4 @@ Core/MyApp/App/student.o: ../Core/MyApp/App/student.c \
 ../Core/MyApp/Ports/buzzer.h:
 ../Core/MyApp/App/gps.h:
 ../Core/MyApp/App/lcdout.h:
+../Core/MyApp/App/student.h:
