@@ -1,2 +1,16 @@
 release/
 debug/
+
+.Metadata/
+.metadata/.ide.log
+.metadata/.log
+.metadata/version.ini
+.settings/language.settings.xml
+.metadata/.ide.log
+.metadata/.log
+.metadata/version.ini
+.settings/language.settings.xml
+.settings/language.settings.xml
+.metadata/version.ini
+.metadata/.log
+.metadata/.ide.log
