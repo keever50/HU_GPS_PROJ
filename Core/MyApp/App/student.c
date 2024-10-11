@@ -33,7 +33,7 @@ void test_orient()
 {
 	struct lsm303_mag_vector vect;
 	lsm303_mag_get_vector(&vect);
-	lcdout_printf("X: %d\nZ: %d\n", vect.x, vect.z);
+	lcdout_printf("X: %d\nY: %d\n", vect.x, vect.y);
 }
 
 void test_gps_coords()
@@ -68,11 +68,12 @@ void Student_task1 (void *argument)
 	char buf[80];
 	unsigned int i = 0;
 
-	lsm303_mag_datarate(0);
+	osDelay(1000);
+	lsm303_mag_datarate(0b000);
 	lsm303_mag_gain(0);
 	while(TRUE)
 	{
-       	osDelay(100);
+       	osDelay(500);
 
 		if (Uart_debug_out & STUDENT_DEBUG_OUT)
 		{

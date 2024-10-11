@@ -47,7 +47,7 @@ int _lsm303_read_register_seq(uint8_t *value)
 
 int lsm303_mag_datarate(uint8_t rate)
 {
-	uint8_t value;
+	uint8_t value=0;
 	value=rate&LSM303_CRA_REG_M_DO_MASK;
 	value=value<<LSM303_CRA_REG_M_DO_OFFS;
 	return _lsm303_write_register(LSM303_CRA_REG_M, value);
