@@ -212,22 +212,26 @@ static void LCD_writenibble(unsigned char data)
 // Stuurt een 8-bits commando naar het display
 static void LCD_writebyte(unsigned char data)
 {
+	BaseType_t in_thread = xTaskGetSchedulerState();
 	const TickType_t xDelay = 2 / portTICK_PERIOD_MS;
 
     /* hoogste 4 bits */
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_SET);
     LCD_writenibble((data>>4)&0x0F);
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_RESET);
-
-    //HAL_Delay(2);
-    vTaskDelay(xDelay);
+    if(in_thread==taskSCHEDULER_NOT_STARTED)
+    	HAL_Delay(2);
+    else
+    	vTaskDelay(xDelay);
     /* laagste 4 bits */
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_SET);
     LCD_writenibble(data&0x0F);
     HAL_GPIO_WritePin(LCD_EN, GPIO_PIN_RESET);
 
-    //HAL_Delay(2);
-    vTaskDelay(xDelay);
+    if(in_thread==taskSCHEDULER_NOT_STARTED)
+    	HAL_Delay(2);
+    else
+    	vTaskDelay(xDelay);
 }
 
 // Stuurt een commando naar het display

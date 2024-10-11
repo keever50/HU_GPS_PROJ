@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#define USE_CUSTOM_MOTION_SENSOR_LSM303AGR_MAG_0 1
 #include "lcd.h"
 #include "keys.h"
 #include "leds.h"

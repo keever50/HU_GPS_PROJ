@@ -14,6 +14,7 @@
 #include "buzzer.h"
 #include "lcdout.h"
 #include "student.h"
+#include "LSM303.h"
 /**
 * @brief Oefentask voor studenten
 * @param argument, kan evt vanuit tasks gebruikt worden
@@ -28,7 +29,12 @@ double lonDMtoM(GNRMC *gnrmc);
 double latDMtoM(GNRMC *gnrmc);
 
 
-
+void test_orient()
+{
+	struct lsm303_mag_vector vect;
+	lsm303_mag_get_vector(&vect);
+	lcdout_printf("X: %d\nZ: %d\n", vect.x, vect.z);
+}
 
 void test_gps_coords()
 {
@@ -55,23 +61,26 @@ void test_gps_coords()
 void Student_task1 (void *argument)
 {
 	student_SemaphoreWaypoints = xSemaphoreCreateMutex();
-	lcdout_init();
+	//lcdout_init();
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 	globalVec.x=0;
 	globalVec.y=0;
 	char buf[80];
 	unsigned int i = 0;
 
+	lsm303_mag_datarate(0);
+	lsm303_mag_gain(0);
 	while(TRUE)
 	{
-       	osDelay(1000);
+       	osDelay(100);
 
 		if (Uart_debug_out & STUDENT_DEBUG_OUT)
 		{
 	       	sprintf(buf, "\r\n%s: %u", __func__, i++);
 			UART_puts(buf);
     	}
-		test_gps_coords();
+		//test_gps_coords();
+		test_orient();
 		Setglobalvector();
 
 	}
