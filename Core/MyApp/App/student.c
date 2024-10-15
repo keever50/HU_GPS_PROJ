@@ -15,7 +15,7 @@
 #include "lcdout.h"
 #include "student.h"
 #include "LSM303.h"
-
+#include <betterbuzzer.h>
 //#define M_1_PI      0.318309886183790671537767526745028724
 
 /**
@@ -34,14 +34,16 @@ double lonDMtoM(GNRMC *gnrmc);
 double latDMtoM(GNRMC *gnrmc);
 
 
-void test_orient()
+int test_orient()
 {
 	struct lsm303_mag_vector vect;
-	lsm303_mag_get_vector(&vect);
+	int ret = lsm303_mag_get_vector(&vect);
+	if(ret) return ret;
 	lcdout_printf("X: %d\nY: %d\n", vect.x, vect.y);
+	return 0;
 }
 
-void test_gps_coords()
+int test_gps_coords()
 {
 	static char last_status='\0';
 	GNRMC latestgnrmc;
@@ -49,24 +51,25 @@ void test_gps_coords()
 
 	if(latestgnrmc.status!='A')
 	{
-		if(latestgnrmc.status!=last_status)
-			lcdout_printf("NO GPS LOCK %d", 12);
-		last_status=latestgnrmc.status;
-		return;
+		//if(latestgnrmc.status!=last_status)
+		lcdout_printf("NO GPS LOCK %d", 12);
+		osDelay(1000);
+		//last_status=latestgnrmc.status;
+		return -1;
 	}
 	last_status=latestgnrmc.status;
 
-	BUZZER_put(1000);
 	double x, y;
 	x = lonDMtoM(&latestgnrmc)/60.0;
 	y = latDMtoM(&latestgnrmc)/60.0;
 	lcdout_printf("X: %f\nY: %f\n", x, y);
+	return 0;
 }
 
 int student_send_keys(char key)
 {
 	if(!student_initialized) return -1;
-	BaseType_t ret = xQueueSend(student_keyQ, key, portMAX_DELAY);
+	BaseType_t ret = xQueueSend(student_keyQ, &key, portMAX_DELAY);
 	if(ret!=pdTRUE) return -2;
 
 	return 0;
@@ -78,6 +81,22 @@ char student_get_key()
 	xQueueReceive(student_keyQ, &k, portMAX_DELAY);
 	return k;
 
+}
+
+int student_start_program(int ID)
+{
+	switch(ID)
+	{
+	case 2:
+	{
+		return test_orient();
+	}
+	case 1:
+	{
+		return test_gps_coords();
+	}
+	}
+	return -0xFF;
 }
 
 int student_init()
@@ -97,7 +116,6 @@ int student_init()
 }
 
 
-
 void Student_task1 (void *argument)
 {
 	globalVec.x=0;
@@ -106,7 +124,14 @@ void Student_task1 (void *argument)
 	unsigned int i = 0;
 
 	student_init();
-
+	buzzer_buzz(100, 400);
+	buzzer_buzz(100, 500);
+	buzzer_buzz(100, 400);
+	buzzer_buzz(100, 500);
+	buzzer_buzz(300, 600);
+	buzzer_buzz(100, 400);
+	buzzer_buzz(100, 500);
+	buzzer_buzz(100, 400);
 
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 
@@ -122,14 +147,16 @@ void Student_task1 (void *argument)
 		//test_gps_coords();
 
 		char key = student_get_key();
-		if(key==2)
+		if(key)
 		{
-			test_orient();
+			int err = student_start_program(key);
+			if(err)
+			{
+				lcdout_printf("Program %d\nERR 0x%X", key, err);
+				buzzer_buzz(100, 1000);
+			}
 		}
-		else if(key==3)
-		{
 
-		}
 
 
 		Setglobalvector();
