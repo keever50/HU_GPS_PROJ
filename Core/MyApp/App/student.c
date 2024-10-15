@@ -15,6 +15,9 @@
 #include "lcdout.h"
 #include "student.h"
 #include "LSM303.h"
+
+#define M_1_PI      0.318309886183790671537767526745028724
+
 /**
 * @brief Oefentask voor studenten
 * @param argument, kan evt vanuit tasks gebruikt worden
@@ -83,8 +86,21 @@ void Student_task1 (void *argument)
 		//test_gps_coords();
 		test_orient();
 		Setglobalvector();
-
 	}
+}
+
+double distance(vector2d_t pos, vector2d_t waypoint)
+{
+	double angle,dX,dY;
+
+	dX=waypoint.x-pos.x;
+	dY=waypoint.y-pos.y;
+
+	angle=(atan2(x,y))*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
+
+	if(angle<0)							//maakt negatieve hoek (dX<0) positief
+		angle+=360;
+	return angle;
 }
 
 double lonDMtoM(GNRMC *gnrmc)
