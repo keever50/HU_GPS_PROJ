@@ -7,9 +7,22 @@
 
 #include <LSM303.h>
 #include "stm32f4xx_hal.h"
+#include "cmsis_os.h"
+#include <semphr.h>
+/* MACROS */
+
+#define LSM303_SM_TAKE  xSemaphoreTake(_lsm303_semaphore, portMAX_DELAY)
+#define LSM303_SM_GIVE	xSemaphoreGive(_lsm303_semaphore)
+
+
+/* PRIVATE GLOBALS */
+
+xSemaphoreHandle _lsm303_semaphore;
 I2C_HandleTypeDef *_lsm303_selected_i2c;
 uint16_t _lsm303_selected_address=0b0111101;
 char _lsm303_initialized=0;
+
+/* PRIVATE FUNC */
 
 int _lsm303_write_register(uint8_t addr, uint8_t value)
 {
@@ -44,6 +57,8 @@ int _lsm303_read_register_seq(uint8_t *value)
 		return -1;
 	return 0;
 }
+
+/* PUBLIC FUNC */
 
 int lsm303_mag_datarate(uint8_t rate)
 {
@@ -86,38 +101,60 @@ int lsm303_mag_mode(enum lsm303_mag_mode mode)
 int lsm303_mag_get_vector(struct lsm303_mag_vector *vect)
 {
 
+	LSM303_SM_TAKE;
+
 	uint8_t L, H;
 	if(_lsm303_read_register(LSM303_OUT_X_H_M, &H))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
+
 	if(_lsm303_read_register_seq(&L))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
 	vect->x = H;
 	vect->x = vect->x<<8;
 	vect->x = vect->x | L;
 
 	if(_lsm303_read_register_seq(&H))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
 	if(_lsm303_read_register_seq(&L))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
 	vect->z = H;
 	vect->z = vect->z<<8;
 	vect->z = vect->z | L;
 
 	if(_lsm303_read_register_seq(&H))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
 	if(_lsm303_read_register_seq(&L))
+	{
+		LSM303_SM_GIVE;
 		return -1;
+	}
 	vect->y = H;
 	vect->y = vect->y<<8;
 	vect->y = vect->y | L;
 
-
+	LSM303_SM_GIVE;
 	return 0;
 }
 
 int lsm303_mag_init(I2C_HandleTypeDef *i2c, uint16_t address)
 {
 	UART_puts("lsm303 init\n");
+	_lsm303_semaphore = xSemaphoreCreateMutex();
 	/* Settings */
 	_lsm303_selected_i2c=i2c;
 	if(address!=0)

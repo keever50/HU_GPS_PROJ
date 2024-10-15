@@ -16,7 +16,7 @@
 #include "student.h"
 #include "LSM303.h"
 
-#define M_1_PI      0.318309886183790671537767526745028724
+//#define M_1_PI      0.318309886183790671537767526745028724
 
 /**
 * @brief Oefentask voor studenten
@@ -27,6 +27,8 @@
 vector2d_t globalVec;
 
 SemaphoreHandle_t student_SemaphoreWaypoints;
+char student_initialized=0;
+QueueHandle_t student_keyQ;
 
 double lonDMtoM(GNRMC *gnrmc);
 double latDMtoM(GNRMC *gnrmc);
@@ -61,19 +63,53 @@ void test_gps_coords()
 	lcdout_printf("X: %f\nY: %f\n", x, y);
 }
 
-void Student_task1 (void *argument)
+int student_send_keys(char key)
+{
+	if(!student_initialized) return -1;
+	BaseType_t ret = xQueueSend(student_keyQ, key, portMAX_DELAY);
+	if(ret!=pdTRUE) return -2;
+
+	return 0;
+}
+
+char student_get_key()
+{
+	char k=0;
+	xQueueReceive(student_keyQ, &k, portMAX_DELAY);
+	return k;
+
+}
+
+int student_init()
 {
 	student_SemaphoreWaypoints = xSemaphoreCreateMutex();
+	student_keyQ = xQueueCreate(STUDENT_KEY_Q_LENGTH, 1);
 	//lcdout_init();
-	UART_puts((char *)__func__); UART_puts(" started\r\n");
+
+
+
+	osDelay(1000);
+	lsm303_mag_datarate(0b000);
+	lsm303_mag_gain(0);
+
+	student_initialized=1;
+	return 0;
+}
+
+
+
+void Student_task1 (void *argument)
+{
 	globalVec.x=0;
 	globalVec.y=0;
 	char buf[80];
 	unsigned int i = 0;
 
-	osDelay(1000);
-	lsm303_mag_datarate(0b000);
-	lsm303_mag_gain(0);
+	student_init();
+
+
+	UART_puts((char *)__func__); UART_puts(" started\r\n");
+
 	while(TRUE)
 	{
        	osDelay(500);
@@ -84,24 +120,35 @@ void Student_task1 (void *argument)
 			UART_puts(buf);
     	}
 		//test_gps_coords();
-		test_orient();
+
+		char key = student_get_key();
+		if(key==2)
+		{
+			test_orient();
+		}
+		else if(key==3)
+		{
+
+		}
+
+
 		Setglobalvector();
 	}
 }
 
-double distance(vector2d_t pos, vector2d_t waypoint)
-{
-	double angle,dX,dY;
-
-	dX=waypoint.x-pos.x;
-	dY=waypoint.y-pos.y;
-
-	angle=(atan2(x,y))*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
-
-	if(angle<0)							//maakt negatieve hoek (dX<0) positief
-		angle+=360;
-	return angle;
-}
+//double distance(vector2d_t pos, vector2d_t waypoint)
+//{
+//	double angle,dX,dY;
+//
+//	dX=waypoint.x-pos.x;
+//	dY=waypoint.y-pos.y;
+//
+//	angle=(atan2(x,y))*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
+//
+//	if(angle<0)							//maakt negatieve hoek (dX<0) positief
+//		angle+=360;
+//	return angle;
+//}
 
 double lonDMtoM(GNRMC *gnrmc)
 {

@@ -6,3 +6,13 @@
  */
 
 
+#include <compass_calib.h>
+#include <LSM303.h>
+#include "cmsis_os.h"
+
+
+int compass_calibration_start()
+{
+	UART_puts("CALIB\n");
+	return 0;
+}
