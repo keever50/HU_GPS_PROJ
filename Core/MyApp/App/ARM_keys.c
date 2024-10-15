@@ -107,6 +107,9 @@ void ARM_keys_task (void *argument)
     	LED_put((unsigned char)key); // set 8 leds-byte to key-value
 	    BUZZER_put (500);
 		osDelay(500);
+
+		student_send_keys(key);
+
 		if(key==1)
 			waypointcreate();
 
