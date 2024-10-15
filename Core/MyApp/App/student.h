@@ -24,5 +24,6 @@ typedef struct vector2d_s vector2d_t;
 void Setglobalvector();
 void Getglobalvector(vector2d_t* vec);
 int student_send_keys(char key);
+char student_get_key();
 
 #endif /* MYAPP_APP_STUDENT_H_ */

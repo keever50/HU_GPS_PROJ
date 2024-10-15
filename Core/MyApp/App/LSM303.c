@@ -19,7 +19,7 @@
 
 xSemaphoreHandle _lsm303_semaphore;
 I2C_HandleTypeDef *_lsm303_selected_i2c;
-uint16_t _lsm303_selected_address=0b0111101;
+uint16_t _lsm303_selected_address=0b00111100;
 char _lsm303_initialized=0;
 
 /* PRIVATE FUNC */
@@ -28,7 +28,7 @@ int _lsm303_write_register(uint8_t addr, uint8_t value)
 {
 	UART_puts("lsm303 write reg\n");
 	uint8_t buff[]={addr,value};
-	HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(_lsm303_selected_i2c, _lsm303_selected_address, buff, sizeof(buff), 1000);
+	HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(_lsm303_selected_i2c, _lsm303_selected_address, buff, sizeof(buff), 100);
 	if(status!=HAL_OK)
 		return -1;
 	return 0;
@@ -38,7 +38,7 @@ int _lsm303_read_register(uint8_t addr, uint8_t *value)
 {
 	//HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(_lsm303_selected_i2c, _lsm303_selected_address, &addr, 1, 1000);
 	UART_puts("lsm303 read reg\n");
-	HAL_StatusTypeDef status = HAL_I2C_Mem_Read(_lsm303_selected_i2c, _lsm303_selected_address, addr, 1, value, 1, 1000);
+	HAL_StatusTypeDef status = HAL_I2C_Mem_Read(_lsm303_selected_i2c, _lsm303_selected_address, addr, 1, value, 1, 100);
 
 
 	if(status!=HAL_OK)
@@ -50,7 +50,7 @@ int _lsm303_read_register_seq(uint8_t *value)
 {
 	//HAL_StatusTypeDef status = HAL_I2C_Master_Transmit(_lsm303_selected_i2c, _lsm303_selected_address, &addr, 1, 1000);
 	UART_puts("lsm303 SEQ read reg\n");
-	HAL_StatusTypeDef status = HAL_I2C_Master_Receive(_lsm303_selected_i2c, _lsm303_selected_address, value, 1, 1000);
+	HAL_StatusTypeDef status = HAL_I2C_Master_Receive(_lsm303_selected_i2c, _lsm303_selected_address, value, 1, 100);
 
 
 	if(status!=HAL_OK)
@@ -161,6 +161,8 @@ int lsm303_mag_init(I2C_HandleTypeDef *i2c, uint16_t address)
 		_lsm303_selected_address=address;
 
 	/* Set default mode and confirm mode */
+	lsm303_mag_datarate(0b111);
+	lsm303_mag_gain(0);
 	int ret = lsm303_mag_mode(eLSM303_MAG_MODE_CONTINUOUS);
 	if(ret) return ret;
 	uint8_t mode;

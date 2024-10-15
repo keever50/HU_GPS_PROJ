@@ -16,6 +16,8 @@
 #include "student.h"
 #include "LSM303.h"
 #include <betterbuzzer.h>
+#include <compass_calib.h>
+#include <math.h>
 //#define M_1_PI      0.318309886183790671537767526745028724
 
 /**
@@ -39,7 +41,15 @@ int test_orient()
 	struct lsm303_mag_vector vect;
 	int ret = lsm303_mag_get_vector(&vect);
 	if(ret) return ret;
-	lcdout_printf("X: %d\nY: %d\n", vect.x, vect.y);
+
+	struct compass_vector comp_vect;;
+	compass_apply_calibration(vect.x, vect.y, &comp_vect);
+	lcdout_printf("X: %f\nY: %f\n", comp_vect.x, comp_vect.y);
+	osDelay(1000);
+	double deg = (atan2(comp_vect.x,comp_vect.y)/3.14)*180;
+	lcdout_printf("%f DEG",deg);
+	//osDelay(1000);
+
 	return 0;
 }
 
@@ -78,7 +88,7 @@ int student_send_keys(char key)
 char student_get_key()
 {
 	char k=0;
-	xQueueReceive(student_keyQ, &k, portMAX_DELAY);
+	xQueueReceive(student_keyQ, &k, 10);
 	return k;
 
 }
@@ -87,6 +97,10 @@ int student_start_program(int ID)
 {
 	switch(ID)
 	{
+	case 3:
+	{
+		return compass_calibration_start();
+	}
 	case 2:
 	{
 		return test_orient();
@@ -108,8 +122,7 @@ int student_init()
 
 
 	osDelay(1000);
-	lsm303_mag_datarate(0b000);
-	lsm303_mag_gain(0);
+
 
 	student_initialized=1;
 	return 0;
