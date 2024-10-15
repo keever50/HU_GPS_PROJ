@@ -20,7 +20,7 @@ typedef struct _GNRMC
 	char    status;        // 2. A=valid, V=not valid
 	char    latitude[10];  // 3. ddmm.mmmm (double)
 	char    NS_ind;        // 4. N,S
-	char    longitude[10]; // 5. ddmm.mmmm (double)
+	char    longitude[11]; // 5. dddmm.mmmm (double)
 	char    EW_ind;        // 6. E,W
 	char    speed[6];      // 7. 0.13 knots (double)
 	char    course[6];     // 8. 309.62 degrees (double)
