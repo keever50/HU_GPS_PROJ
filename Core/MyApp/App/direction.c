@@ -5,45 +5,51 @@
  *      Author: milan
  */
 
+#include <student.h>
+#include <waypoints.h>
+#include <math.h>
+#include <direction.h>
+char _currentWP;
 
-
-double dirNext()
-{
-	double angle;
-	vector2d_t wp1,wp2;
-	wp1=waypoints[currentWP];
-	wp2=waypoints[currentWP+1];
-	angle=direction(wp1, wp2);
-	currentWP++;
-	return angle;
-}
-
-double direction(vector2d_t pos, vector2d_t waypoint)
+double dir_direction(vector2d_t *pos, vector2d_t *waypoint)
 {
 	double angle,dX,dY;
 
-	dX=waypoint.x-pos.x;
-	dY=waypoint.y-pos.y;
+	dX=waypoint->x-pos->x;
+	dY=waypoint->y-pos->y;
 
-	angle=(atan2(dX,dY))*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
+	angle=atan2(dX,dY)*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
 
 	if(angle<0)							//maakt negatieve hoek (dX<0) positief
 		angle+=360;
 	return angle;
 }
 
-double calcDiff(double currentDir, double waypointDir)
+double dir_next()						//hoek tussen waypoints
+{
+	double angle;
+	vector2d_t wp1,wp2;
+
+	waypoint_get(_currentWP,&wp1);
+	waypoint_get(_currentWP+1,&wp2);
+	angle=dir_direction(&wp1, &wp2);
+	_currentWP++;
+	return angle;
+}
+
+
+double dir_calcDiff(double currentDir, double waypointDir)	//verschil in hoek tussen kompas en waypoint
 {
     double diff;
 
     diff=currentDir-waypointDir;
     if(diff>180)
     {
-        diff-180*-1;
+        diff=diff-180*-1;
     }
     else if(diff<-180)
     {
-        diff+360;
+        diff=diff+360;
     }
     return diff;
 }

@@ -16,6 +16,8 @@
 
 #define STUDENT_KEY_Q_LENGTH 5
 
+#define M_1_PI      0.318309886183790671537767526745028724
+
 struct vector2d_s
 {
 	double x,y;

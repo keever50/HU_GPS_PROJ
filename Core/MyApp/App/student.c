@@ -20,7 +20,8 @@
 #include <compass_calib.h>
 #include <math.h>
 #include <waypoints.h>
-//#define M_1_PI      0.318309886183790671537767526745028724
+
+
 
 /**
 * @brief Oefentask voor studenten

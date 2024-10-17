@@ -8,6 +8,7 @@
 
 #include <waypoints.h>
 #include <lcdout.h>
+#include <student.h>
 
 vector2d_t waypoints[20];
 int waypointteller=0;
