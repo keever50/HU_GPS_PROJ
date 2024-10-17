@@ -18,6 +18,7 @@
 #include <betterbuzzer.h>
 #include <compass_calib.h>
 #include <math.h>
+#include <waypoints.h>
 //#define M_1_PI      0.318309886183790671537767526745028724
 
 /**
@@ -76,6 +77,22 @@ int test_gps_coords()
 	return 0;
 }
 
+int student_list_waypoints()
+{
+	int i=0;
+	for(;;)
+	{
+		vector2d_t waypoint;
+		int ret = waypoint_get(i, &waypoint);
+		if(ret<0) break;
+		lcdout_printf("Index: %d\nX%.4f Y%.4f", i, waypoint.x, waypoint.y);
+		i++;
+		buzzer_buzz(50, 400);
+		osDelay(500);
+	}
+	return 0;
+}
+
 int student_send_keys(char key)
 {
 	if(!student_initialized) return -1;
@@ -97,6 +114,14 @@ int student_start_program(int ID)
 {
 	switch(ID)
 	{
+	case 5:
+	{
+		return waypointcreate();
+	}
+	case 4:
+	{
+		return student_list_waypoints();
+	}
 	case 3:
 	{
 		return compass_calibration_start();
@@ -138,13 +163,13 @@ void Student_task1 (void *argument)
 
 	student_init();
 	buzzer_buzz(100, 400);
-	buzzer_buzz(100, 500);
-	buzzer_buzz(100, 400);
-	buzzer_buzz(100, 500);
-	buzzer_buzz(300, 600);
-	buzzer_buzz(100, 400);
-	buzzer_buzz(100, 500);
-	buzzer_buzz(100, 400);
+//	buzzer_buzz(100, 500);
+//	buzzer_buzz(100, 400);
+//	buzzer_buzz(100, 500);
+//	buzzer_buzz(300, 600);
+//	buzzer_buzz(100, 400);
+//	buzzer_buzz(100, 500);
+//	buzzer_buzz(100, 400);
 
 	UART_puts((char *)__func__); UART_puts(" started\r\n");
 

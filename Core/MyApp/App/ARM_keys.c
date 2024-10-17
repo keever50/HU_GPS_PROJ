@@ -53,35 +53,6 @@ void ARM_keys_IRQ (void *argument)
 	}
 }
 
-vector2d_t waypoints[20];
-int waypointteller=0;
-
-void waypointread();
-void waypointcreate()
-{
-    BUZZER_put (500);//check of functie wordt aangeroepen
-	osDelay(500);
-	if(waypointteller>=sizeof(waypoints))
-		return;
-	vector2d_t vec;
-	Getglobalvector(&vec);
-	waypoints[waypointteller] = vec;
-	waypointteller++;
-	waypointread();
-}
-
-void waypointread()
-{
-	for(int i=0;i<waypointteller;i++)
-	{
-		vector2d_t vec = waypoints[i];
-
-		char msg[256];
-		snprintf(msg,sizeof(msg),"waypoint %d. x %f. y %f\n",i, vec.x, vec.y);
-		UART_puts(msg);
-	}
-	UART_puts("\n");
-}
 /**
 * @brief Task krijgt ARM-key met notificatie binnen, en zet ledjes op die waarde.
 * Ook de gekleurde ledjes (behalve blauw, die wordt door de timer gebruikt) krijgen
@@ -110,8 +81,8 @@ void ARM_keys_task (void *argument)
 
 		student_send_keys(key);
 
-		if(key==1)
-			waypointcreate();
+//		if(key==1)
+//			waypointcreate();
 
 		if (Uart_debug_out & ARMKEYS_DEBUG_OUT)
 		{

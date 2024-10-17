@@ -5,6 +5,12 @@
  *      Author: tomfv
  */
 
+// 1: get gps coords
+// 2: get orientation
+// 3: calibrate mag
+// 4: list waypoints
+// 5: set waypoint
+
 #ifndef MYAPP_APP_STUDENT_H_
 #define MYAPP_APP_STUDENT_H_
 
