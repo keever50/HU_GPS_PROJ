@@ -62,6 +62,7 @@ int _lsm303_read_register_seq(uint8_t *value)
 
 int lsm303_mag_datarate(uint8_t rate)
 {
+	if(!_lsm303_initialized) return -1;
 	uint8_t value=0;
 	value=rate&LSM303_CRA_REG_M_DO_MASK;
 	value=value<<LSM303_CRA_REG_M_DO_OFFS;
@@ -70,6 +71,7 @@ int lsm303_mag_datarate(uint8_t rate)
 
 int lsm303_mag_gain(uint8_t gain)
 {
+	if(!_lsm303_initialized) return -1;
 	uint8_t value;
 	value=gain&LSM303_CRB_REG_M_MASK;
 	value=value<<LSM303_CRB_REG_M_OFFS;
@@ -78,6 +80,7 @@ int lsm303_mag_gain(uint8_t gain)
 
 int lsm303_mag_mode(enum lsm303_mag_mode mode)
 {
+	if(!_lsm303_initialized) return -1;
 	UART_puts("lsm303 mode\n");
 	switch(mode)
 	{
@@ -100,8 +103,9 @@ int lsm303_mag_mode(enum lsm303_mag_mode mode)
 
 int lsm303_mag_get_vector(struct lsm303_mag_vector *vect)
 {
-
+	if(!_lsm303_initialized) return -1;
 	LSM303_SM_TAKE;
+
 
 	uint8_t L, H;
 	if(_lsm303_read_register(LSM303_OUT_X_H_M, &H))
@@ -153,6 +157,8 @@ int lsm303_mag_get_vector(struct lsm303_mag_vector *vect)
 
 int lsm303_mag_init(I2C_HandleTypeDef *i2c, uint16_t address)
 {
+
+	_lsm303_initialized=1;
 	UART_puts("lsm303 init\n");
 	_lsm303_semaphore = xSemaphoreCreateMutex();
 	/* Settings */
@@ -161,18 +167,23 @@ int lsm303_mag_init(I2C_HandleTypeDef *i2c, uint16_t address)
 		_lsm303_selected_address=address;
 
 	/* Set default mode and confirm mode */
-	lsm303_mag_datarate(0b111);
-	lsm303_mag_gain(0);
 	int ret = lsm303_mag_mode(eLSM303_MAG_MODE_CONTINUOUS);
-	if(ret) return ret;
+	if(ret)
+	{
+		_lsm303_initialized=0;
+		return ret;
+	}
 	uint8_t mode;
 	_lsm303_read_register(LSM303_MR_REG_M, &mode);
 	if(mode!=LSM303_MR_REG_M_CONTINUOUS)
 	{
+		_lsm303_initialized=0;
 		return -1;
 	}
+	lsm303_mag_datarate(0b111);
+	lsm303_mag_gain(0);
 
 
-	_lsm303_initialized=1;
+
 	return 0;
 }

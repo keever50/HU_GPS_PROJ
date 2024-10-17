@@ -132,11 +132,14 @@ int main(void)
   KEYS_init();
   KEYS_initISR(1); // set all lines high once
   LED_init();
+
+  /* Check for errors */
+  lcdout_printf("");
   int lsm303_mag_err = lsm303_mag_init(&hi2c3, 0);
   if(lsm303_mag_err)
   {
 	  lcdout_printf("Compass error\n%d",lsm303_mag_err);
-	  return lsm303_mag_err;
+	  osDelay(1000);
   }
 
   DisplayVersion();
