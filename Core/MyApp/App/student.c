@@ -15,6 +15,7 @@
 #include "lcdout.h"
 #include "student.h"
 #include "LSM303.h"
+#include "direction.h"
 #include <betterbuzzer.h>
 #include <compass_calib.h>
 #include <math.h>
@@ -158,6 +159,8 @@ void Student_task1 (void *argument)
 {
 	globalVec.x=0;
 	globalVec.y=0;
+
+
 	char buf[80];
 	unsigned int i = 0;
 

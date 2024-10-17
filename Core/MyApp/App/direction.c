@@ -6,7 +6,19 @@
  */
 
 
-double distance(vector2d_t pos, vector2d_t waypoint)
+
+double dirNext()
+{
+	double angle;
+	vector2d_t wp1,wp2;
+	wp1=waypoints[currentWP];
+	wp2=waypoints[currentWP+1];
+	angle=direction(wp1, wp2);
+	currentWP++;
+	return angle;
+}
+
+double direction(vector2d_t pos, vector2d_t waypoint)
 {
 	double angle,dX,dY;
 

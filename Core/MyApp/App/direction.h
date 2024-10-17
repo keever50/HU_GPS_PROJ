@@ -11,7 +11,11 @@
 #include <math.h>
 #define M_1_PI      0.318309886183790671537767526745028724
 
-double distance(vector2d_t pos, vector2d_t waypoint);
+char currentWP;
+
+double directions(vector2d_t pos, vector2d_t waypoint);
 double calcDiff(double currentDir, double waypointDir);
+double dirNext();
+
 
 #endif /* MYAPP_APP_DIRECTION_H_ */
