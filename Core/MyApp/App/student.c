@@ -58,7 +58,7 @@ int test_orient()
 
 int test_gps_coords()
 {
-	static char last_status='\0';
+	char last_status='\0';
 	GNRMC latestgnrmc;
 	gps_get_GNRMC(&latestgnrmc);
 
@@ -112,10 +112,29 @@ char student_get_key()
 
 }
 
+int next_waypoint()
+{
+	char WP = dir_get_waypoint();
+	double dir = dir_next();
+
+	lcdout_printf("WP %d\nDIR %f", WP, dir);
+	return 0;
+}
+
 int student_start_program(int ID)
 {
 	switch(ID)
 	{
+	case 7:
+	{
+		waypoint_test();
+		lcdout_printf("Waypoints placed");
+		return 0;
+	}
+	case 6:
+	{
+		return next_waypoint();
+	}
 	case 5:
 	{
 		return waypointcreate();

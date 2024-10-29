@@ -15,6 +15,6 @@
 double dir_direction(vector2d_t *pos, vector2d_t *waypoint);
 double dir_calcDiff(double currentDir, double waypointDir);
 double dir_next();
-
+char dir_get_waypoint();
 
 #endif /* MYAPP_APP_DIRECTION_H_ */

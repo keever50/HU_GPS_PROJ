@@ -10,7 +10,7 @@
 #include <lcdout.h>
 #include <student.h>
 
-vector2d_t waypoints[20];
+vector2d_t waypoints[WAYPOINT_MAX_WPS];
 int waypointteller=0;
 
 //xSemaphoreHandle waypoint_sema;
@@ -47,4 +47,20 @@ void waypointread()
 		UART_puts(msg);
 	}
 	UART_puts("\n");
+}
+
+void waypoint_test()
+{
+	waypoints[waypointteller].x=0;
+	waypoints[waypointteller++].y=0;
+
+	waypoints[waypointteller].x=10;
+	waypoints[waypointteller++].y=0;
+
+	waypoints[waypointteller].x=10;
+	waypoints[waypointteller++].y=10;
+
+	waypoints[waypointteller].x=0;
+	waypoints[waypointteller++].y=10;
+
 }

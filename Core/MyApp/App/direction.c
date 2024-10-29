@@ -22,7 +22,12 @@ double dir_direction(vector2d_t *pos, vector2d_t *waypoint)
 
 	if(angle<0)							//maakt negatieve hoek (dX<0) positief
 		angle+=360;
-	return angle;
+	return angle-180;
+}
+
+char dir_get_waypoint()
+{
+	return _currentWP;
 }
 
 double dir_next()						//hoek tussen waypoints
@@ -34,6 +39,7 @@ double dir_next()						//hoek tussen waypoints
 	waypoint_get(_currentWP+1,&wp2);
 	angle=dir_direction(&wp1, &wp2);
 	_currentWP++;
+	if(_currentWP>=WAYPOINT_MAX_WPS) _currentWP=0;
 	return angle;
 }
 
