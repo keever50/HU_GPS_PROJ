@@ -121,10 +121,64 @@ int next_waypoint()
 	return 0;
 }
 
+int start_route()
+{
+	lcdout_printf("Starting\nroute");
+	buzzer_buzz(200, 440/2);
+	buzzer_buzz(200, 880/2);
+	buzzer_buzz(200, 1200/2);
+	buzzer_buzz(200, 440);
+	buzzer_buzz(200, 880);
+	buzzer_buzz(200, 1200);
+
+	osDelay(1000);
+
+	uint16_t current_wp_index=0;
+	for(;;)
+	{
+		/* Get a waypoint. This returns -1 when the route is finished */
+		vector2d_t WP;
+		int ret = waypoint_get(current_wp_index, &WP);
+		if(ret<0)
+		{
+			lcdout_printf("Route\nFinished!");
+			buzzer_buzz(200, 440);
+			buzzer_buzz(200, 880);
+			buzzer_buzz(200, 1200);
+			buzzer_buzz(200, 440/2);
+			buzzer_buzz(200, 880/2);
+			buzzer_buzz(200, 1200/2);
+			break;
+		}
+
+		/* Keep updating our position */
+
+		for(;;)
+		{
+			buzzer_buzz(20, 2000);
+			vector2d_t our_pos;
+			Setglobalvector(); /* Get the current GPS coord */
+			Getglobalvector(&our_pos);
+			double dir = dir_direction(&our_pos, &WP);
+			lcdout_printf("POS%.4f|%.4f\nDIR%.1f", our_pos.x, our_pos.y, dir);
+			osDelay(1000);
+		}
+
+
+
+
+		current_wp_index++;
+	}
+}
+
 int student_start_program(int ID)
 {
 	switch(ID)
 	{
+	case 8:
+	{
+		return start_route();
+	}
 	case 7:
 	{
 		waypoint_test();

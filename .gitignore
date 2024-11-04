@@ -1,5 +1,6 @@
 release/
 debug/
+.settings/
 .settings/language.settings.xml
 
 .Metadata/

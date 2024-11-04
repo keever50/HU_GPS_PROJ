@@ -27,7 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "admin.h"
 #include "lcdout.h"
-#include "LSM303.h"
+#include "QMC5883L.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -135,10 +135,10 @@ int main(void)
 
   /* Check for errors */
   lcdout_printf("");
-  int lsm303_mag_err = lsm303_mag_init(&hi2c3, 0);
-  if(lsm303_mag_err)
+  int qmc58831_mag_err = qmc58831_init(&hi2c3);
+  if(qmc58831_mag_err)
   {
-	  lcdout_printf("Compass error\n%d",lsm303_mag_err);
+	  lcdout_printf("Compass error\n%d",qmc58831_mag_err);
 	  osDelay(1000);
   }
 
