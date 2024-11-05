@@ -176,6 +176,7 @@ int start_route()
 			}
 
 			double dir = dir_direction(&our_pos, &WP);
+			buzzer_buzz(200, (WP_RADIUS/dist)*1000);
 			lcdout_printf("POS%.4f|%.4f\nDIR%.1f", our_pos.x, our_pos.y, dir);
 			osDelay(1000);
 		}
