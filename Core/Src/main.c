@@ -497,7 +497,7 @@ static void MX_TIM4_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1000*0.075;
+  sConfigOC.Pulse = 1000*0.1;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
@@ -659,6 +659,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
   HAL_GPIO_Init(CLK_IN_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : bumper_Pin */
+  GPIO_InitStruct.Pin = bumper_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(bumper_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD4_Pin LD3_Pin LD6_Pin Audio_RST_Pin */
   GPIO_InitStruct.Pin = LD4_Pin|LD3_Pin|LD6_Pin|Audio_RST_Pin;

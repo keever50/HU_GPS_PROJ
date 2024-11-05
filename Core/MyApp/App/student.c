@@ -168,7 +168,14 @@ int start_route()
 
 		for(;;)
 		{
-			buzzer_buzz(20, 2000);
+			/* Bumper */
+			while(!HAL_GPIO_ReadPin(GPIOD, bumper_Pin))
+			{
+				buzzer_buzz(200,1000);
+				buzzer_buzz(200,900);
+				lcdout_printf("BUMPED");
+			}
+
 			vector2d_t our_pos;
 			Setglobalvector(); /* Get the current GPS coord */
 			Getglobalvector(&our_pos);
@@ -194,16 +201,17 @@ int start_route()
 			if(dir>90)
 			{
 				dir = dir - 180;
-				buzzer_buzz(200, 2000);
-				lcdout_printf("Turn around");
+				buzzer_buzz(200, 1000);
+				lcdout_printf("Reversed");
 			}
 			if(dir<-90)
 			{
 				dir = dir + 180;
-				buzzer_buzz(200, 2000);
-				lcdout_printf("Turn around");
+				buzzer_buzz(200, 1000);
+				lcdout_printf("Reversed");
 			}
-
+			osDelay(50);
+			if(dist>0.01) dist=0.01;
 			buzzer_buzz(200, (WP_RADIUS/dist)*1000);
 			lcdout_printf("POS%.4f|%.4f\nDIR%.1f", our_pos.x, our_pos.y, dir);
 			set_servo_angle(dir);
