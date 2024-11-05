@@ -38,6 +38,19 @@ QueueHandle_t student_keyQ;
 double lonDMtoM(GNRMC *gnrmc);
 double latDMtoM(GNRMC *gnrmc);
 
+void set_servo_angle(double angle)
+{
+	if(angle<-45)
+	{
+		angle=-45;
+	}else if(angle>45)
+	{
+		angle=45;
+	}
+	double pwm=(angle/90)+0.5;
+	double servo=0.05+(pwm*0.05);
+	set_servo(servo);
+}
 
 int test_orient()
 {
@@ -176,9 +189,28 @@ int start_route()
 			}
 
 			double dir = dir_direction(&our_pos, &WP);
+
+//			// Turn around
+			if(dir>90)
+			{
+				dir = dir - 180;
+				buzzer_buzz(200, 2000);
+				lcdout_printf("Turn around");
+				dir = -dir;
+			}
+			if(dir<-90)
+			{
+				dir = dir + 180;
+				buzzer_buzz(200, 2000);
+				lcdout_printf("Turn around");
+				dir = -dir;
+			}
+
 			buzzer_buzz(200, (WP_RADIUS/dist)*1000);
 			lcdout_printf("POS%.4f|%.4f\nDIR%.1f", our_pos.x, our_pos.y, dir);
+			set_servo_angle(dir);
 			osDelay(1000);
+
 		}
 
 

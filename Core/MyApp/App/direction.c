@@ -20,9 +20,11 @@ double dir_direction(vector2d_t *pos, vector2d_t *waypoint)
 
 	angle=atan2(dX,dY)*(180*M_1_PI);	//hoek vanaf y-as in rad naar graden
 
-	if(angle<0)							//maakt negatieve hoek (dX<0) positief
-		angle+=360;
-	return angle-180;
+
+
+//	if(angle<0)							//maakt negatieve hoek (dX<0) positief
+//		angle+=360;
+	return angle;
 }
 
 char dir_get_waypoint()

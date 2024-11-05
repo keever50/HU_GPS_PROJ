@@ -145,7 +145,7 @@ void Error_Handler(void);
 #define MEMS_INT2_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
-
+void set_servo(double pwm);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
