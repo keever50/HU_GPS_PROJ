@@ -16,3 +16,5 @@ debug/
 .metadata/version.ini
 .metadata/.log
 .metadata/.ide.log
+Core/MyApp/.DS_Store
+.DS_Store
