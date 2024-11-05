@@ -33,6 +33,8 @@ int waypointcreate()
 	waypoints[waypointteller] = vec;
 	waypointteller++;
 	lcdout_printf("Waypoint set");
+	osDelay(1000);
+	lcdout_printf("");
 	return 0;
 }
 

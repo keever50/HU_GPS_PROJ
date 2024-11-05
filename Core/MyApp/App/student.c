@@ -159,6 +159,22 @@ int start_route()
 			vector2d_t our_pos;
 			Setglobalvector(); /* Get the current GPS coord */
 			Getglobalvector(&our_pos);
+
+			/* Check distance to next wp */
+			double dist;
+			double dx = our_pos.x-WP.x;
+			double dy = our_pos.y-WP.y;
+			dist = sqrt(pow(dx,2)+pow(dy,2));
+			if(dist<WP_RADIUS)
+			{
+				lcdout_printf("Waypoint\nreached");
+				buzzer_buzz(400, 440);
+				buzzer_buzz(400, 880);
+				buzzer_buzz(400, 1200);
+				osDelay(1000);
+				break;
+			}
+
 			double dir = dir_direction(&our_pos, &WP);
 			lcdout_printf("POS%.4f|%.4f\nDIR%.1f", our_pos.x, our_pos.y, dir);
 			osDelay(1000);
