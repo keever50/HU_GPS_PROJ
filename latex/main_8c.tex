@@ -7,8 +7,9 @@
 
 {\ttfamily \#include "{}main.\+h"{}}\newline
 {\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
-{\ttfamily \#include "{}usb\+\_\+host.\+h"{}}\newline
 {\ttfamily \#include "{}admin.\+h"{}}\newline
+{\ttfamily \#include "{}lcdout.\+h"{}}\newline
+{\ttfamily \#include "{}QMC5883\+L.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,6 +17,9 @@ void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+
 \begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_a99d0fdb0434092bcb24d9c9af917e4e9}{Start\+Default\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
 \begin{DoxyCompactList}\small\item\em Function implementing the default\+Task thread. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a5058f4c74be2aa14f0c08f09c525cfd5}\label{main_8c_a5058f4c74be2aa14f0c08f09c525cfd5} 
+void {\bfseries set\+\_\+servo} (double pwm)
+\item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___u_a_r_t___exported___functions___group2_gae494a9643f29b87d6d81e5264e60e57b}{HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback}} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
@@ -30,11 +34,20 @@ void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Ha
 \Hypertarget{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7} 
 \mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} {\bfseries hi2c1}
 \item 
+\Hypertarget{main_8c_a5ccf4a01a8d7f08d3190181f843f7515}\label{main_8c_a5ccf4a01a8d7f08d3190181f843f7515} 
+\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} {\bfseries hi2c3}
+\item 
 \Hypertarget{main_8c_a42cb7a8588778f08bf78b1cb4757169c}\label{main_8c_a42cb7a8588778f08bf78b1cb4757169c} 
 \mbox{\hyperlink{group___i2_s___exported___types_ga5ba06de362a2420f3b9f1314229b3cdc}{I2\+S\+\_\+\+Handle\+Type\+Def}} {\bfseries hi2s3}
 \item 
 \Hypertarget{main_8c_a9c6222bae4d0328dd843ae099623b40b}\label{main_8c_a9c6222bae4d0328dd843ae099623b40b} 
 \mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} {\bfseries hspi1}
+\item 
+\Hypertarget{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim3}
+\item 
+\Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\label{main_8c_a85788cec5a97ee377e4ee2e74f026484} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim4}
 \item 
 \Hypertarget{main_8c_ae273feb3e0dc44e38892650faa58fced}\label{main_8c_ae273feb3e0dc44e38892650faa58fced} 
 \mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} {\bfseries huart4}

@@ -14,7 +14,7 @@ CMSIS STM32\+F4xx Device Peripheral Access Layer Header File.
 \begin{DoxyCompactList}\small\item\em Comment the line below if you will not use the peripherals drivers. In this case, these drivers will not be included and the application code will be based on direct access to peripherals registers. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{group___library__configuration__section_ga4841e20bc5159a594936808c113ae3bc}{\+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB1}}~(0x06U)
 \item 
-\#define \mbox{\hyperlink{group___library__configuration__section_ga6ccbf6336bfb67bf4daeb05eba18a5e3}{\+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB2}}~(0x08U)
+\#define \mbox{\hyperlink{group___library__configuration__section_ga6ccbf6336bfb67bf4daeb05eba18a5e3}{\+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB2}}~(0x0\+AU)
 \item 
 \#define \mbox{\hyperlink{group___library__configuration__section_gafbd304f122892833ce0d4daa3dc4ff13}{\+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+RC}}~(0x00U)
 \item 
@@ -83,9 +83,9 @@ MCD Application Team \begin{DoxyVerb}     The file is the unique include file th
      is using in the C source code, usually in main.c. This file contains:
       - Configuration section that allows to select:
          - The STM32F4xx device used in the target application
-         - To use or not the peripheral's drivers in application code(i.e. 
-           code will be based on direct access to peripheral's registers 
-           rather than drivers API), this option is controlled by 
+         - To use or not the peripheral's drivers in application code(i.e.
+           code will be based on direct access to peripheral's registers
+           rather than drivers API), this option is controlled by
            "#define USE_HAL_DRIVER"
 \end{DoxyVerb}
 

@@ -46,6 +46,8 @@ Header file of CORTEX LL module.
 \begin{DoxyCompactList}\small\item\em Enabled events and all interrupts, including disabled interrupts, can wakeup the processor. @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Enable\+Event\+On\+Pend. \end{DoxyCompactList}\item 
 \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf4ebb8351f09676067aa0ce1fe08321b}{LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend}} (void)
 \begin{DoxyCompactList}\small\item\em Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga7dc8f153ab303eeb3f7197f442747d76}{LL\+\_\+\+LPM\+\_\+\+Clear\+Event}} (void)
+\begin{DoxyCompactList}\small\item\em Clear pending events. \end{DoxyCompactList}\item 
 \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga904eb6ce46a723dd47b468241c6b0a2c}{LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault}} (uint32\+\_\+t Fault)
 \begin{DoxyCompactList}\small\item\em Enable a fault in System handler control register (SHCSR) @rmtoll SCB\+\_\+\+SHCSR MEMFAULTENA LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault. \end{DoxyCompactList}\item 
 \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga8b6826c996c587651a651a6138c44e1e}{LL\+\_\+\+HANDLER\+\_\+\+Disable\+Fault}} (uint32\+\_\+t Fault)

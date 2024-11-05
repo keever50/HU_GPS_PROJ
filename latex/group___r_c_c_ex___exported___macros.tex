@@ -21,10 +21,10 @@
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (RCC-\/>PLLCFGR\ =\ (0x20000000U\ |\ (\_\_RCC\_PLLSource\_\_)\ |\ (\_\_PLLM\_\_)|\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLN\_\_)\ <<\ RCC\_PLLCFGR\_PLLN\_Pos)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((\_\_PLLP\_\_)\ >>\ 1U)\ -\/1U)\ <<\ RCC\_PLLCFGR\_PLLP\_Pos)\ \ \ \ |\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLQ\_\_)\ <<\ RCC\_PLLCFGR\_PLLQ\_Pos)))}
+\DoxyCodeLine{\ \ (RCC-\/>PLLCFGR\ =\ (0x20000000U\ |\ (\_\_RCC\_PLLSource\_\_)\ |\ (\_\_PLLM\_\_)|\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLN\_\_)\ <<\ RCC\_PLLCFGR\_PLLN\_Pos)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((((\_\_PLLP\_\_)\ >>\ 1U)\ -\/1U)\ <<\ RCC\_PLLCFGR\_PLLP\_Pos)\ \ \ \ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLQ\_\_)\ <<\ RCC\_PLLCFGR\_PLLQ\_Pos)))}
 
 \end{DoxyCode}
 
@@ -42,8 +42,7 @@ This function must be used only when the main PLL is disabled.
 \hline
 \end{DoxyParams}
 \begin{DoxyNote}{Note}
-This clock source (RCC\+\_\+\+PLLSource) is common for the main PLL and PLLI2S. ~\newline
- 
+This clock source (RCC\+\_\+\+PLLSource) is common for the main PLL and PLLI2S. 
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -79,8 +78,8 @@ If the USB OTG FS is used in your application, you have to set the PLLQ paramete
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (RCC-\/>PLLI2SCFGR\ =\ (((\_\_PLLI2SN\_\_)\ <<\ RCC\_PLLI2SCFGR\_PLLI2SN\_Pos)\ \ |\(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLI2SR\_\_)\ <<\ RCC\_PLLI2SCFGR\_PLLI2SR\_Pos)))}
+\DoxyCodeLine{\ \ (RCC-\/>PLLI2SCFGR\ =\ (((\_\_PLLI2SN\_\_)\ <<\ RCC\_PLLI2SCFGR\_PLLI2SN\_Pos)\ \ |\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PLLI2SR\_\_)\ <<\ RCC\_PLLI2SCFGR\_PLLI2SR\_Pos)))}
 
 \end{DoxyCode}
 

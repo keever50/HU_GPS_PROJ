@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: HSI Configuration</title>
+<title>HUGPS: HSI Configuration</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -117,8 +117,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        (MODIFY_REG(RCC-&gt;CR,\</div>
-<div class="line">        RCC_CR_HSITRIM, (uint32_t)(__HSICalibrationValue__) &lt;&lt; RCC_CR_HSITRIM_Pos))</div>
+<b>Value:</b><div class="fragment"><div class="line">                                                                        (MODIFY_REG(RCC-&gt;CR,\</div>
+<div class="line">                                                                        RCC_CR_HSITRIM, (uint32_t)(__HSICalibrationValue__) &lt;&lt; RCC_CR_HSITRIM_Pos))</div>
 </div><!-- fragment -->
 <p>Macro to adjust the Internal High Speed oscillator (HSI) calibration value. </p>
 <dl class="section note"><dt>Note</dt><dd>The calibration is used to compensate for the variations in voltage and temperature that influence the frequency of the internal HSI RC. </dd></dl>
@@ -145,8 +145,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t *) RCC_CR_HSION_BB = DISABLE)</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t *) RCC_CR_HSION_BB = DISABLE)</div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -164,7 +164,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t *) RCC_CR_HSION_BB = ENABLE)</div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t *) RCC_CR_HSION_BB = ENABLE)</div>
 </div><!-- fragment -->
 <p>Macros to enable or disable the Internal High Speed oscillator (HSI). </p>
 <dl class="section note"><dt>Note</dt><dd>The HSI is stopped by hardware when entering STOP and STANDBY modes. It is used (enabled by hardware) as system clock source after startup from Reset, wake-up from STOP and STANDBY mode, or in case of failure of the HSE used directly or indirectly as system clock (if the Clock Security System CSS is enabled). </dd>

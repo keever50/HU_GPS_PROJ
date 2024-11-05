@@ -6,7 +6,7 @@ Header file of UART HAL module.
 
 
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+def.\+h"{}}\newline
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_u_a_r_t___init_type_def}{UART\+\_\+\+Init\+Type\+Def}}
@@ -108,9 +108,15 @@ struct \mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{\+\_\+\+\_\+\+UART
 \item 
 \#define {\bfseries UART\+\_\+\+IT\+\_\+\+ERR}~((uint32\+\_\+t)(UART\+\_\+\+CR3\+\_\+\+REG\+\_\+\+INDEX $<$$<$ 28U \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaaed1a39c551b1641128f81893ff558d0}{USART\+\_\+\+CR3\+\_\+\+EIE}}))
 \item 
-\#define \mbox{\hyperlink{group___u_a_r_t___r_e_c_e_p_t_i_o_n___t_y_p_e___values_gae25ccd542b3d0e6180e38871da6070d2}{HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+STANDARD}}~(0x00000000U)
+\#define \mbox{\hyperlink{group___u_a_r_t___reception___type___values_gae25ccd542b3d0e6180e38871da6070d2}{HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+STANDARD}}~(0x00000000U)
 \item 
-\#define \mbox{\hyperlink{group___u_a_r_t___r_e_c_e_p_t_i_o_n___t_y_p_e___values_ga0b12e95686ebebc1d6c8c77331e5bac6}{HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+TOIDLE}}~(0x00000001U)
+\#define \mbox{\hyperlink{group___u_a_r_t___reception___type___values_ga0b12e95686ebebc1d6c8c77331e5bac6}{HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+TOIDLE}}~(0x00000001U)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___rx_event___type___values_gacb1603ee7c4bcd848380033a2e6b3736}{HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+TC}}~(0x00000000U)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___rx_event___type___values_ga2c892e22044c836a9cc922859663562c}{HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+HT}}~(0x00000001U)
+\item 
+\#define {\bfseries HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+IDLE}~(0x00000002U)
 \item 
 \#define \mbox{\hyperlink{group___u_a_r_t___exported___macros_ga19deab848407b106998416c78092fa9b}{\+\_\+\+\_\+\+HAL\+\_\+\+UART\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
 \begin{DoxyCompactList}\small\item\em Reset UART handle gstate \& Rx\+State. \end{DoxyCompactList}\item 
@@ -207,6 +213,8 @@ struct \mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{\+\_\+\+\_\+\+UART
 \item 
 typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_ga9f272475ea543a68fd8cb19f03a9bce9}{HAL\+\_\+\+UART\+\_\+\+Rx\+Type\+Type\+Def}}
 \begin{DoxyCompactList}\small\item\em HAL UART Reception type definition. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203}{HAL\+\_\+\+UART\+\_\+\+Rx\+Event\+Type\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em HAL UART Rx Event type definition. \end{DoxyCompactList}\item 
 typedef struct \mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{\+\_\+\+\_\+\+UART\+\_\+\+Handle\+Type\+Def}} {\bfseries UART\+\_\+\+Handle\+Type\+Def}
 \begin{DoxyCompactList}\small\item\em UART handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
@@ -265,6 +273,8 @@ void \mbox{\hyperlink{group___u_a_r_t___exported___functions___group1_ga718f3980
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+UARTEx\+\_\+\+Receive\+To\+Idle\+\_\+\+DMA} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203}{HAL\+\_\+\+UART\+\_\+\+Rx\+Event\+Type\+Type\+Def}} {\bfseries HAL\+\_\+\+UARTEx\+\_\+\+Get\+Rx\+Event\+Type} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
+\item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+UART\+\_\+\+Abort} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+UART\+\_\+\+Abort\+Transmit} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
@@ -307,9 +317,9 @@ void {\bfseries HAL\+\_\+\+UARTEx\+\_\+\+Rx\+Event\+Callback} (\mbox{\hyperlink{
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Half\+Duplex\+\_\+\+Enable\+Receiver} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
 \item 
-\mbox{\hyperlink{group___u_a_r_t___exported___types_gaf55d844a35379c204c90be5d1e8e50ba}{HAL\+\_\+\+UART\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+UART\+\_\+\+Get\+State} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
+\mbox{\hyperlink{group___u_a_r_t___exported___types_gaf55d844a35379c204c90be5d1e8e50ba}{HAL\+\_\+\+UART\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+UART\+\_\+\+Get\+State} (const \mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
 \item 
-uint32\+\_\+t {\bfseries HAL\+\_\+\+UART\+\_\+\+Get\+Error} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
+uint32\+\_\+t {\bfseries HAL\+\_\+\+UART\+\_\+\+Get\+Error} (const \mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries UART\+\_\+\+Start\+\_\+\+Receive\+\_\+\+IT} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}huart, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 

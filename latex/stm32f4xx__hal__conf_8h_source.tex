@@ -53,7 +53,7 @@
 \DoxyCodeLine{00071\ \textcolor{comment}{/*\ \#define\ HAL\_SMBUS\_MODULE\_ENABLED\ */}}
 \DoxyCodeLine{00072\ \textcolor{comment}{/*\ \#define\ HAL\_WWDG\_MODULE\_ENABLED\ */}}
 \DoxyCodeLine{00073\ \textcolor{comment}{/*\ \#define\ HAL\_PCD\_MODULE\_ENABLED\ */}}
-\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ HAL\_HCD\_MODULE\_ENABLED}}
+\DoxyCodeLine{00074\ \textcolor{comment}{/*\ \#define\ HAL\_HCD\_MODULE\_ENABLED\ */}}
 \DoxyCodeLine{00075\ \textcolor{comment}{/*\ \#define\ HAL\_DSI\_MODULE\_ENABLED\ */}}
 \DoxyCodeLine{00076\ \textcolor{comment}{/*\ \#define\ HAL\_QSPI\_MODULE\_ENABLED\ */}}
 \DoxyCodeLine{00077\ \textcolor{comment}{/*\ \#define\ HAL\_QSPI\_MODULE\_ENABLED\ */}}
@@ -166,7 +166,7 @@
 \DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ MAC\_ADDR5\ \ \ 0U}}
 \DoxyCodeLine{00215\ }
 \DoxyCodeLine{00216\ \textcolor{comment}{/*\ Definition\ of\ the\ Ethernet\ driver\ buffers\ size\ and\ count\ */}}
-\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ ETH\_RX\_BUF\_SIZE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{/*\ buffer\ size\ for\ receive\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ ETH\_RX\_BUF\_SIZE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETH\_MAX\_PACKET\_SIZE\ }\textcolor{comment}{/*\ buffer\ size\ for\ receive\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00218\ \textcolor{preprocessor}{\#define\ ETH\_TX\_BUF\_SIZE\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ETH\_MAX\_PACKET\_SIZE\ }\textcolor{comment}{/*\ buffer\ size\ for\ transmit\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ ETH\_RXBUFNB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4U\ \ \ \ \ \ \ }\textcolor{comment}{/*\ 4\ Rx\ buffers\ of\ size\ ETH\_RX\_BUF\_SIZE\ \ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ ETH\_TXBUFNB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4U\ \ \ \ \ \ \ }\textcolor{comment}{/*\ 4\ Tx\ buffers\ of\ size\ ETH\_TX\_BUF\_SIZE\ \ */}\textcolor{preprocessor}{}}
@@ -375,7 +375,7 @@
 \DoxyCodeLine{00432\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_PCD\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00433\ }
 \DoxyCodeLine{00434\ \textcolor{preprocessor}{\#ifdef\ HAL\_HCD\_MODULE\_ENABLED}}
-\DoxyCodeLine{00435\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{stm32f4xx__hal__hcd_8h}{stm32f4xx\_hal\_hcd.h}}"{}}}
+\DoxyCodeLine{00435\ \textcolor{preprocessor}{\ \#include\ "{}stm32f4xx\_hal\_hcd.h"{}}}
 \DoxyCodeLine{00436\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HAL\_HCD\_MODULE\_ENABLED\ */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{00437\ }
 \DoxyCodeLine{00438\ \textcolor{preprocessor}{\#ifdef\ HAL\_DSI\_MODULE\_ENABLED}}

@@ -1,0 +1,79 @@
+\doxysection{Core/\+My\+App/\+App/direction.h File Reference}
+\hypertarget{direction_8h}{}\label{direction_8h}\index{Core/MyApp/App/direction.h@{Core/MyApp/App/direction.h}}
+
+
+functies die de hoek berekenen tussen waypoints of eigen positie Created on\+: Oct 15, 2024 Author\+: milan  
+
+
+{\ttfamily \#include "{}student.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{direction_8h_aef7d6e057fef2823dc19f60f33588e39}{dir\+\_\+direction}} (\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}pos, \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}waypoint)
+\begin{DoxyCompactList}\small\item\em berekent hoek tussen twee coordinaten \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{direction_8h_a083c611625583d470dbc446697c1ebd2}{dir\+\_\+calc\+Diff}} (double current\+Dir, double waypoint\+Dir)
+\begin{DoxyCompactList}\small\item\em berekent verschil tussen kompas hoek en hoek volgend waypoint \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{direction_8h_a8028f4d50b64e3264540e4c25410f307}{dir\+\_\+next}} ()
+\begin{DoxyCompactList}\small\item\em berekent hoek tussen het huidige en volgende waypoint \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{direction_8h_a496d770246af07d463931d125de97678}{dir\+\_\+get\+\_\+waypoint}} ()
+\begin{DoxyCompactList}\small\item\em krijg het huidige waypoint \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+functies die de hoek berekenen tussen waypoints of eigen positie Created on\+: Oct 15, 2024 Author\+: milan 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{direction_8h_a083c611625583d470dbc446697c1ebd2}\index{direction.h@{direction.h}!dir\_calcDiff@{dir\_calcDiff}}
+\index{dir\_calcDiff@{dir\_calcDiff}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{dir\_calcDiff()}{dir\_calcDiff()}}
+{\footnotesize\ttfamily \label{direction_8h_a083c611625583d470dbc446697c1ebd2} 
+double dir\+\_\+calc\+Diff (\begin{DoxyParamCaption}\item[{double}]{current\+Dir}{, }\item[{double}]{waypoint\+Dir}{}\end{DoxyParamCaption})}
+
+
+
+berekent verschil tussen kompas hoek en hoek volgend waypoint 
+
+\begin{DoxyReturn}{Returns}
+de hoek tussen twee hoeken (-\/180 tot 180) 
+\end{DoxyReturn}
+\Hypertarget{direction_8h_aef7d6e057fef2823dc19f60f33588e39}\index{direction.h@{direction.h}!dir\_direction@{dir\_direction}}
+\index{dir\_direction@{dir\_direction}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{dir\_direction()}{dir\_direction()}}
+{\footnotesize\ttfamily \label{direction_8h_aef7d6e057fef2823dc19f60f33588e39} 
+double dir\+\_\+direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{pos}{, }\item[{\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{waypoint}{}\end{DoxyParamCaption})}
+
+
+
+berekent hoek tussen twee coordinaten 
+
+\begin{DoxyReturn}{Returns}
+hoek tussen twee coordinaten in graden (-\/180 tot 180) 
+\end{DoxyReturn}
+\Hypertarget{direction_8h_a496d770246af07d463931d125de97678}\index{direction.h@{direction.h}!dir\_get\_waypoint@{dir\_get\_waypoint}}
+\index{dir\_get\_waypoint@{dir\_get\_waypoint}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{dir\_get\_waypoint()}{dir\_get\_waypoint()}}
+{\footnotesize\ttfamily \label{direction_8h_a496d770246af07d463931d125de97678} 
+char dir\+\_\+get\+\_\+waypoint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+krijg het huidige waypoint 
+
+\begin{DoxyReturn}{Returns}
+huidige waypoint 
+\end{DoxyReturn}
+\Hypertarget{direction_8h_a8028f4d50b64e3264540e4c25410f307}\index{direction.h@{direction.h}!dir\_next@{dir\_next}}
+\index{dir\_next@{dir\_next}!direction.h@{direction.h}}
+\doxysubsubsection{\texorpdfstring{dir\_next()}{dir\_next()}}
+{\footnotesize\ttfamily \label{direction_8h_a8028f4d50b64e3264540e4c25410f307} 
+double dir\+\_\+next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+berekent hoek tussen het huidige en volgende waypoint 
+
+\begin{DoxyReturn}{Returns}
+de hoek tussen twee hoeken (-\/180 tot 180) 
+\end{DoxyReturn}

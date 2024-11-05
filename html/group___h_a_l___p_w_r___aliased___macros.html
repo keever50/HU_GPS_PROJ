@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: HAL PWR Aliased Macros maintained for legacy purpose</title>
+<title>HUGPS: HAL PWR Aliased Macros maintained for legacy purpose</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -226,9 +226,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { <a class="code hl_define" href="group___p_w_r___exported___macro.html#ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</a>();<a class="code hl_define" href="group___p_w_r___exported___macro.html#ga1ca57168205f8cd8d1014e6eb9465f2d">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</a>(); } <span class="keywordflow">while</span>(0)</div>
-<div class="ttc" id="agroup___p_w_r___exported___macro_html_ga1ca57168205f8cd8d1014e6eb9465f2d"><div class="ttname"><a href="group___p_w_r___exported___macro.html#ga1ca57168205f8cd8d1014e6eb9465f2d">__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE</a></div><div class="ttdeci">#define __HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE()</div><div class="ttdoc">Disable the PVD Extended Interrupt Falling Trigger.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_pwr.h:228</div></div>
-<div class="ttc" id="agroup___p_w_r___exported___macro_html_ga1ca8fd7f3286a176f6be540c75a004c6"><div class="ttname"><a href="group___p_w_r___exported___macro.html#ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</a></div><div class="ttdeci">#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE()</div><div class="ttdoc">Disable the PVD Extended Interrupt Rising Trigger.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_pwr.h:215</div></div>
+<b>Value:</b><div class="fragment"><div class="line">                                                                      <span class="keywordflow">do</span> { <a class="code hl_define" href="group___p_w_r___exported___macro.html#ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</a>(); \</div>
+<div class="line">                                                                      __HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE(); \</div>
+<div class="line">                                                                    } <span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="agroup___p_w_r___exported___macro_html_ga1ca8fd7f3286a176f6be540c75a004c6"><div class="ttname"><a href="group___p_w_r___exported___macro.html#ga1ca8fd7f3286a176f6be540c75a004c6">__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE</a></div><div class="ttdeci">#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE()</div><div class="ttdoc">Disable the PVD Extended Interrupt Rising Trigger.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_pwr.h:218</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,7 +247,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { HAL_PWREx_DisablePVM1();HAL_PWREx_DisablePVM2();HAL_PWREx_DisablePVM3();HAL_PWREx_DisablePVM4(); } <span class="keywordflow">while</span>(0)</div>
+<b>Value:</b><div class="fragment"><div class="line">                                                                      <span class="keywordflow">do</span> { HAL_PWREx_DisablePVM1();HAL_PWREx_DisablePVM2(); \</div>
+<div class="line">                                                                      HAL_PWREx_DisablePVM3();HAL_PWREx_DisablePVM4(); \</div>
+<div class="line">                                                                    } <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -264,7 +267,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { HAL_PWREx_EnablePVM1();HAL_PWREx_EnablePVM2();HAL_PWREx_EnablePVM3();HAL_PWREx_EnablePVM4(); } <span class="keywordflow">while</span>(0)</div>
+<b>Value:</b><div class="fragment"><div class="line">                                                                      <span class="keywordflow">do</span> { HAL_PWREx_EnablePVM1();HAL_PWREx_EnablePVM2(); \</div>
+<div class="line">                                                                      HAL_PWREx_EnablePVM3();HAL_PWREx_EnablePVM4(); \</div>
+<div class="line">                                                                    } <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 </div>
 </div>

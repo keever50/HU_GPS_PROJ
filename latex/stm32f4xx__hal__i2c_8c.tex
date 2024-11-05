@@ -94,7 +94,7 @@ This software is licensed under terms that can be found in the LICENSE file in t
          add his own code by customization of function pointer HAL_I2C_SlaveRxCpltCallback()
     (+) In case of transfer Error, HAL_I2C_ErrorCallback() function is executed and user can
          add his own code by customization of function pointer HAL_I2C_ErrorCallback()
-    (+) Abort a master I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
+    (+) Abort a master or memory I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
     (+) End of abort process, HAL_I2C_AbortCpltCallback() is executed and user can
          add his own code by customization of function pointer HAL_I2C_AbortCpltCallback()
 
@@ -144,7 +144,7 @@ This software is licensed under terms that can be found in the LICENSE file in t
           or using HAL_I2C_Master_Seq_Receive_DMA()
     (+++) At reception end of current frame transfer, HAL_I2C_MasterRxCpltCallback() is executed and user can
          add his own code by customization of function pointer HAL_I2C_MasterRxCpltCallback()
-    (++) Abort a master IT or DMA I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
+    (++) Abort a master or memory IT or DMA I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
     (+++) End of abort process, HAL_I2C_AbortCpltCallback() is executed and user can
          add his own code by customization of function pointer HAL_I2C_AbortCpltCallback()
     (++) Enable/disable the Address listen mode in slave I2C mode using HAL_I2C_EnableListen_IT() HAL_I2C_DisableListen_IT()
@@ -198,7 +198,7 @@ This software is licensed under terms that can be found in the LICENSE file in t
          add his own code by customization of function pointer HAL_I2C_SlaveRxCpltCallback()
     (+) In case of transfer Error, HAL_I2C_ErrorCallback() function is executed and user can
          add his own code by customization of function pointer HAL_I2C_ErrorCallback()
-    (+) Abort a master I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
+    (+) Abort a master or memory I2C process communication with Interrupt using HAL_I2C_Master_Abort_IT()
     (+) End of abort process, HAL_I2C_AbortCpltCallback() is executed and user can
          add his own code by customization of function pointer HAL_I2C_AbortCpltCallback()
 

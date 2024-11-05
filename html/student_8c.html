@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Core/MyApp/App/student.c File Reference</title>
+<title>HUGPS: Core/MyApp/App/student.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -89,8 +89,6 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">student.c File Reference</div></div>
@@ -106,73 +104,90 @@ $(function(){ initResizable(false); });
 <code>#include &quot;lcd.h&quot;</code><br />
 <code>#include &quot;buzzer.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="lcdout_8h_source.html">lcdout.h</a>&quot;</code><br />
+<code>#include &quot;student.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_l_s_m303_8h_source.html">LSM303.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="direction_8h_source.html">direction.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="betterbuzzer_8h_source.html">betterbuzzer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="compass__calib_8h_source.html">compass_calib.h</a>&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="waypoints_8h_source.html">waypoints.h</a>&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvector2d__s.html">vector2d_s</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aa77f8bba4388250b35a6dd5baaf5cd1f" id="r_aa77f8bba4388250b35a6dd5baaf5cd1f"><td class="memItemLeft" align="right" valign="top"><a id="aa77f8bba4388250b35a6dd5baaf5cd1f" name="aa77f8bba4388250b35a6dd5baaf5cd1f"></a>
-typedef struct <a class="el" href="structvector2d__s.html">vector2d_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vector2d_t</b></td></tr>
-<tr class="separator:aa77f8bba4388250b35a6dd5baaf5cd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a94752975a5474c37e39f4f93529e392e" id="r_a94752975a5474c37e39f4f93529e392e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94752975a5474c37e39f4f93529e392e">lonDMtoM</a> (<a class="el" href="struct___g_n_r_m_c.html">GNRMC</a> *gnrmc)</td></tr>
-<tr class="memdesc:a94752975a5474c37e39f4f93529e392e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oefentask voor studenten.  <br /></td></tr>
+<tr class="memitem:a94752975a5474c37e39f4f93529e392e" id="r_a94752975a5474c37e39f4f93529e392e"><td class="memItemLeft" align="right" valign="top"><a id="a94752975a5474c37e39f4f93529e392e" name="a94752975a5474c37e39f4f93529e392e"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>lonDMtoM</b> (<a class="el" href="struct___g_n_r_m_c.html">GNRMC</a> *gnrmc)</td></tr>
 <tr class="separator:a94752975a5474c37e39f4f93529e392e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b7c2e13f92ba72ae600c31aea13654" id="r_a37b7c2e13f92ba72ae600c31aea13654"><td class="memItemLeft" align="right" valign="top"><a id="a37b7c2e13f92ba72ae600c31aea13654" name="a37b7c2e13f92ba72ae600c31aea13654"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>latDMtoM</b> (<a class="el" href="struct___g_n_r_m_c.html">GNRMC</a> *gnrmc)</td></tr>
 <tr class="separator:a37b7c2e13f92ba72ae600c31aea13654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cefa220befc6ac5b41b32559d40a0bd" id="r_a4cefa220befc6ac5b41b32559d40a0bd"><td class="memItemLeft" align="right" valign="top"><a id="a4cefa220befc6ac5b41b32559d40a0bd" name="a4cefa220befc6ac5b41b32559d40a0bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waypointsReset</b> ()</td></tr>
-<tr class="separator:a4cefa220befc6ac5b41b32559d40a0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa82c355e081297404d10feecb9ab99fb" id="r_aa82c355e081297404d10feecb9ab99fb"><td class="memItemLeft" align="right" valign="top"><a id="aa82c355e081297404d10feecb9ab99fb" name="aa82c355e081297404d10feecb9ab99fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LCD_print_fix</b> (char *msg)</td></tr>
-<tr class="separator:aa82c355e081297404d10feecb9ab99fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292efb44fdf9fc4c2ff7a60513cd97bd" id="r_a292efb44fdf9fc4c2ff7a60513cd97bd"><td class="memItemLeft" align="right" valign="top"><a id="a292efb44fdf9fc4c2ff7a60513cd97bd" name="a292efb44fdf9fc4c2ff7a60513cd97bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>test_gps_coords</b> ()</td></tr>
-<tr class="separator:a292efb44fdf9fc4c2ff7a60513cd97bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea10095ef03d3bc42d5d795c7dfa0821" id="r_aea10095ef03d3bc42d5d795c7dfa0821"><td class="memItemLeft" align="right" valign="top"><a id="aea10095ef03d3bc42d5d795c7dfa0821" name="aea10095ef03d3bc42d5d795c7dfa0821"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_servo_angle</b> (double angle)</td></tr>
+<tr class="separator:aea10095ef03d3bc42d5d795c7dfa0821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc780da7ddfec5d5f78b4f19c39b507b" id="r_abc780da7ddfec5d5f78b4f19c39b507b"><td class="memItemLeft" align="right" valign="top"><a id="abc780da7ddfec5d5f78b4f19c39b507b" name="abc780da7ddfec5d5f78b4f19c39b507b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>test_orient</b> ()</td></tr>
+<tr class="separator:abc780da7ddfec5d5f78b4f19c39b507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08794513677e7c40396b99b37bf2801" id="r_ad08794513677e7c40396b99b37bf2801"><td class="memItemLeft" align="right" valign="top"><a id="ad08794513677e7c40396b99b37bf2801" name="ad08794513677e7c40396b99b37bf2801"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>test_gps_coords</b> ()</td></tr>
+<tr class="separator:ad08794513677e7c40396b99b37bf2801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6312f5264e753576186b5147ced0eb83" id="r_a6312f5264e753576186b5147ced0eb83"><td class="memItemLeft" align="right" valign="top"><a id="a6312f5264e753576186b5147ced0eb83" name="a6312f5264e753576186b5147ced0eb83"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>student_list_waypoints</b> ()</td></tr>
+<tr class="separator:a6312f5264e753576186b5147ced0eb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8fad90740cf7511cd2638ac22cffe9" id="r_aca8fad90740cf7511cd2638ac22cffe9"><td class="memItemLeft" align="right" valign="top"><a id="aca8fad90740cf7511cd2638ac22cffe9" name="aca8fad90740cf7511cd2638ac22cffe9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>student_send_keys</b> (char key)</td></tr>
+<tr class="separator:aca8fad90740cf7511cd2638ac22cffe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a93e1ce22b90b67d2d601d3b8c380f" id="r_a93a93e1ce22b90b67d2d601d3b8c380f"><td class="memItemLeft" align="right" valign="top"><a id="a93a93e1ce22b90b67d2d601d3b8c380f" name="a93a93e1ce22b90b67d2d601d3b8c380f"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>student_get_key</b> ()</td></tr>
+<tr class="separator:a93a93e1ce22b90b67d2d601d3b8c380f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf01368d7dc2afae537f5116622feee" id="r_addf01368d7dc2afae537f5116622feee"><td class="memItemLeft" align="right" valign="top"><a id="addf01368d7dc2afae537f5116622feee" name="addf01368d7dc2afae537f5116622feee"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>next_waypoint</b> ()</td></tr>
+<tr class="separator:addf01368d7dc2afae537f5116622feee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6587c477006105b60e62dd6ed5d38d93" id="r_a6587c477006105b60e62dd6ed5d38d93"><td class="memItemLeft" align="right" valign="top"><a id="a6587c477006105b60e62dd6ed5d38d93" name="a6587c477006105b60e62dd6ed5d38d93"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>start_route</b> ()</td></tr>
+<tr class="separator:a6587c477006105b60e62dd6ed5d38d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3149b3bcaadf796191128e3b7c736c40" id="r_a3149b3bcaadf796191128e3b7c736c40"><td class="memItemLeft" align="right" valign="top"><a id="a3149b3bcaadf796191128e3b7c736c40" name="a3149b3bcaadf796191128e3b7c736c40"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>student_start_program</b> (int ID)</td></tr>
+<tr class="separator:a3149b3bcaadf796191128e3b7c736c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66aebff2740d10e65e6cdc29c760de73" id="r_a66aebff2740d10e65e6cdc29c760de73"><td class="memItemLeft" align="right" valign="top"><a id="a66aebff2740d10e65e6cdc29c760de73" name="a66aebff2740d10e65e6cdc29c760de73"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>student_init</b> ()</td></tr>
+<tr class="separator:a66aebff2740d10e65e6cdc29c760de73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a282e21c3f1a0eb3054bbb9e40ffa9cc6" id="r_a282e21c3f1a0eb3054bbb9e40ffa9cc6"><td class="memItemLeft" align="right" valign="top"><a id="a282e21c3f1a0eb3054bbb9e40ffa9cc6" name="a282e21c3f1a0eb3054bbb9e40ffa9cc6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Student_task1</b> (void *argument)</td></tr>
 <tr class="separator:a282e21c3f1a0eb3054bbb9e40ffa9cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54f345008105d79340880470b3b4e55e" id="r_a54f345008105d79340880470b3b4e55e"><td class="memItemLeft" align="right" valign="top"><a id="a54f345008105d79340880470b3b4e55e" name="a54f345008105d79340880470b3b4e55e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waypointSet</b> ()</td></tr>
-<tr class="separator:a54f345008105d79340880470b3b4e55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7bbe6d98da379bc0caeaa6e0a5c2d1" id="r_a2c7bbe6d98da379bc0caeaa6e0a5c2d1"><td class="memItemLeft" align="right" valign="top"><a id="a2c7bbe6d98da379bc0caeaa6e0a5c2d1" name="a2c7bbe6d98da379bc0caeaa6e0a5c2d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waypointGet</b> (<a class="el" href="structvector2d__s.html">vector2d_t</a> *vec)</td></tr>
-<tr class="separator:a2c7bbe6d98da379bc0caeaa6e0a5c2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c0605f5dd7f351de7a42cb3b8584d6" id="r_a97c0605f5dd7f351de7a42cb3b8584d6"><td class="memItemLeft" align="right" valign="top"><a id="a97c0605f5dd7f351de7a42cb3b8584d6" name="a97c0605f5dd7f351de7a42cb3b8584d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Setglobalvector</b> ()</td></tr>
+<tr class="separator:a97c0605f5dd7f351de7a42cb3b8584d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93414af775a993682d7c860df3df73e" id="r_aa93414af775a993682d7c860df3df73e"><td class="memItemLeft" align="right" valign="top"><a id="aa93414af775a993682d7c860df3df73e" name="aa93414af775a993682d7c860df3df73e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Getglobalvector</b> (<a class="el" href="structvector2d__s.html">vector2d_t</a> *vec)</td></tr>
+<tr class="separator:aa93414af775a993682d7c860df3df73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a8277754f25f3e1ac4a3236b8fdb92194" id="r_a8277754f25f3e1ac4a3236b8fdb92194"><td class="memItemLeft" align="right" valign="top"><a id="a8277754f25f3e1ac4a3236b8fdb92194" name="a8277754f25f3e1ac4a3236b8fdb92194"></a>
-<a class="el" href="structvector2d__s.html">vector2d_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>waypoints</b> [20]</td></tr>
-<tr class="separator:a8277754f25f3e1ac4a3236b8fdb92194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad683d20f8c8f3dd5c70a7da875804f55" id="r_ad683d20f8c8f3dd5c70a7da875804f55"><td class="memItemLeft" align="right" valign="top"><a id="ad683d20f8c8f3dd5c70a7da875804f55" name="ad683d20f8c8f3dd5c70a7da875804f55"></a>
-<a class="el" href="structvector2d__s.html">vector2d_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>globalVec</b></td></tr>
+<tr class="memitem:ad683d20f8c8f3dd5c70a7da875804f55" id="r_ad683d20f8c8f3dd5c70a7da875804f55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvector2d__s.html">vector2d_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad683d20f8c8f3dd5c70a7da875804f55">globalVec</a></td></tr>
+<tr class="memdesc:ad683d20f8c8f3dd5c70a7da875804f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oefentask voor studenten.  <br /></td></tr>
 <tr class="separator:ad683d20f8c8f3dd5c70a7da875804f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6621b8f3b3943c9d9bb7525f83d9f7ac" id="r_a6621b8f3b3943c9d9bb7525f83d9f7ac"><td class="memItemLeft" align="right" valign="top"><a id="a6621b8f3b3943c9d9bb7525f83d9f7ac" name="a6621b8f3b3943c9d9bb7525f83d9f7ac"></a>
 <a class="el" href="struct_queue_definition.html">SemaphoreHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>student_SemaphoreWaypoints</b></td></tr>
 <tr class="separator:a6621b8f3b3943c9d9bb7525f83d9f7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95ea9d312d8083abdccab77e7f02a287" id="r_a95ea9d312d8083abdccab77e7f02a287"><td class="memItemLeft" align="right" valign="top"><a id="a95ea9d312d8083abdccab77e7f02a287" name="a95ea9d312d8083abdccab77e7f02a287"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>student_initialized</b> =0</td></tr>
+<tr class="separator:a95ea9d312d8083abdccab77e7f02a287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eba00099154cc4f7ac6cff5c8b56b9c" id="r_a8eba00099154cc4f7ac6cff5c8b56b9c"><td class="memItemLeft" align="right" valign="top"><a id="a8eba00099154cc4f7ac6cff5c8b56b9c" name="a8eba00099154cc4f7ac6cff5c8b56b9c"></a>
+<a class="el" href="struct_queue_definition.html">QueueHandle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>student_keyQ</b></td></tr>
+<tr class="separator:a8eba00099154cc4f7ac6cff5c8b56b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hier kunnen studenten hun eigen tasks aanmaken. </p>
 <dl class="section author"><dt>Author</dt><dd>MSC</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>5/5/2022 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a94752975a5474c37e39f4f93529e392e" name="a94752975a5474c37e39f4f93529e392e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94752975a5474c37e39f4f93529e392e">&#9670;&#160;</a></span>lonDMtoM()</h2>
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="ad683d20f8c8f3dd5c70a7da875804f55" name="ad683d20f8c8f3dd5c70a7da875804f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad683d20f8c8f3dd5c70a7da875804f55">&#9670;&#160;</a></span>globalVec</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double lonDMtoM </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct___g_n_r_m_c.html">GNRMC</a> *</td>          <td class="paramname"><span class="paramname"><em>gnrmc</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="structvector2d__s.html">vector2d_t</a> globalVec</td>
         </tr>
       </table>
 </div><div class="memdoc">

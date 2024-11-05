@@ -1,0 +1,44 @@
+\doxysection{student.\+h}
+\hypertarget{student_8h_source}{}\label{student_8h_source}\index{Core/MyApp/App/student.h@{Core/MyApp/App/student.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ student.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Oct\ 8,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ tomfv}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ 1:\ get\ gps\ coords}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 2:\ get\ orientation}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ 3:\ calibrate\ mag}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ 4:\ list\ waypoints}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ 5:\ set\ waypoint}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ MYAPP\_APP\_STUDENT\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ MYAPP\_APP\_STUDENT\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ STUDENT\_KEY\_Q\_LENGTH\ 5}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ WP\_RADIUS\ 0.00010}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ M\_1\_PI\ \ \ \ \ \ 0.318309886183790671537767526745028724}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvector2d__s}{vector2d\_s}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ x,y;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvector2d__s}{vector2d\_s}}\ \mbox{\hyperlink{structvector2d__s}{vector2d\_t}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ Setglobalvector();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ Getglobalvector(\mbox{\hyperlink{structvector2d__s}{vector2d\_t}}*\ vec);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ student\_send\_keys(\textcolor{keywordtype}{char}\ key);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{char}\ student\_get\_key();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MYAPP\_APP\_STUDENT\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

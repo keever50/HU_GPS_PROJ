@@ -1,0 +1,66 @@
+\doxysection{Core/\+My\+App/\+App/waypoints.c File Reference}
+\hypertarget{waypoints_8c}{}\label{waypoints_8c}\index{Core/MyApp/App/waypoints.c@{Core/MyApp/App/waypoints.c}}
+
+
+a library for waypoint related functions Created on\+: Oct 17, 2024 Author\+: Tom Veldkamp  
+
+
+{\ttfamily \#include $<$waypoints.\+h$>$}\newline
+{\ttfamily \#include $<$lcdout.\+h$>$}\newline
+{\ttfamily \#include $<$student.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{waypoints_8c_a37768e624a86442c9c7df55042c5bab3}{waypoint\+\_\+get}} (int index, \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}waypoint)
+\begin{DoxyCompactList}\small\item\em Get a waypoint from the waypoint list using the index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{waypoints_8c_af73cab8c5489de82343806145250fcfb}{waypointcreate}} ()
+\begin{DoxyCompactList}\small\item\em Adds a waypoint from the current position to the waypoint list. \end{DoxyCompactList}\item 
+\Hypertarget{waypoints_8c_aaa8aff697779351433e966c7da5e5a8a}\label{waypoints_8c_aaa8aff697779351433e966c7da5e5a8a} 
+void {\bfseries waypointread} ()
+\begin{DoxyCompactList}\small\item\em Lists all the waypoints to the LCD. \end{DoxyCompactList}\item 
+\Hypertarget{waypoints_8c_a529c8398932793c8de0be5d7e44b8749}\label{waypoints_8c_a529c8398932793c8de0be5d7e44b8749} 
+void {\bfseries waypoint\+\_\+test} ()
+\begin{DoxyCompactList}\small\item\em Creates 4 pre-\/defined waypoints for debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{waypoints_8c_a1ebc936c31e8020112e0ba1da59e6b44}\label{waypoints_8c_a1ebc936c31e8020112e0ba1da59e6b44} 
+\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} {\bfseries waypoints} \mbox{[}WAYPOINT\+\_\+\+MAX\+\_\+\+WPS\mbox{]}
+\item 
+\Hypertarget{waypoints_8c_a20105e9fbc1ac02a1c67f45017e53f9a}\label{waypoints_8c_a20105e9fbc1ac02a1c67f45017e53f9a} 
+int {\bfseries waypointteller} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a library for waypoint related functions Created on\+: Oct 17, 2024 Author\+: Tom Veldkamp 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{waypoints_8c_a37768e624a86442c9c7df55042c5bab3}\index{waypoints.c@{waypoints.c}!waypoint\_get@{waypoint\_get}}
+\index{waypoint\_get@{waypoint\_get}!waypoints.c@{waypoints.c}}
+\doxysubsubsection{\texorpdfstring{waypoint\_get()}{waypoint\_get()}}
+{\footnotesize\ttfamily \label{waypoints_8c_a37768e624a86442c9c7df55042c5bab3} 
+int waypoint\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{waypoint}{}\end{DoxyParamCaption})}
+
+
+
+Get a waypoint from the waypoint list using the index. 
+
+\begin{DoxyReturn}{Returns}
+Returns -\/1 when no waypoint was found. 
+\end{DoxyReturn}
+\Hypertarget{waypoints_8c_af73cab8c5489de82343806145250fcfb}\index{waypoints.c@{waypoints.c}!waypointcreate@{waypointcreate}}
+\index{waypointcreate@{waypointcreate}!waypoints.c@{waypoints.c}}
+\doxysubsubsection{\texorpdfstring{waypointcreate()}{waypointcreate()}}
+{\footnotesize\ttfamily \label{waypoints_8c_af73cab8c5489de82343806145250fcfb} 
+int waypointcreate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Adds a waypoint from the current position to the waypoint list. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 when the waypoint list is full 
+\end{DoxyReturn}

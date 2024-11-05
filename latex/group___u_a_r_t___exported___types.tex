@@ -1,6 +1,6 @@
 \doxysubsubsection{UART Exported Types}
 \hypertarget{group___u_a_r_t___exported___types}{}\label{group___u_a_r_t___exported___types}\index{UART Exported Types@{UART Exported Types}}
-\doxysubsubsubsubsection*{Classes}
+\doxysubsubsubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_u_a_r_t___init_type_def}{UART\+\_\+\+Init\+Type\+Def}}
@@ -12,6 +12,8 @@ struct \mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{\+\_\+\+\_\+\+UART
 \item 
 typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_ga9f272475ea543a68fd8cb19f03a9bce9}{HAL\+\_\+\+UART\+\_\+\+Rx\+Type\+Type\+Def}}
 \begin{DoxyCompactList}\small\item\em HAL UART Reception type definition. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203}{HAL\+\_\+\+UART\+\_\+\+Rx\+Event\+Type\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em HAL UART Rx Event type definition. \end{DoxyCompactList}\item 
 \Hypertarget{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}\label{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e} 
 typedef struct \mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{\+\_\+\+\_\+\+UART\+\_\+\+Handle\+Type\+Def}} {\bfseries UART\+\_\+\+Handle\+Type\+Def}
 \begin{DoxyCompactList}\small\item\em UART handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -36,6 +38,19 @@ enum \mbox{\hyperlink{group___u_a_r_t___exported___types_gaf55d844a35379c204c90b
 
 
 \doxysubsubsubsection{Typedef Documentation}
+\Hypertarget{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203}\index{UART Exported Types@{UART Exported Types}!HAL\_UART\_RxEventTypeTypeDef@{HAL\_UART\_RxEventTypeTypeDef}}
+\index{HAL\_UART\_RxEventTypeTypeDef@{HAL\_UART\_RxEventTypeTypeDef}!UART Exported Types@{UART Exported Types}}
+\doxysubsubsubsubsection{\texorpdfstring{HAL\_UART\_RxEventTypeTypeDef}{HAL\_UART\_RxEventTypeTypeDef}}
+{\footnotesize\ttfamily \label{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203} 
+typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_gadddf3d5480235c945dc8eec58f961203}{HAL\+\_\+\+UART\+\_\+\+Rx\+Event\+Type\+Type\+Def}}}
+
+
+
+HAL UART Rx Event type definition. 
+
+\begin{DoxyNote}{Note}
+HAL UART Rx Event type value aims to identify which type of Event has occurred leading to call of the Rx\+Event callback. This parameter can be a value of \doxylink{group___u_a_r_t___rx_event___type___values}{UART Rx\+Event type values} \+: HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+TC = 0x00U, HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+HT = 0x01U, HAL\+\_\+\+UART\+\_\+\+RXEVENT\+\_\+\+IDLE = 0x02U, 
+\end{DoxyNote}
 \Hypertarget{group___u_a_r_t___exported___types_ga9f272475ea543a68fd8cb19f03a9bce9}\index{UART Exported Types@{UART Exported Types}!HAL\_UART\_RxTypeTypeDef@{HAL\_UART\_RxTypeTypeDef}}
 \index{HAL\_UART\_RxTypeTypeDef@{HAL\_UART\_RxTypeTypeDef}!UART Exported Types@{UART Exported Types}}
 \doxysubsubsubsubsection{\texorpdfstring{HAL\_UART\_RxTypeTypeDef}{HAL\_UART\_RxTypeTypeDef}}
@@ -47,7 +62,7 @@ typedef uint32\+\_\+t \mbox{\hyperlink{group___u_a_r_t___exported___types_ga9f27
 HAL UART Reception type definition. 
 
 \begin{DoxyNote}{Note}
-HAL UART Reception type value aims to identify which type of Reception is ongoing. It is expected to admit following values \+: HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+STANDARD = 0x00U, HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+TOIDLE = 0x01U, 
+HAL UART Reception type value aims to identify which type of Reception is ongoing. This parameter can be a value of \doxylink{group___u_a_r_t___reception___type___values}{UART Reception type values} \+: HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+STANDARD = 0x00U, HAL\+\_\+\+UART\+\_\+\+RECEPTION\+\_\+\+TOIDLE = 0x01U, 
 \end{DoxyNote}
 
 

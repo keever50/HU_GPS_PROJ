@@ -1,0 +1,58 @@
+\doxysection{Core/\+My\+App/\+App/compass\+\_\+calib.h File Reference}
+\hypertarget{compass__calib_8h}{}\label{compass__calib_8h}\index{Core/MyApp/App/compass\_calib.h@{Core/MyApp/App/compass\_calib.h}}
+
+
+Compass calibration library for \doxylink{_l_s_m303_8h}{LSM303.\+h}. and HU\+\_\+\+GPS program.  
+
+
+{\ttfamily \#include $<$main.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcompass__calibration__info}{compass\+\_\+calibration\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Calibration information. Filled in after running the calibration program. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcompass__vector}{compass\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Compass magnetic direction vector from the LSM303. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{compass__calib_8h_a3eea1c771914f921d9028d018c06c580}{compass\+\_\+calibration\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the calibration program. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{compass__calib_8h_a56cbda2292313f606d1e366a1e78dd2b}{compass\+\_\+apply\+\_\+calibration}} (int16\+\_\+t x, int16\+\_\+t y, struct \mbox{\hyperlink{structcompass__vector}{compass\+\_\+vector}} \texorpdfstring{$\ast$}{*}vect)
+\begin{DoxyCompactList}\small\item\em Apply the calibration results to x,y and output to \doxylink{structcompass__vector}{compass\+\_\+vector} vect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compass calibration library for \doxylink{_l_s_m303_8h}{LSM303.\+h}. and HU\+\_\+\+GPS program. 
+
+Created on\+: Oct 15, 2024 Author\+: kevin 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{compass__calib_8h_a56cbda2292313f606d1e366a1e78dd2b}\index{compass\_calib.h@{compass\_calib.h}!compass\_apply\_calibration@{compass\_apply\_calibration}}
+\index{compass\_apply\_calibration@{compass\_apply\_calibration}!compass\_calib.h@{compass\_calib.h}}
+\doxysubsubsection{\texorpdfstring{compass\_apply\_calibration()}{compass\_apply\_calibration()}}
+{\footnotesize\ttfamily \label{compass__calib_8h_a56cbda2292313f606d1e366a1e78dd2b} 
+int compass\+\_\+apply\+\_\+calibration (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x}{, }\item[{int16\+\_\+t}]{y}{, }\item[{struct \mbox{\hyperlink{structcompass__vector}{compass\+\_\+vector}} \texorpdfstring{$\ast$}{*}}]{vect}{}\end{DoxyParamCaption})}
+
+
+
+Apply the calibration results to x,y and output to \doxylink{structcompass__vector}{compass\+\_\+vector} vect. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 when OK 
+\end{DoxyReturn}
+(\+\_\+compass\+\_\+calib\+\_\+info.\+x\+\_\+range/2);
+
+(\+\_\+compass\+\_\+calib\+\_\+info.\+y\+\_\+range/2);\Hypertarget{compass__calib_8h_a3eea1c771914f921d9028d018c06c580}\index{compass\_calib.h@{compass\_calib.h}!compass\_calibration\_start@{compass\_calibration\_start}}
+\index{compass\_calibration\_start@{compass\_calibration\_start}!compass\_calib.h@{compass\_calib.h}}
+\doxysubsubsection{\texorpdfstring{compass\_calibration\_start()}{compass\_calibration\_start()}}
+{\footnotesize\ttfamily \label{compass__calib_8h_a3eea1c771914f921d9028d018c06c580} 
+int compass\+\_\+calibration\+\_\+start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the calibration program. 
+
+\begin{DoxyReturn}{Returns}
+0 when OK 
+\end{DoxyReturn}

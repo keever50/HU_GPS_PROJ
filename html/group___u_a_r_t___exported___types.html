@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: UART Exported Types</title>
+<title>HUGPS: UART Exported Types</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -85,7 +85,7 @@ $(function(){ initResizable(false); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">UART Exported Types<div class="ingroups"><a class="el" href="group___s_t_m32_f4xx___h_a_l___driver.html">STM32F4xx_HAL_Driver</a> &raquo; <a class="el" href="group___u_a_r_t.html">UART</a></div></div></div>
@@ -93,7 +93,7 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_a_r_t___init_type_def.html">UART_InitTypeDef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Init Structure definition.  <a href="struct_u_a_r_t___init_type_def.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,6 +106,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga9f272475ea543a68fd8cb19f03a9bce9" id="r_ga9f272475ea543a68fd8cb19f03a9bce9"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f272475ea543a68fd8cb19f03a9bce9">HAL_UART_RxTypeTypeDef</a></td></tr>
 <tr class="memdesc:ga9f272475ea543a68fd8cb19f03a9bce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL UART Reception type definition.  <br /></td></tr>
 <tr class="separator:ga9f272475ea543a68fd8cb19f03a9bce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadddf3d5480235c945dc8eec58f961203" id="r_gadddf3d5480235c945dc8eec58f961203"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadddf3d5480235c945dc8eec58f961203">HAL_UART_RxEventTypeTypeDef</a></td></tr>
+<tr class="memdesc:gadddf3d5480235c945dc8eec58f961203"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL UART Rx Event type definition.  <br /></td></tr>
+<tr class="separator:gadddf3d5480235c945dc8eec58f961203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5de4a49eb132735325e706f406c69d6e" id="r_ga5de4a49eb132735325e706f406c69d6e"><td class="memItemLeft" align="right" valign="top"><a id="ga5de4a49eb132735325e706f406c69d6e" name="ga5de4a49eb132735325e706f406c69d6e"></a>
 typedef struct <a class="el" href="struct_____u_a_r_t___handle_type_def.html">__UART_HandleTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UART_HandleTypeDef</b></td></tr>
 <tr class="memdesc:ga5de4a49eb132735325e706f406c69d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART handle Structure definition. <br /></td></tr>
@@ -130,6 +133,23 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="gadddf3d5480235c945dc8eec58f961203" name="gadddf3d5480235c945dc8eec58f961203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadddf3d5480235c945dc8eec58f961203">&#9670;&#160;</a></span>HAL_UART_RxEventTypeTypeDef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="#gadddf3d5480235c945dc8eec58f961203">HAL_UART_RxEventTypeTypeDef</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HAL UART Rx Event type definition. </p>
+<dl class="section note"><dt>Note</dt><dd>HAL UART Rx Event type value aims to identify which type of Event has occurred leading to call of the RxEvent callback. This parameter can be a value of <a class="el" href="group___u_a_r_t___rx_event___type___values.html">UART RxEvent type values</a> : HAL_UART_RXEVENT_TC = 0x00U, HAL_UART_RXEVENT_HT = 0x01U, HAL_UART_RXEVENT_IDLE = 0x02U, </dd></dl>
+
+</div>
+</div>
 <a id="ga9f272475ea543a68fd8cb19f03a9bce9" name="ga9f272475ea543a68fd8cb19f03a9bce9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9f272475ea543a68fd8cb19f03a9bce9">&#9670;&#160;</a></span>HAL_UART_RxTypeTypeDef</h2>
 
@@ -143,7 +163,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>HAL UART Reception type definition. </p>
-<dl class="section note"><dt>Note</dt><dd>HAL UART Reception type value aims to identify which type of Reception is ongoing. It is expected to admit following values : HAL_UART_RECEPTION_STANDARD = 0x00U, HAL_UART_RECEPTION_TOIDLE = 0x01U, </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>HAL UART Reception type value aims to identify which type of Reception is ongoing. This parameter can be a value of <a class="el" href="group___u_a_r_t___reception___type___values.html">UART Reception type values</a> : HAL_UART_RECEPTION_STANDARD = 0x00U, HAL_UART_RECEPTION_TOIDLE = 0x01U, </dd></dl>
 
 </div>
 </div>

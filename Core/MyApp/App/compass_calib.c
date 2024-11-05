@@ -1,4 +1,4 @@
-/*
+/**
  * compass_calib.c
  *
  *  Created on: Oct 15, 2024
@@ -33,6 +33,7 @@ int _compass_show_err(int err)
 
 /* PUBLIC FUNC */
 
+
 int compass_apply_calibration(int16_t x, int16_t y, struct compass_vector *vect)
 {
 	vect->x=(x-_compass_calib_info.x_center);///(_compass_calib_info.x_range/2);
@@ -43,6 +44,7 @@ int compass_apply_calibration(int16_t x, int16_t y, struct compass_vector *vect)
 
 	return 0;
 }
+
 
 int compass_calibration_start()
 {

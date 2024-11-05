@@ -1,8 +1,8 @@
-/*
- * waypoints.c
- *
+/**
+ * @file waypoints.c
+ * @brief a library for waypoint related functions
  *  Created on: Oct 17, 2024
- *      Author: kevin
+ *      Author: Tom Veldkamp
  */
 
 
@@ -14,6 +14,7 @@ vector2d_t waypoints[WAYPOINT_MAX_WPS];
 int waypointteller=0;
 
 //xSemaphoreHandle waypoint_sema;
+
 
 int waypoint_get(int index, vector2d_t *waypoint)
 {

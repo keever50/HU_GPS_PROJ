@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Drivers/CMSIS/Include/cmsis_iccarm.h File Reference</title>
+<title>HUGPS: Drivers/CMSIS/Include/cmsis_iccarm.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">cmsis_iccarm.h File Reference</div></div>
@@ -103,7 +103,7 @@ $(function(){ initResizable(false); });
 <p><a href="cmsis__iccarm_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____iar__u32.html">__iar_u32</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -124,6 +124,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a1378040bcf22428955c6e3ce9c2053cd" id="r_a1378040bcf22428955c6e3ce9c2053cd"><td class="memItemLeft" align="right" valign="top"><a id="a1378040bcf22428955c6e3ce9c2053cd" name="a1378040bcf22428955c6e3ce9c2053cd"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__ASM</b>&#160;&#160;&#160;__asm</td></tr>
 <tr class="separator:a1378040bcf22428955c6e3ce9c2053cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6516fb12ab0dd45c734f8cef7d921af6" id="r_a6516fb12ab0dd45c734f8cef7d921af6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6516fb12ab0dd45c734f8cef7d921af6">__COMPILER_BARRIER</a>()</td></tr>
+<tr class="separator:a6516fb12ab0dd45c734f8cef7d921af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2d8d7118f8ff49547f60aa0c3382bb" id="r_ade2d8d7118f8ff49547f60aa0c3382bb"><td class="memItemLeft" align="right" valign="top"><a id="ade2d8d7118f8ff49547f60aa0c3382bb" name="ade2d8d7118f8ff49547f60aa0c3382bb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__INLINE</b>&#160;&#160;&#160;inline</td></tr>
 <tr class="separator:ade2d8d7118f8ff49547f60aa0c3382bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +142,7 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__PACKED_UNION</b>&#160;&#160;&#160;__packed union</td></tr>
 <tr class="separator:a6fba34d08b0a526830b4231d2ea0b89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a378ac21329d33f561f90265eef89f564" id="r_a378ac21329d33f561f90265eef89f564"><td class="memItemLeft" align="right" valign="top"><a id="a378ac21329d33f561f90265eef89f564" name="a378ac21329d33f561f90265eef89f564"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>__RESTRICT</b>&#160;&#160;&#160;__restrict</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__RESTRICT</b>&#160;&#160;&#160;restrict</td></tr>
 <tr class="separator:a378ac21329d33f561f90265eef89f564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba87361bfad2ae52cfe2f40c1a1dbf9c" id="r_aba87361bfad2ae52cfe2f40c1a1dbf9c"><td class="memItemLeft" align="right" valign="top"><a id="aba87361bfad2ae52cfe2f40c1a1dbf9c" name="aba87361bfad2ae52cfe2f40c1a1dbf9c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__STATIC_INLINE</b>&#160;&#160;&#160;static inline</td></tr>
@@ -167,6 +169,21 @@ Macros</h2></td></tr>
 <tr class="memitem:ac607bf387b29162be6a9b77fc7999539" id="r_ac607bf387b29162be6a9b77fc7999539"><td class="memItemLeft" align="right" valign="top"><a id="ac607bf387b29162be6a9b77fc7999539" name="ac607bf387b29162be6a9b77fc7999539"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__WEAK</b>&#160;&#160;&#160;_Pragma(&quot;__weak&quot;)</td></tr>
 <tr class="separator:ac607bf387b29162be6a9b77fc7999539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72db8b026c5e100254080fefabd9fd88" id="r_a72db8b026c5e100254080fefabd9fd88"><td class="memItemLeft" align="right" valign="top"><a id="a72db8b026c5e100254080fefabd9fd88" name="a72db8b026c5e100254080fefabd9fd88"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__PROGRAM_START</b>&#160;&#160;&#160;__iar_program_start</td></tr>
+<tr class="separator:a72db8b026c5e100254080fefabd9fd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1002e751427b1189f92787d4e4eef965" id="r_a1002e751427b1189f92787d4e4eef965"><td class="memItemLeft" align="right" valign="top"><a id="a1002e751427b1189f92787d4e4eef965" name="a1002e751427b1189f92787d4e4eef965"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__INITIAL_SP</b>&#160;&#160;&#160;CSTACK$$Limit</td></tr>
+<tr class="separator:a1002e751427b1189f92787d4e4eef965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b0bad4aa39632d3faea46aa1e102a8" id="r_a84b0bad4aa39632d3faea46aa1e102a8"><td class="memItemLeft" align="right" valign="top"><a id="a84b0bad4aa39632d3faea46aa1e102a8" name="a84b0bad4aa39632d3faea46aa1e102a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__STACK_LIMIT</b>&#160;&#160;&#160;CSTACK$$Base</td></tr>
+<tr class="separator:a84b0bad4aa39632d3faea46aa1e102a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94ebeb20055f1848d7b707d3c7cfc5d" id="r_ab94ebeb20055f1848d7b707d3c7cfc5d"><td class="memItemLeft" align="right" valign="top"><a id="ab94ebeb20055f1848d7b707d3c7cfc5d" name="ab94ebeb20055f1848d7b707d3c7cfc5d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__VECTOR_TABLE</b>&#160;&#160;&#160;__vector_table</td></tr>
+<tr class="separator:ab94ebeb20055f1848d7b707d3c7cfc5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f65c96effa79fbd610fea43ee7d745b" id="r_a4f65c96effa79fbd610fea43ee7d745b"><td class="memItemLeft" align="right" valign="top"><a id="a4f65c96effa79fbd610fea43ee7d745b" name="a4f65c96effa79fbd610fea43ee7d745b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>__VECTOR_TABLE_ATTRIBUTE</b>&#160;&#160;&#160;@&quot;.intvec&quot;</td></tr>
+<tr class="separator:a4f65c96effa79fbd610fea43ee7d745b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf5e66520f87c928ab4395d5787e4df" id="r_a2cf5e66520f87c928ab4395d5787e4df"><td class="memItemLeft" align="right" valign="top"><a id="a2cf5e66520f87c928ab4395d5787e4df" name="a2cf5e66520f87c928ab4395d5787e4df"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__ICCARM_INTRINSICS_VERSION__</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a2cf5e66520f87c928ab4395d5787e4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,10 +196,12 @@ Macros</h2></td></tr>
 <tr class="separator:a6b3a48e13de4b114653b4e06145a601d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cfee62c8cc63a1f72c134ffa096b911" id="r_a1cfee62c8cc63a1f72c134ffa096b911"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cfee62c8cc63a1f72c134ffa096b911">__set_FPSCR</a>(VALUE)</td></tr>
 <tr class="separator:a1cfee62c8cc63a1f72c134ffa096b911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c141f2890d12b9c0f56eaed4e4846c8" id="r_a6c141f2890d12b9c0f56eaed4e4846c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c141f2890d12b9c0f56eaed4e4846c8">__enable_irq</a></td></tr>
-<tr class="separator:a6c141f2890d12b9c0f56eaed4e4846c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cb98c1adc8a28bc3b48649a3421195d" id="r_a6cb98c1adc8a28bc3b48649a3421195d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cb98c1adc8a28bc3b48649a3421195d">__disable_irq</a></td></tr>
-<tr class="separator:a6cb98c1adc8a28bc3b48649a3421195d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63ab98aec1a5bde0e191fb22e693f480" id="r_ga63ab98aec1a5bde0e191fb22e693f480"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___reg_acc_functions.html#ga63ab98aec1a5bde0e191fb22e693f480">__enable_irq</a></td></tr>
+<tr class="memdesc:ga63ab98aec1a5bde0e191fb22e693f480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable IRQ Interrupts.  <br /></td></tr>
+<tr class="separator:ga63ab98aec1a5bde0e191fb22e693f480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a8f966bf50cc372e7ac092f612efd1a" id="r_ga9a8f966bf50cc372e7ac092f612efd1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___reg_acc_functions.html#ga9a8f966bf50cc372e7ac092f612efd1a">__disable_irq</a></td></tr>
+<tr class="memdesc:ga9a8f966bf50cc372e7ac092f612efd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable IRQ Interrupts.  <br /></td></tr>
+<tr class="separator:ga9a8f966bf50cc372e7ac092f612efd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd585ddc865fb9b7f2493af1eee1a572" id="r_abd585ddc865fb9b7f2493af1eee1a572"><td class="memItemLeft" align="right" valign="top"><a id="abd585ddc865fb9b7f2493af1eee1a572" name="abd585ddc865fb9b7f2493af1eee1a572"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__NOP</b>&#160;&#160;&#160;__no_operation</td></tr>
 <tr class="separator:abd585ddc865fb9b7f2493af1eee1a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +210,10 @@ Macros</h2></td></tr>
 <tr class="separator:gae0d8e20f8c3c2a502075dabcff733c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ea6bd3c507d3e81c3b3a1258e46397" id="r_a15ea6bd3c507d3e81c3b3a1258e46397"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15ea6bd3c507d3e81c3b3a1258e46397">__BKPT</a>(value)</td></tr>
 <tr class="separator:a15ea6bd3c507d3e81c3b3a1258e46397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfc7fe62ef04578af6a1f360dc38245" id="r_a6cfc7fe62ef04578af6a1f360dc38245"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cfc7fe62ef04578af6a1f360dc38245">__SXTB16_RORn</a>(ARG1,  ARG2)</td></tr>
+<tr class="separator:a6cfc7fe62ef04578af6a1f360dc38245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefefc7eb15bebfb76044494b9491496e" id="r_aefefc7eb15bebfb76044494b9491496e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefefc7eb15bebfb76044494b9491496e">__SXTAB16_RORn</a>(ARG1,  ARG2,  ARG3)</td></tr>
+<tr class="separator:aefefc7eb15bebfb76044494b9491496e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -218,8 +241,8 @@ __IAR_FT uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>__ROR</b
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CMSIS compiler ICCARM (IAR Compiler for Arm) header file. </p>
-<dl class="section version"><dt>Version</dt><dd>V5.0.7 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>19. June 2018 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>V5.3.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14. April 2021 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a15ea6bd3c507d3e81c3b3a1258e46397" name="a15ea6bd3c507d3e81c3b3a1258e46397"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15ea6bd3c507d3e81c3b3a1258e46397">&#9670;&#160;</a></span>__BKPT</h2>
@@ -239,39 +262,21 @@ __IAR_FT uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>__ROR</b
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a6cb98c1adc8a28bc3b48649a3421195d" name="a6cb98c1adc8a28bc3b48649a3421195d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cb98c1adc8a28bc3b48649a3421195d">&#9670;&#160;</a></span>__disable_irq</h2>
+<a id="a6516fb12ab0dd45c734f8cef7d921af6" name="a6516fb12ab0dd45c734f8cef7d921af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6516fb12ab0dd45c734f8cef7d921af6">&#9670;&#160;</a></span>__COMPILER_BARRIER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define __disable_irq</td>
+          <td class="memname">#define __COMPILER_BARRIER</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>void</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__disable_interrupt</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a6c141f2890d12b9c0f56eaed4e4846c8" name="a6c141f2890d12b9c0f56eaed4e4846c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c141f2890d12b9c0f56eaed4e4846c8">&#9670;&#160;</a></span>__enable_irq</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __enable_irq</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>void</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">__enable_interrupt</div>
+<b>Value:</b><div class="fragment"><div class="line">__ASM <span class="keyword">volatile</span>(<span class="stringliteral">&quot;&quot;</span>:::<span class="stringliteral">&quot;memory&quot;</span>)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -326,6 +331,56 @@ __IAR_FT uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>__ROR</b
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((void)VALUE)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aefefc7eb15bebfb76044494b9491496e" name="aefefc7eb15bebfb76044494b9491496e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefefc7eb15bebfb76044494b9491496e">&#9670;&#160;</a></span>__SXTAB16_RORn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __SXTAB16_RORn</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ARG1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ARG2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ARG3</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">__SXTAB16(ARG1, <a class="code hl_define" href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a>(ARG2, ARG3))</div>
+<div class="ttc" id="agroup___c_m_s_i_s___core___instruction_interface_html_ga95b9bd281ddeda378b85afdb8f2ced86"><div class="ttname"><a href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a></div><div class="ttdeci">#define __ROR</div><div class="ttdoc">Rotate Right in unsigned value (32 bit)</div><div class="ttdef"><b>Definition</b> cmsis_armcc.h:238</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6cfc7fe62ef04578af6a1f360dc38245" name="a6cfc7fe62ef04578af6a1f360dc38245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cfc7fe62ef04578af6a1f360dc38245">&#9670;&#160;</a></span>__SXTB16_RORn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __SXTB16_RORn</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ARG1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ARG2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">__SXTB16(<a class="code hl_define" href="group___c_m_s_i_s___core___instruction_interface.html#ga95b9bd281ddeda378b85afdb8f2ced86">__ROR</a>(ARG1, ARG2))</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -384,7 +439,7 @@ __IAR_FT uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>__ROR</b
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(((<span class="keyword">struct </span><a class="code hl_struct" href="struct____iar__u32.html">__iar_u32</a> *)(PTR))-&gt;v)</div>
-<div class="ttc" id="astruct____iar__u32_html"><div class="ttname"><a href="struct____iar__u32.html">__iar_u32</a></div><div class="ttdef"><b>Definition</b> cmsis_iccarm.h:216</div></div>
+<div class="ttc" id="astruct____iar__u32_html"><div class="ttname"><a href="struct____iar__u32.html">__iar_u32</a></div><div class="ttdef"><b>Definition</b> cmsis_iccarm.h:228</div></div>
 </div><!-- fragment -->
 </div>
 </div>

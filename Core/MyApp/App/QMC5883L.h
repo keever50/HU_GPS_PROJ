@@ -1,6 +1,6 @@
-/*
- * QMC5883L.h
- *
+/**
+ * @file QMC5883L.h
+ * @brief Compass sensor driver
  *  Created on: Nov 4, 2024
  *      Author: kevin
  */
@@ -24,9 +24,20 @@
 	#define QMC58831_CTRL_REG_MODE_CONTINUOUS 0b01
 
 
-
+/**
+ * @brief Initializes the driver. This is required to be run once.
+ * @return error
+ */
 int qmc58831_init(I2C_HandleTypeDef *i2c);
+/**
+ * @brief Changes the sensor mode
+ * @return error
+ */
 int qmc58831_mode(uint8_t mode);
+/**
+ * @brief Gets the magnetic XYZ directions
+ * @return error
+ */
 int qmc5883l_get_direction(int16_t *x, int16_t *y, int16_t *z);
 
 

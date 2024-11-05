@@ -1,0 +1,57 @@
+\doxysection{LSM303.\+h}
+\hypertarget{_l_s_m303_8h_source}{}\label{_l_s_m303_8h_source}\index{Core/MyApp/App/LSM303.h@{Core/MyApp/App/LSM303.h}}
+\mbox{\hyperlink{_l_s_m303_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MYAPP\_APP\_LSM303\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MYAPP\_APP\_LSM303\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ LSM303\_MR\_REG\_M\ 0x02}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ LSM303\_MR\_REG\_M\_SLEEP\ 0b11}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ LSM303\_MR\_REG\_M\_CONTINUOUS\ 0b00}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ LSM303\_MR\_REG\_M\_SINGLE\ \ 0b01}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_X\_H\_M\ 0x03}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_X\_L\_M\ 0x04}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_Z\_H\_M\ 0x05}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_Z\_L\_M\ 0x06}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_Y\_H\_M\ 0x07}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ LSM303\_OUT\_Y\_L\_M\ 0x08}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ LSM303\_SR\_REG\_M\ 0x09}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ LSM303\_SR\_REG\_M\_DRDY\_BIT\ 0b01}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ LSM303\_SR\_REG\_M\_LOCK\_BIT\ 0b10}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LSM303\_CRB\_REG\_M\ 0x01}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ LSM303\_CRB\_REG\_M\_MASK\ 0x111}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ LSM303\_CRB\_REG\_M\_OFFS\ 5}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ LSM303\_CRA\_REG\_M\ 0x00}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ LSM303\_CRA\_REG\_M\_DO\_MASK\ 0x111}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ LSM303\_CRA\_REG\_M\_DO\_OFFS\ 2}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{enum}\ lsm303\_mag\_mode}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ eLSM303\_MAG\_MODE\_CONTINUOUS,}
+\DoxyCodeLine{00042\ \ \ \ \ eLSM303\_MAG\_MODE\_SINGLE,}
+\DoxyCodeLine{00043\ \ \ \ \ eLSM303\_MAG\_MODE\_SLEEP}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlsm303__mag__vector}{lsm303\_mag\_vector}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ int16\_t\ x,\ y,\ z;}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_l_s_m303_8h_adc47a632b300dbf8bb565b08e2bc2314}{lsm303\_mag\_datarate}}(uint8\_t\ rate);}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_l_s_m303_8h_a08c99b3805e7ea01a8ba662e6e474a70}{lsm303\_mag\_gain}}(uint8\_t\ gain);}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_l_s_m303_8h_a7e20d2f46813394e2e2a0387a709bf45}{lsm303\_mag\_init}}(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}\ *i2c,\ uint16\_t\ address);}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{int}\ lsm303\_mag\_mode(\textcolor{keyword}{enum}\ lsm303\_mag\_mode\ mode);}
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_l_s_m303_8h_a7830903949c75db935625cb7dbdc75d3}{lsm303\_mag\_get\_vector}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structlsm303__mag__vector}{lsm303\_mag\_vector}}\ *vect);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MYAPP\_APP\_LSM303\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: MPU_Type Struct Reference</title>
+<title>HUGPS: MPU_Type Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -85,134 +85,223 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_m_p_u___type-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">MPU_Type Struct Reference<div class="ingroups"><a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_cn_s_c_b.html">System Controls not in SCB (SCnSCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___sys_tick.html">System Tick Timer (SysTick)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_cn_s_c_b.html">System Controls not in SCB (SCnSCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___sys_tick.html">System Tick Timer (SysTick)</a> &raquo; <a class="el" href="group___c_m_s_i_s___i_t_m.html">Instrumentation Trace Macrocell (ITM)</a> &raquo; <a class="el" href="group___c_m_s_i_s___d_w_t.html">Data Watchpoint and Trace (DWT)</a> &raquo; <a class="el" href="group___c_m_s_i_s___t_p_i.html">Trace Port Interface (TPI)</a> &raquo; <a class="el" href="group___c_m_s_i_s___m_p_u.html">Memory Protection Unit (MPU)</a></div></div></div>
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">MPU_Type Struct Reference<div class="ingroups"><a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_cn_s_c_b.html">System Controls not in SCB (SCnSCB)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___i_c_b.html">Implementation Control Block register (ICB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___sys_tick.html">System Tick Timer (SysTick)</a> &raquo; <a class="el" href="group___c_m_s_i_s___i_t_m.html">Instrumentation Trace Macrocell (ITM)</a> &raquo; <a class="el" href="group___c_m_s_i_s___d_w_t.html">Data Watchpoint and Trace (DWT)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_cn_s_c_b.html">System Controls not in SCB (SCnSCB)</a> &#124; <a class="el" href="group___c_m_s_i_s__core__register.html">Defines and Type Definitions</a> &raquo; <a class="el" href="group___c_m_s_i_s___c_o_r_e.html">Status and Control Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___n_v_i_c.html">Nested Vectored Interrupt Controller (NVIC)</a> &raquo; <a class="el" href="group___c_m_s_i_s___s_c_b.html">System Control Block (SCB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___i_c_b.html">Implementation Control Block register (ICB)</a> &raquo; <a class="el" href="group___c_m_s_i_s___sys_tick.html">System Tick Timer (SysTick)</a> &raquo; <a class="el" href="group___c_m_s_i_s___i_t_m.html">Instrumentation Trace Macrocell (ITM)</a> &raquo; <a class="el" href="group___c_m_s_i_s___d_w_t.html">Data Watchpoint and Trace (DWT)</a> &raquo; <a class="el" href="group___mem_sys_ctl___type.html">Memory System Control Registers (IMPLEMENTATION DEFINED)</a> &raquo; <a class="el" href="group___pwr_mod_ctl___type.html">Power Mode Control Registers</a> &raquo; <a class="el" href="group___e_w_i_c___type.html">External Wakeup Interrupt Controller Registers</a> &raquo; <a class="el" href="group___err_bnk___type.html">Error Banking Registers (IMPLEMENTATION DEFINED)</a> &raquo; <a class="el" href="group___prc_cfg_inf___type.html">Processor Configuration Information Registers (IMPLEMENTATION DEFINED)</a> &raquo; <a class="el" href="group___s_t_l___type.html">Software Test Library Observation Registers</a> &raquo; <a class="el" href="group___c_m_s_i_s___t_p_i.html">Trace Port Interface (TPI)</a> &raquo; <a class="el" href="group___c_m_s_i_s___m_p_u.html">Memory Protection Unit (MPU)</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Structure type to access the Memory Protection Unit (MPU).  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="core__armv8mbl_8h_source.html">core_armv8mbl.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="core__armv81mml_8h_source.html">core_armv81mml.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ga0433efc1383674bc8e86cc0e830b462d" id="r_ga0433efc1383674bc8e86cc0e830b462d"><td class="memItemLeft" align="right" valign="top">__IM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga0433efc1383674bc8e86cc0e830b462d">TYPE</a></td></tr>
-<tr class="separator:ga0433efc1383674bc8e86cc0e830b462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d81d6aa73a9287bafba2bcc5ffc6d18" id="r_ga4d81d6aa73a9287bafba2bcc5ffc6d18"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga4d81d6aa73a9287bafba2bcc5ffc6d18">CTRL</a></td></tr>
-<tr class="separator:ga4d81d6aa73a9287bafba2bcc5ffc6d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa800d44f4d3520cc891d7b8d711320c1" id="r_gaa800d44f4d3520cc891d7b8d711320c1"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gaa800d44f4d3520cc891d7b8d711320c1">RNR</a></td></tr>
-<tr class="separator:gaa800d44f4d3520cc891d7b8d711320c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac953770d38a7d322b971d93eb8a5b062" id="r_gac953770d38a7d322b971d93eb8a5b062"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gac953770d38a7d322b971d93eb8a5b062">RBAR</a></td></tr>
-<tr class="separator:gac953770d38a7d322b971d93eb8a5b062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3e1c3c971bab068b1d4c689db3221b40" id="r_ga3e1c3c971bab068b1d4c689db3221b40"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga3e1c3c971bab068b1d4c689db3221b40">RLAR</a></td></tr>
-<tr class="separator:ga3e1c3c971bab068b1d4c689db3221b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2a93c470d2ebc1afd22170cd8f4bb867" id="r_ga2a93c470d2ebc1afd22170cd8f4bb867"><td class="memItemLeft" align="right" valign="top">
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>RESERVED0</b> [7U]</td></tr>
-<tr class="separator:ga2a93c470d2ebc1afd22170cd8f4bb867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22c6784ec05c1d3aed3e7c145159d3a4" id="r_ga22c6784ec05c1d3aed3e7c145159d3a4"><td class="memItemLeft" >
+Data Fields</h2></td></tr>
+<tr class="memitem:gaee6e8f4171b9024d763ba87f3ce92e73" id="r_gaee6e8f4171b9024d763ba87f3ce92e73"><td class="memItemLeft" align="right" valign="top">__IM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gaee6e8f4171b9024d763ba87f3ce92e73">TYPE</a></td></tr>
+<tr class="separator:gaee6e8f4171b9024d763ba87f3ce92e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac81efc171e9852a36caeb47122bfec5b" id="r_gac81efc171e9852a36caeb47122bfec5b"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gac81efc171e9852a36caeb47122bfec5b">CTRL</a></td></tr>
+<tr class="separator:gac81efc171e9852a36caeb47122bfec5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga840e54c4f1cf688fc9f7495ea386abb4" id="r_ga840e54c4f1cf688fc9f7495ea386abb4"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga840e54c4f1cf688fc9f7495ea386abb4">RNR</a></td></tr>
+<tr class="separator:ga840e54c4f1cf688fc9f7495ea386abb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c6ca0b5d8ba77e54cb0b01855a2f753" id="r_ga9c6ca0b5d8ba77e54cb0b01855a2f753"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga9c6ca0b5d8ba77e54cb0b01855a2f753">RBAR</a></td></tr>
+<tr class="separator:ga9c6ca0b5d8ba77e54cb0b01855a2f753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf27430ffaf2940fc019c14364112353" id="r_gacf27430ffaf2940fc019c14364112353"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gacf27430ffaf2940fc019c14364112353">RLAR</a></td></tr>
+<tr class="separator:gacf27430ffaf2940fc019c14364112353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe44c1572bc8b056060b86a7265cfb69" id="r_gafe44c1572bc8b056060b86a7265cfb69"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gafe44c1572bc8b056060b86a7265cfb69">RBAR_A1</a></td></tr>
+<tr class="separator:gafe44c1572bc8b056060b86a7265cfb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga264112fc47526e1f333c8f4b380ad31e" id="r_ga264112fc47526e1f333c8f4b380ad31e"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga264112fc47526e1f333c8f4b380ad31e">RLAR_A1</a></td></tr>
+<tr class="separator:ga264112fc47526e1f333c8f4b380ad31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga883319c839e8c5d2cc768bf2289686c9" id="r_ga883319c839e8c5d2cc768bf2289686c9"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga883319c839e8c5d2cc768bf2289686c9">RBAR_A2</a></td></tr>
+<tr class="separator:ga883319c839e8c5d2cc768bf2289686c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36a1e26a1eb74903e8d918ecd6c20234" id="r_ga36a1e26a1eb74903e8d918ecd6c20234"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga36a1e26a1eb74903e8d918ecd6c20234">RLAR_A2</a></td></tr>
+<tr class="separator:ga36a1e26a1eb74903e8d918ecd6c20234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4718bd9732fdf87af917188aa79c7af3" id="r_ga4718bd9732fdf87af917188aa79c7af3"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga4718bd9732fdf87af917188aa79c7af3">RBAR_A3</a></td></tr>
+<tr class="separator:ga4718bd9732fdf87af917188aa79c7af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9801960adf7090637f232df31bba7746" id="r_ga9801960adf7090637f232df31bba7746"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga9801960adf7090637f232df31bba7746">RLAR_A3</a></td></tr>
+<tr class="separator:ga9801960adf7090637f232df31bba7746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3bc109a372d05329e22cb7e3bf2b84ba" id="r_ga3bc109a372d05329e22cb7e3bf2b84ba"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>RESERVED0</b> [1]</td></tr>
+<tr class="separator:ga3bc109a372d05329e22cb7e3bf2b84ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3749d15b9cbe94aeaabe82de152b7056" id="r_ga3749d15b9cbe94aeaabe82de152b7056"><td class="memItemLeft" >
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga798e5e4faac89308ec7d317a1c7f6dff" id="r_ga798e5e4faac89308ec7d317a1c7f6dff"><td class="memItemLeft" >
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
 &#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga798e5e4faac89308ec7d317a1c7f6dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad4f1906a9260d215856939aa71d907c7" id="r_gad4f1906a9260d215856939aa71d907c7"><td class="memItemLeft" >
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c11123920ed409433d209601b17042a" id="r_ga6c11123920ed409433d209601b17042a"><td class="memItemLeft" >
 &#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaae0ff23cc01e5b7f830b0a03a8eee163" id="r_gaae0ff23cc01e5b7f830b0a03a8eee163"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga3b47c220774ad7786bb42ea3622b0693">MPU_Type::MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:gaae0ff23cc01e5b7f830b0a03a8eee163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4f7f8b707d86e45caad25f47ec15df7d" id="r_ga4f7f8b707d86e45caad25f47ec15df7d"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gac2840c137a056aeb543bd2d618992a03">MPU_Type::MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga4f7f8b707d86e45caad25f47ec15df7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad4f1906a9260d215856939aa71d907c7" id="r_gad4f1906a9260d215856939aa71d907c7"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:gad4f1906a9260d215856939aa71d907c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22c6784ec05c1d3aed3e7c145159d3a4" id="r_ga22c6784ec05c1d3aed3e7c145159d3a4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga22c6784ec05c1d3aed3e7c145159d3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13d69b9bea12861383f3a62764b02f63" id="r_ga13d69b9bea12861383f3a62764b02f63"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga13d69b9bea12861383f3a62764b02f63">RBAR_A1</a></td></tr>
-<tr class="separator:ga13d69b9bea12861383f3a62764b02f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga290082b50ab1dd1649211adaa1801ee9" id="r_ga290082b50ab1dd1649211adaa1801ee9"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga290082b50ab1dd1649211adaa1801ee9">RLAR_A1</a></td></tr>
-<tr class="separator:ga290082b50ab1dd1649211adaa1801ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga57dc551614932150e684fcc60590c2c4" id="r_ga57dc551614932150e684fcc60590c2c4"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga57dc551614932150e684fcc60590c2c4">RBAR_A2</a></td></tr>
-<tr class="separator:ga57dc551614932150e684fcc60590c2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga983793154742e272a91dc54c4b453b4a" id="r_ga983793154742e272a91dc54c4b453b4a"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga983793154742e272a91dc54c4b453b4a">RLAR_A2</a></td></tr>
-<tr class="separator:ga983793154742e272a91dc54c4b453b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga345911aabecd1f7d93a1bff7738b0d86" id="r_ga345911aabecd1f7d93a1bff7738b0d86"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga345911aabecd1f7d93a1bff7738b0d86">RBAR_A3</a></td></tr>
-<tr class="separator:ga345911aabecd1f7d93a1bff7738b0d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga787a145b788c49d66c8b5e3350a291b7" id="r_ga787a145b788c49d66c8b5e3350a291b7"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga787a145b788c49d66c8b5e3350a291b7">RLAR_A3</a></td></tr>
-<tr class="separator:ga787a145b788c49d66c8b5e3350a291b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5042d01b350d24b7c325e84d6f169a70" id="r_ga5042d01b350d24b7c325e84d6f169a70"><td class="memItemLeft" >
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c11123920ed409433d209601b17042a" id="r_ga6c11123920ed409433d209601b17042a"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga6c11123920ed409433d209601b17042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3749d15b9cbe94aeaabe82de152b7056" id="r_ga3749d15b9cbe94aeaabe82de152b7056"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga3749d15b9cbe94aeaabe82de152b7056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1aae730900b01d67147a773a30c71407" id="r_ga1aae730900b01d67147a773a30c71407"><td class="memItemLeft" >
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7dd5578471b91d0d8a1dbdd9fcddd22" id="r_gaa7dd5578471b91d0d8a1dbdd9fcddd22"><td class="memItemLeft" >
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
 &#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:gaa7dd5578471b91d0d8a1dbdd9fcddd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga432d33daaa762dfeea3c4c5c80351f25" id="r_ga432d33daaa762dfeea3c4c5c80351f25"><td class="memItemLeft" >
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga322c21e936d36497fd3d2a5c1e00d511" id="r_ga322c21e936d36497fd3d2a5c1e00d511"><td class="memItemLeft" >
 &#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga679806eb389b3eb022c96228982668ad" id="r_ga679806eb389b3eb022c96228982668ad"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga3b47c220774ad7786bb42ea3622b0693">MPU_Type::MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga679806eb389b3eb022c96228982668ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49463d18fa889aa889cb9ef258f50a53" id="r_ga49463d18fa889aa889cb9ef258f50a53"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gac2840c137a056aeb543bd2d618992a03">MPU_Type::MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga49463d18fa889aa889cb9ef258f50a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga432d33daaa762dfeea3c4c5c80351f25" id="r_ga432d33daaa762dfeea3c4c5c80351f25"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga432d33daaa762dfeea3c4c5c80351f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5042d01b350d24b7c325e84d6f169a70" id="r_ga5042d01b350d24b7c325e84d6f169a70"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga5042d01b350d24b7c325e84d6f169a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9236c629b7cf86f8bd2459c610fdf715" id="r_ga9236c629b7cf86f8bd2459c610fdf715"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga9236c629b7cf86f8bd2459c610fdf715">RASR</a></td></tr>
-<tr class="separator:ga9236c629b7cf86f8bd2459c610fdf715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeaaf24cdf40cffdc66eef25654cf39ae" id="r_gaeaaf24cdf40cffdc66eef25654cf39ae"><td class="memItemLeft" >
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga322c21e936d36497fd3d2a5c1e00d511" id="r_ga322c21e936d36497fd3d2a5c1e00d511"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga322c21e936d36497fd3d2a5c1e00d511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1aae730900b01d67147a773a30c71407" id="r_ga1aae730900b01d67147a773a30c71407"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga1aae730900b01d67147a773a30c71407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba263fe4e83fce7ce149ec7dc34c48c2" id="r_gaba263fe4e83fce7ce149ec7dc34c48c2"><td class="memItemLeft" >
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06f20497c3ab1945fc91e10d4759c884" id="r_ga06f20497c3ab1945fc91e10d4759c884"><td class="memItemLeft" >
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
 &#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga06f20497c3ab1945fc91e10d4759c884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga261593856dfaf8907bafaa82610f6459" id="r_ga261593856dfaf8907bafaa82610f6459"><td class="memItemLeft" >
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79fa6650fb8dcaef3e248ff5b67a07aa" id="r_ga79fa6650fb8dcaef3e248ff5b67a07aa"><td class="memItemLeft" >
 &#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga891abe24591ad5d6c3fbad4a81782da2" id="r_ga891abe24591ad5d6c3fbad4a81782da2"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga3b47c220774ad7786bb42ea3622b0693">MPU_Type::MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga891abe24591ad5d6c3fbad4a81782da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71e3f0bfb51bbaa1a453a63b5c85b10d" id="r_ga71e3f0bfb51bbaa1a453a63b5c85b10d"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gac2840c137a056aeb543bd2d618992a03">MPU_Type::MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga71e3f0bfb51bbaa1a453a63b5c85b10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga261593856dfaf8907bafaa82610f6459" id="r_ga261593856dfaf8907bafaa82610f6459"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga261593856dfaf8907bafaa82610f6459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeaaf24cdf40cffdc66eef25654cf39ae" id="r_gaeaaf24cdf40cffdc66eef25654cf39ae"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:gaeaaf24cdf40cffdc66eef25654cf39ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5a224ccd12ac55ddfe11d9eca42de48" id="r_gab5a224ccd12ac55ddfe11d9eca42de48"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gab5a224ccd12ac55ddfe11d9eca42de48">RASR_A1</a></td></tr>
-<tr class="separator:gab5a224ccd12ac55ddfe11d9eca42de48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac60e0919871b66446a039838bcaaec3b" id="r_gac60e0919871b66446a039838bcaaec3b"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gac60e0919871b66446a039838bcaaec3b">RASR_A2</a></td></tr>
-<tr class="separator:gac60e0919871b66446a039838bcaaec3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c0b2d3e3e16bb4e7dfa069652d5a155" id="r_ga9c0b2d3e3e16bb4e7dfa069652d5a155"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga9c0b2d3e3e16bb4e7dfa069652d5a155">RASR_A3</a></td></tr>
-<tr class="separator:ga9c0b2d3e3e16bb4e7dfa069652d5a155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa72c9c15506d356b26bf33c534540b11" id="r_gaa72c9c15506d356b26bf33c534540b11"><td class="memItemLeft" >
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79fa6650fb8dcaef3e248ff5b67a07aa" id="r_ga79fa6650fb8dcaef3e248ff5b67a07aa"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga79fa6650fb8dcaef3e248ff5b67a07aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba263fe4e83fce7ce149ec7dc34c48c2" id="r_gaba263fe4e83fce7ce149ec7dc34c48c2"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gaba263fe4e83fce7ce149ec7dc34c48c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0c485d3232774561fda8068a60d4e1f" id="r_gaa0c485d3232774561fda8068a60d4e1f"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gaa0c485d3232774561fda8068a60d4e1f">RASR</a></td></tr>
+<tr class="separator:gaa0c485d3232774561fda8068a60d4e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac4bfd802046472cdeb32eb4c0be63d" id="r_ga1ac4bfd802046472cdeb32eb4c0be63d"><td class="memItemLeft" >
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3aa05e5dc67f7cec4f197eb71c780130" id="r_ga3aa05e5dc67f7cec4f197eb71c780130"><td class="memItemLeft" >
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
 &#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga3aa05e5dc67f7cec4f197eb71c780130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga816541fad5fbf0a6fc9f500cc6d8fbbb" id="r_ga816541fad5fbf0a6fc9f500cc6d8fbbb"><td class="memItemLeft" >
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb6e64dbe1e31eabef82969c1ad29bb8" id="r_gafb6e64dbe1e31eabef82969c1ad29bb8"><td class="memItemLeft" >
 &#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78d7b22ef4def19c50e44eaf4aa533d5" id="r_ga78d7b22ef4def19c50e44eaf4aa533d5"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#ga3b47c220774ad7786bb42ea3622b0693">MPU_Type::MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga78d7b22ef4def19c50e44eaf4aa533d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga595804891854d164c9596f60aff29526" id="r_ga595804891854d164c9596f60aff29526"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s___core___sys_tick_functions.html#gac2840c137a056aeb543bd2d618992a03">MPU_Type::MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga595804891854d164c9596f60aff29526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga816541fad5fbf0a6fc9f500cc6d8fbbb" id="r_ga816541fad5fbf0a6fc9f500cc6d8fbbb"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ga816541fad5fbf0a6fc9f500cc6d8fbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa72c9c15506d356b26bf33c534540b11" id="r_gaa72c9c15506d356b26bf33c534540b11"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:gaa72c9c15506d356b26bf33c534540b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb6e64dbe1e31eabef82969c1ad29bb8" id="r_gafb6e64dbe1e31eabef82969c1ad29bb8"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gafb6e64dbe1e31eabef82969c1ad29bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ac4bfd802046472cdeb32eb4c0be63d" id="r_ga1ac4bfd802046472cdeb32eb4c0be63d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga1ac4bfd802046472cdeb32eb4c0be63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad44a348327e8033dafcda034c7c077fc" id="r_gad44a348327e8033dafcda034c7c077fc"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gad44a348327e8033dafcda034c7c077fc">RASR_A1</a></td></tr>
+<tr class="separator:gad44a348327e8033dafcda034c7c077fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5763e9adcf2fd52b4b1e120db2b5d040" id="r_ga5763e9adcf2fd52b4b1e120db2b5d040"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga5763e9adcf2fd52b4b1e120db2b5d040">RASR_A2</a></td></tr>
+<tr class="separator:ga5763e9adcf2fd52b4b1e120db2b5d040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacce01d8f20570510d98e9633e4620f62" id="r_gacce01d8f20570510d98e9633e4620f62"><td class="memItemLeft" align="right" valign="top">__IOM uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_m_s_i_s__core___debug_functions.html#gacce01d8f20570510d98e9633e4620f62">RASR_A3</a></td></tr>
+<tr class="separator:gacce01d8f20570510d98e9633e4620f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89cbba48530abfa6b7ac4b02c494399e" id="r_ga89cbba48530abfa6b7ac4b02c494399e"><td class="memItemLeft" >
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
+&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ae44e1ee36934cf9ce4dacb5386999b" id="r_ga9ae44e1ee36934cf9ce4dacb5386999b"><td class="memItemLeft" >
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9ae44e1ee36934cf9ce4dacb5386999b" id="r_ga9ae44e1ee36934cf9ce4dacb5386999b"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga9ae44e1ee36934cf9ce4dacb5386999b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga89cbba48530abfa6b7ac4b02c494399e" id="r_ga89cbba48530abfa6b7ac4b02c494399e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga89cbba48530abfa6b7ac4b02c494399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14133de49421f93630d9ada3ee440feb" id="r_ga14133de49421f93630d9ada3ee440feb"><td class="memItemLeft" >
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
+&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1968f624b207729ea6a04e6a5781b145" id="r_ga1968f624b207729ea6a04e6a5781b145"><td class="memItemLeft" >
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1968f624b207729ea6a04e6a5781b145" id="r_ga1968f624b207729ea6a04e6a5781b145"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga1968f624b207729ea6a04e6a5781b145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14133de49421f93630d9ada3ee440feb" id="r_ga14133de49421f93630d9ada3ee440feb"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga14133de49421f93630d9ada3ee440feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca9e41841ce0dd031a96aba4448bf42f" id="r_gaca9e41841ce0dd031a96aba4448bf42f"><td class="memItemLeft" >
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
+&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4e7e671037e14ae1e38bbb3d693893e" id="r_gae4e7e671037e14ae1e38bbb3d693893e"><td class="memItemLeft" >
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4e7e671037e14ae1e38bbb3d693893e" id="r_gae4e7e671037e14ae1e38bbb3d693893e"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gae4e7e671037e14ae1e38bbb3d693893e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca9e41841ce0dd031a96aba4448bf42f" id="r_gaca9e41841ce0dd031a96aba4448bf42f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gaca9e41841ce0dd031a96aba4448bf42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78b563d3d607a4e28569748853084fc4" id="r_ga78b563d3d607a4e28569748853084fc4"><td class="memItemLeft" >
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
+&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea50a9ac4bcf336b3c36516fe17c2a36" id="r_gaea50a9ac4bcf336b3c36516fe17c2a36"><td class="memItemLeft" >
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea50a9ac4bcf336b3c36516fe17c2a36" id="r_gaea50a9ac4bcf336b3c36516fe17c2a36"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gaea50a9ac4bcf336b3c36516fe17c2a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78b563d3d607a4e28569748853084fc4" id="r_ga78b563d3d607a4e28569748853084fc4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga78b563d3d607a4e28569748853084fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6741d5ecce0a92d996b6905ec4642f74" id="r_ga6741d5ecce0a92d996b6905ec4642f74"><td class="memItemLeft" >
+union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4926beceb043d0f01096e88dba6062a4" id="r_ga4926beceb043d0f01096e88dba6062a4"><td class="memItemLeft" >
+&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<b>MAIR</b> [2]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga4926beceb043d0f01096e88dba6062a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac40f537a7a65cd00ca088d44442f507e" id="r_gac40f537a7a65cd00ca088d44442f507e"><td class="memItemLeft" >
+&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1" id="r_ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga057e6bbe03c9a5cfaf3d77ecd5b03eb1">MAIR0</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga057e6bbe03c9a5cfaf3d77ecd5b03eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2eaf19017cd4ccc9af912e6cf61cebd9" id="r_ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;__IOM uint32_t&#160;&#160;&#160;<a class="el" href="group___c_m_s_i_s__core___debug_functions.html#ga2eaf19017cd4ccc9af912e6cf61cebd9">MAIR1</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga2eaf19017cd4ccc9af912e6cf61cebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac40f537a7a65cd00ca088d44442f507e" id="r_gac40f537a7a65cd00ca088d44442f507e"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:gac40f537a7a65cd00ca088d44442f507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6741d5ecce0a92d996b6905ec4642f74" id="r_ga6741d5ecce0a92d996b6905ec4642f74"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ga6741d5ecce0a92d996b6905ec4642f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure type to access the Memory Protection Unit (MPU). </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
+<li>Drivers/CMSIS/Include/<a class="el" href="core__armv81mml_8h_source.html">core_armv81mml.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__armv8mbl_8h_source.html">core_armv8mbl.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__armv8mml_8h_source.html">core_armv8mml.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm0plus_8h_source.html">core_cm0plus.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm23_8h_source.html">core_cm23.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm3_8h_source.html">core_cm3.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm33_8h_source.html">core_cm33.h</a></li>
+<li>Drivers/CMSIS/Include/<a class="el" href="core__cm35p_8h_source.html">core_cm35p.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm4_8h_source.html">core_cm4.h</a></li>
+<li>Drivers/CMSIS/Include/<a class="el" href="core__cm55_8h_source.html">core_cm55.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__cm7_8h_source.html">core_cm7.h</a></li>
+<li>Drivers/CMSIS/Include/<a class="el" href="core__cm85_8h_source.html">core_cm85.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__sc000_8h_source.html">core_sc000.h</a></li>
 <li>Drivers/CMSIS/Include/<a class="el" href="core__sc300_8h_source.html">core_sc300.h</a></li>
+<li>Drivers/CMSIS/Include/<a class="el" href="core__starmc1_8h_source.html">core_starmc1.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

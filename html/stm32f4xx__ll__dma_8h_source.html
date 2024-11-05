@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h Source File</title>
+<title>HUGPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -520,402 +520,402 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span> </div>
 <div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>{</div>
-<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_HTIF0)==(DMA_LISR_HTIF0));</div>
+<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_HTIF0)==(DMA_LISR_HTIF0));</div>
 <div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span>}</div>
 <div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span> </div>
 <div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>{</div>
-<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_HTIF1)==(DMA_LISR_HTIF1));</div>
+<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_HTIF1)==(DMA_LISR_HTIF1));</div>
 <div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>}</div>
 <div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span> </div>
 <div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>{</div>
-<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_HTIF2)==(DMA_LISR_HTIF2));</div>
+<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_HTIF2)==(DMA_LISR_HTIF2));</div>
 <div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>}</div>
 <div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span> </div>
 <div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>{</div>
-<div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_HTIF3)==(DMA_LISR_HTIF3));</div>
+<div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_HTIF3)==(DMA_LISR_HTIF3));</div>
 <div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>}</div>
 <div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span> </div>
 <div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>{</div>
-<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_HTIF4)==(DMA_HISR_HTIF4));</div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_HTIF4)==(DMA_HISR_HTIF4));</div>
 <div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>}</div>
 <div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span> </div>
 <div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>{</div>
-<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_HTIF5)==(DMA_HISR_HTIF5));</div>
+<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_HTIF5)==(DMA_HISR_HTIF5));</div>
 <div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>}</div>
 <div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span> </div>
 <div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>{</div>
-<div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_HTIF6)==(DMA_HISR_HTIF6));</div>
+<div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_HTIF6)==(DMA_HISR_HTIF6));</div>
 <div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>}</div>
 <div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span> </div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_HT7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>{</div>
-<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_HTIF7)==(DMA_HISR_HTIF7));</div>
+<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_HTIF7)==(DMA_HISR_HTIF7));</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>} </div>
 <div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span> </div>
 <div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>{</div>
-<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TCIF0)==(DMA_LISR_TCIF0));</div>
+<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TCIF0)==(DMA_LISR_TCIF0));</div>
 <div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>}</div>
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span> </div>
 <div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>{</div>
-<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TCIF1)==(DMA_LISR_TCIF1));</div>
+<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TCIF1)==(DMA_LISR_TCIF1));</div>
 <div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>}</div>
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span> </div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>{</div>
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TCIF2)==(DMA_LISR_TCIF2));</div>
+<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TCIF2)==(DMA_LISR_TCIF2));</div>
 <div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>}</div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span> </div>
 <div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>{</div>
-<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TCIF3)==(DMA_LISR_TCIF3));</div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TCIF3)==(DMA_LISR_TCIF3));</div>
 <div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>}</div>
 <div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span> </div>
 <div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>{</div>
-<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TCIF4)==(DMA_HISR_TCIF4));</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TCIF4)==(DMA_HISR_TCIF4));</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>}</div>
 <div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span> </div>
 <div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>{</div>
-<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TCIF5)==(DMA_HISR_TCIF5));</div>
+<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TCIF5)==(DMA_HISR_TCIF5));</div>
 <div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>}</div>
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span> </div>
 <div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>{</div>
-<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TCIF6)==(DMA_HISR_TCIF6));</div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TCIF6)==(DMA_HISR_TCIF6));</div>
 <div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>}</div>
 <div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span> </div>
 <div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TC7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>{</div>
-<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TCIF7)==(DMA_HISR_TCIF7));</div>
+<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TCIF7)==(DMA_HISR_TCIF7));</div>
 <div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>} </div>
 <div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span> </div>
 <div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>{</div>
-<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TEIF0)==(DMA_LISR_TEIF0));</div>
+<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TEIF0)==(DMA_LISR_TEIF0));</div>
 <div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>}</div>
 <div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span> </div>
 <div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>{</div>
-<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TEIF1)==(DMA_LISR_TEIF1));</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TEIF1)==(DMA_LISR_TEIF1));</div>
 <div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>}</div>
 <div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span> </div>
 <div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>{</div>
-<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TEIF2)==(DMA_LISR_TEIF2));</div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TEIF2)==(DMA_LISR_TEIF2));</div>
 <div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>}</div>
 <div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span> </div>
 <div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>{</div>
-<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_TEIF3)==(DMA_LISR_TEIF3));</div>
+<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_TEIF3)==(DMA_LISR_TEIF3));</div>
 <div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span>}</div>
 <div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span> </div>
 <div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>{</div>
-<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TEIF4)==(DMA_HISR_TEIF4));</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TEIF4)==(DMA_HISR_TEIF4));</div>
 <div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>}</div>
 <div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span> </div>
 <div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>{</div>
-<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TEIF5)==(DMA_HISR_TEIF5));</div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TEIF5)==(DMA_HISR_TEIF5));</div>
 <div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>}</div>
 <div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span> </div>
 <div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>{</div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TEIF6)==(DMA_HISR_TEIF6));</div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TEIF6)==(DMA_HISR_TEIF6));</div>
 <div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>}</div>
 <div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span> </div>
 <div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_TE7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>{</div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_TEIF7)==(DMA_HISR_TEIF7));</div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_TEIF7)==(DMA_HISR_TEIF7));</div>
 <div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>} </div>
 <div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span> </div>
 <div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>{</div>
-<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_DMEIF0)==(DMA_LISR_DMEIF0));</div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_DMEIF0)==(DMA_LISR_DMEIF0));</div>
 <div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>}</div>
 <div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span> </div>
 <div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>{</div>
-<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_DMEIF1)==(DMA_LISR_DMEIF1));</div>
+<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_DMEIF1)==(DMA_LISR_DMEIF1));</div>
 <div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>}</div>
 <div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span> </div>
 <div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>{</div>
-<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_DMEIF2)==(DMA_LISR_DMEIF2));</div>
+<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_DMEIF2)==(DMA_LISR_DMEIF2));</div>
 <div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>}</div>
 <div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span> </div>
 <div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>{</div>
-<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_DMEIF3)==(DMA_LISR_DMEIF3));</div>
+<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_DMEIF3)==(DMA_LISR_DMEIF3));</div>
 <div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>}</div>
 <div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span> </div>
 <div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>{</div>
-<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_DMEIF4)==(DMA_HISR_DMEIF4));</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_DMEIF4)==(DMA_HISR_DMEIF4));</div>
 <div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>}</div>
 <div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span> </div>
 <div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>{</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_DMEIF5)==(DMA_HISR_DMEIF5));</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_DMEIF5)==(DMA_HISR_DMEIF5));</div>
 <div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>}</div>
 <div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span> </div>
 <div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span>{</div>
-<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_DMEIF6)==(DMA_HISR_DMEIF6));</div>
+<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"> 1981</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_DMEIF6)==(DMA_HISR_DMEIF6));</div>
 <div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>}</div>
 <div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span> </div>
 <div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_DME7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>{</div>
-<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_DMEIF7)==(DMA_HISR_DMEIF7));</div>
+<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_DMEIF7)==(DMA_HISR_DMEIF7));</div>
 <div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>}</div>
 <div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span> </div>
 <div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>{</div>
-<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_FEIF0)==(DMA_LISR_FEIF0));</div>
+<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_FEIF0)==(DMA_LISR_FEIF0));</div>
 <div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>}</div>
 <div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span> </div>
 <div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>{</div>
-<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_FEIF1)==(DMA_LISR_FEIF1));</div>
+<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_FEIF1)==(DMA_LISR_FEIF1));</div>
 <div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>}</div>
 <div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span> </div>
 <div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02024" name="l02024"></a><span class="lineno"> 2024</span>{</div>
-<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_FEIF2)==(DMA_LISR_FEIF2));</div>
+<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_FEIF2)==(DMA_LISR_FEIF2));</div>
 <div class="line"><a id="l02026" name="l02026"></a><span class="lineno"> 2026</span>}</div>
 <div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span> </div>
 <div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span>{</div>
-<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">LISR</a> ,DMA_LISR_FEIF3)==(DMA_LISR_FEIF3));</div>
+<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">LISR</a> ,DMA_LISR_FEIF3)==(DMA_LISR_FEIF3));</div>
 <div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span>}</div>
 <div class="line"><a id="l02038" name="l02038"></a><span class="lineno"> 2038</span> </div>
 <div class="line"><a id="l02045" name="l02045"></a><span class="lineno"> 2045</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02046" name="l02046"></a><span class="lineno"> 2046</span>{</div>
-<div class="line"><a id="l02047" name="l02047"></a><span class="lineno"> 2047</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_FEIF4)==(DMA_HISR_FEIF4));</div>
+<div class="line"><a id="l02047" name="l02047"></a><span class="lineno"> 2047</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_FEIF4)==(DMA_HISR_FEIF4));</div>
 <div class="line"><a id="l02048" name="l02048"></a><span class="lineno"> 2048</span>}</div>
 <div class="line"><a id="l02049" name="l02049"></a><span class="lineno"> 2049</span> </div>
 <div class="line"><a id="l02056" name="l02056"></a><span class="lineno"> 2056</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02057" name="l02057"></a><span class="lineno"> 2057</span>{</div>
-<div class="line"><a id="l02058" name="l02058"></a><span class="lineno"> 2058</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_FEIF5)==(DMA_HISR_FEIF5));</div>
+<div class="line"><a id="l02058" name="l02058"></a><span class="lineno"> 2058</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_FEIF5)==(DMA_HISR_FEIF5));</div>
 <div class="line"><a id="l02059" name="l02059"></a><span class="lineno"> 2059</span>}</div>
 <div class="line"><a id="l02060" name="l02060"></a><span class="lineno"> 2060</span> </div>
 <div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>{</div>
-<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_FEIF6)==(DMA_HISR_FEIF6));</div>
+<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_FEIF6)==(DMA_HISR_FEIF6));</div>
 <div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>}</div>
 <div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span> </div>
 <div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span>__STATIC_INLINE uint32_t LL_DMA_IsActiveFlag_FE7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02079" name="l02079"></a><span class="lineno"> 2079</span>{</div>
-<div class="line"><a id="l02080" name="l02080"></a><span class="lineno"> 2080</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">HISR</a> ,DMA_HISR_FEIF7)==(DMA_HISR_FEIF7));</div>
+<div class="line"><a id="l02080" name="l02080"></a><span class="lineno"> 2080</span>  <span class="keywordflow">return</span> (READ_BIT(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">HISR</a> ,DMA_HISR_FEIF7)==(DMA_HISR_FEIF7));</div>
 <div class="line"><a id="l02081" name="l02081"></a><span class="lineno"> 2081</span>}</div>
 <div class="line"><a id="l02082" name="l02082"></a><span class="lineno"> 2082</span> </div>
 <div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span>{</div>
-<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CHTIF0);</div>
+<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CHTIF0);</div>
 <div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span>}</div>
 <div class="line"><a id="l02093" name="l02093"></a><span class="lineno"> 2093</span> </div>
 <div class="line"><a id="l02100" name="l02100"></a><span class="lineno"> 2100</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02101" name="l02101"></a><span class="lineno"> 2101</span>{</div>
-<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CHTIF1);</div>
+<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CHTIF1);</div>
 <div class="line"><a id="l02103" name="l02103"></a><span class="lineno"> 2103</span>}</div>
 <div class="line"><a id="l02104" name="l02104"></a><span class="lineno"> 2104</span> </div>
 <div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span>{</div>
-<div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CHTIF2);</div>
+<div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CHTIF2);</div>
 <div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>}</div>
 <div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span> </div>
 <div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span>{</div>
-<div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CHTIF3);</div>
+<div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CHTIF3);</div>
 <div class="line"><a id="l02125" name="l02125"></a><span class="lineno"> 2125</span>}</div>
 <div class="line"><a id="l02126" name="l02126"></a><span class="lineno"> 2126</span> </div>
 <div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>{</div>
-<div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CHTIF4);</div>
+<div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CHTIF4);</div>
 <div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span>}</div>
 <div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span> </div>
 <div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>{</div>
-<div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CHTIF5);</div>
+<div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CHTIF5);</div>
 <div class="line"><a id="l02147" name="l02147"></a><span class="lineno"> 2147</span>}</div>
 <div class="line"><a id="l02148" name="l02148"></a><span class="lineno"> 2148</span> </div>
 <div class="line"><a id="l02155" name="l02155"></a><span class="lineno"> 2155</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span>{</div>
-<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CHTIF6);</div>
+<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CHTIF6);</div>
 <div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>}</div>
 <div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span> </div>
 <div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_HT7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>{</div>
-<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CHTIF7);</div>
+<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CHTIF7);</div>
 <div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>}</div>
 <div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span> </div>
 <div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>{</div>
-<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTCIF0);</div>
+<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTCIF0);</div>
 <div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>}</div>
 <div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span> </div>
 <div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02189" name="l02189"></a><span class="lineno"> 2189</span>{</div>
-<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTCIF1);</div>
+<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTCIF1);</div>
 <div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span>}</div>
 <div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span> </div>
 <div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>{</div>
-<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTCIF2);</div>
+<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTCIF2);</div>
 <div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>}</div>
 <div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span> </div>
 <div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02211" name="l02211"></a><span class="lineno"> 2211</span>{</div>
-<div class="line"><a id="l02212" name="l02212"></a><span class="lineno"> 2212</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTCIF3);</div>
+<div class="line"><a id="l02212" name="l02212"></a><span class="lineno"> 2212</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTCIF3);</div>
 <div class="line"><a id="l02213" name="l02213"></a><span class="lineno"> 2213</span>}</div>
 <div class="line"><a id="l02214" name="l02214"></a><span class="lineno"> 2214</span> </div>
 <div class="line"><a id="l02221" name="l02221"></a><span class="lineno"> 2221</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02222" name="l02222"></a><span class="lineno"> 2222</span>{</div>
-<div class="line"><a id="l02223" name="l02223"></a><span class="lineno"> 2223</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTCIF4);</div>
+<div class="line"><a id="l02223" name="l02223"></a><span class="lineno"> 2223</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTCIF4);</div>
 <div class="line"><a id="l02224" name="l02224"></a><span class="lineno"> 2224</span>}</div>
 <div class="line"><a id="l02225" name="l02225"></a><span class="lineno"> 2225</span> </div>
 <div class="line"><a id="l02232" name="l02232"></a><span class="lineno"> 2232</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02233" name="l02233"></a><span class="lineno"> 2233</span>{</div>
-<div class="line"><a id="l02234" name="l02234"></a><span class="lineno"> 2234</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTCIF5);</div>
+<div class="line"><a id="l02234" name="l02234"></a><span class="lineno"> 2234</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTCIF5);</div>
 <div class="line"><a id="l02235" name="l02235"></a><span class="lineno"> 2235</span>}</div>
 <div class="line"><a id="l02236" name="l02236"></a><span class="lineno"> 2236</span> </div>
 <div class="line"><a id="l02243" name="l02243"></a><span class="lineno"> 2243</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02244" name="l02244"></a><span class="lineno"> 2244</span>{</div>
-<div class="line"><a id="l02245" name="l02245"></a><span class="lineno"> 2245</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTCIF6);</div>
+<div class="line"><a id="l02245" name="l02245"></a><span class="lineno"> 2245</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTCIF6);</div>
 <div class="line"><a id="l02246" name="l02246"></a><span class="lineno"> 2246</span>}</div>
 <div class="line"><a id="l02247" name="l02247"></a><span class="lineno"> 2247</span> </div>
 <div class="line"><a id="l02254" name="l02254"></a><span class="lineno"> 2254</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TC7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02255" name="l02255"></a><span class="lineno"> 2255</span>{</div>
-<div class="line"><a id="l02256" name="l02256"></a><span class="lineno"> 2256</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTCIF7);</div>
+<div class="line"><a id="l02256" name="l02256"></a><span class="lineno"> 2256</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTCIF7);</div>
 <div class="line"><a id="l02257" name="l02257"></a><span class="lineno"> 2257</span>}</div>
 <div class="line"><a id="l02258" name="l02258"></a><span class="lineno"> 2258</span> </div>
 <div class="line"><a id="l02265" name="l02265"></a><span class="lineno"> 2265</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02266" name="l02266"></a><span class="lineno"> 2266</span>{</div>
-<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTEIF0);</div>
+<div class="line"><a id="l02267" name="l02267"></a><span class="lineno"> 2267</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTEIF0);</div>
 <div class="line"><a id="l02268" name="l02268"></a><span class="lineno"> 2268</span>}</div>
 <div class="line"><a id="l02269" name="l02269"></a><span class="lineno"> 2269</span> </div>
 <div class="line"><a id="l02276" name="l02276"></a><span class="lineno"> 2276</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02277" name="l02277"></a><span class="lineno"> 2277</span>{</div>
-<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTEIF1);</div>
+<div class="line"><a id="l02278" name="l02278"></a><span class="lineno"> 2278</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTEIF1);</div>
 <div class="line"><a id="l02279" name="l02279"></a><span class="lineno"> 2279</span>}</div>
 <div class="line"><a id="l02280" name="l02280"></a><span class="lineno"> 2280</span> </div>
 <div class="line"><a id="l02287" name="l02287"></a><span class="lineno"> 2287</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02288" name="l02288"></a><span class="lineno"> 2288</span>{</div>
-<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTEIF2);</div>
+<div class="line"><a id="l02289" name="l02289"></a><span class="lineno"> 2289</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTEIF2);</div>
 <div class="line"><a id="l02290" name="l02290"></a><span class="lineno"> 2290</span>}</div>
 <div class="line"><a id="l02291" name="l02291"></a><span class="lineno"> 2291</span> </div>
 <div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02299" name="l02299"></a><span class="lineno"> 2299</span>{</div>
-<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CTEIF3);</div>
+<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CTEIF3);</div>
 <div class="line"><a id="l02301" name="l02301"></a><span class="lineno"> 2301</span>}</div>
 <div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span> </div>
 <div class="line"><a id="l02309" name="l02309"></a><span class="lineno"> 2309</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>{</div>
-<div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTEIF4);</div>
+<div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTEIF4);</div>
 <div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>}</div>
 <div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span> </div>
 <div class="line"><a id="l02320" name="l02320"></a><span class="lineno"> 2320</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02321" name="l02321"></a><span class="lineno"> 2321</span>{</div>
-<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTEIF5);</div>
+<div class="line"><a id="l02322" name="l02322"></a><span class="lineno"> 2322</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTEIF5);</div>
 <div class="line"><a id="l02323" name="l02323"></a><span class="lineno"> 2323</span>}</div>
 <div class="line"><a id="l02324" name="l02324"></a><span class="lineno"> 2324</span> </div>
 <div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02332" name="l02332"></a><span class="lineno"> 2332</span>{</div>
-<div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTEIF6);</div>
+<div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTEIF6);</div>
 <div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span>}</div>
 <div class="line"><a id="l02335" name="l02335"></a><span class="lineno"> 2335</span> </div>
 <div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_TE7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02343" name="l02343"></a><span class="lineno"> 2343</span>{</div>
-<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CTEIF7);</div>
+<div class="line"><a id="l02344" name="l02344"></a><span class="lineno"> 2344</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CTEIF7);</div>
 <div class="line"><a id="l02345" name="l02345"></a><span class="lineno"> 2345</span>}</div>
 <div class="line"><a id="l02346" name="l02346"></a><span class="lineno"> 2346</span> </div>
 <div class="line"><a id="l02353" name="l02353"></a><span class="lineno"> 2353</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02354" name="l02354"></a><span class="lineno"> 2354</span>{</div>
-<div class="line"><a id="l02355" name="l02355"></a><span class="lineno"> 2355</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CDMEIF0);</div>
+<div class="line"><a id="l02355" name="l02355"></a><span class="lineno"> 2355</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CDMEIF0);</div>
 <div class="line"><a id="l02356" name="l02356"></a><span class="lineno"> 2356</span>}</div>
 <div class="line"><a id="l02357" name="l02357"></a><span class="lineno"> 2357</span> </div>
 <div class="line"><a id="l02364" name="l02364"></a><span class="lineno"> 2364</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02365" name="l02365"></a><span class="lineno"> 2365</span>{</div>
-<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CDMEIF1);</div>
+<div class="line"><a id="l02366" name="l02366"></a><span class="lineno"> 2366</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CDMEIF1);</div>
 <div class="line"><a id="l02367" name="l02367"></a><span class="lineno"> 2367</span>}</div>
 <div class="line"><a id="l02368" name="l02368"></a><span class="lineno"> 2368</span> </div>
 <div class="line"><a id="l02375" name="l02375"></a><span class="lineno"> 2375</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02376" name="l02376"></a><span class="lineno"> 2376</span>{</div>
-<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CDMEIF2);</div>
+<div class="line"><a id="l02377" name="l02377"></a><span class="lineno"> 2377</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CDMEIF2);</div>
 <div class="line"><a id="l02378" name="l02378"></a><span class="lineno"> 2378</span>}</div>
 <div class="line"><a id="l02379" name="l02379"></a><span class="lineno"> 2379</span> </div>
 <div class="line"><a id="l02386" name="l02386"></a><span class="lineno"> 2386</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02387" name="l02387"></a><span class="lineno"> 2387</span>{</div>
-<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CDMEIF3);</div>
+<div class="line"><a id="l02388" name="l02388"></a><span class="lineno"> 2388</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CDMEIF3);</div>
 <div class="line"><a id="l02389" name="l02389"></a><span class="lineno"> 2389</span>}</div>
 <div class="line"><a id="l02390" name="l02390"></a><span class="lineno"> 2390</span> </div>
 <div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>{</div>
-<div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CDMEIF4);</div>
+<div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CDMEIF4);</div>
 <div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span>}</div>
 <div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span> </div>
 <div class="line"><a id="l02408" name="l02408"></a><span class="lineno"> 2408</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02409" name="l02409"></a><span class="lineno"> 2409</span>{</div>
-<div class="line"><a id="l02410" name="l02410"></a><span class="lineno"> 2410</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CDMEIF5);</div>
+<div class="line"><a id="l02410" name="l02410"></a><span class="lineno"> 2410</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CDMEIF5);</div>
 <div class="line"><a id="l02411" name="l02411"></a><span class="lineno"> 2411</span>}</div>
 <div class="line"><a id="l02412" name="l02412"></a><span class="lineno"> 2412</span> </div>
 <div class="line"><a id="l02419" name="l02419"></a><span class="lineno"> 2419</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02420" name="l02420"></a><span class="lineno"> 2420</span>{</div>
-<div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CDMEIF6);</div>
+<div class="line"><a id="l02421" name="l02421"></a><span class="lineno"> 2421</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CDMEIF6);</div>
 <div class="line"><a id="l02422" name="l02422"></a><span class="lineno"> 2422</span>}</div>
 <div class="line"><a id="l02423" name="l02423"></a><span class="lineno"> 2423</span> </div>
 <div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_DME7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span>{</div>
-<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CDMEIF7);</div>
+<div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CDMEIF7);</div>
 <div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>}</div>
 <div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span> </div>
 <div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE0(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span>{</div>
-<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CFEIF0);</div>
+<div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CFEIF0);</div>
 <div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span>}</div>
 <div class="line"><a id="l02445" name="l02445"></a><span class="lineno"> 2445</span> </div>
 <div class="line"><a id="l02452" name="l02452"></a><span class="lineno"> 2452</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE1(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02453" name="l02453"></a><span class="lineno"> 2453</span>{</div>
-<div class="line"><a id="l02454" name="l02454"></a><span class="lineno"> 2454</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CFEIF1);</div>
+<div class="line"><a id="l02454" name="l02454"></a><span class="lineno"> 2454</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CFEIF1);</div>
 <div class="line"><a id="l02455" name="l02455"></a><span class="lineno"> 2455</span>}</div>
 <div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span> </div>
 <div class="line"><a id="l02463" name="l02463"></a><span class="lineno"> 2463</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE2(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02464" name="l02464"></a><span class="lineno"> 2464</span>{</div>
-<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CFEIF2);</div>
+<div class="line"><a id="l02465" name="l02465"></a><span class="lineno"> 2465</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CFEIF2);</div>
 <div class="line"><a id="l02466" name="l02466"></a><span class="lineno"> 2466</span>}</div>
 <div class="line"><a id="l02467" name="l02467"></a><span class="lineno"> 2467</span> </div>
 <div class="line"><a id="l02474" name="l02474"></a><span class="lineno"> 2474</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE3(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02475" name="l02475"></a><span class="lineno"> 2475</span>{</div>
-<div class="line"><a id="l02476" name="l02476"></a><span class="lineno"> 2476</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">LIFCR</a> , DMA_LIFCR_CFEIF3);</div>
+<div class="line"><a id="l02476" name="l02476"></a><span class="lineno"> 2476</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">LIFCR</a> , DMA_LIFCR_CFEIF3);</div>
 <div class="line"><a id="l02477" name="l02477"></a><span class="lineno"> 2477</span>}</div>
 <div class="line"><a id="l02478" name="l02478"></a><span class="lineno"> 2478</span> </div>
 <div class="line"><a id="l02485" name="l02485"></a><span class="lineno"> 2485</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE4(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02486" name="l02486"></a><span class="lineno"> 2486</span>{</div>
-<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CFEIF4);</div>
+<div class="line"><a id="l02487" name="l02487"></a><span class="lineno"> 2487</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CFEIF4);</div>
 <div class="line"><a id="l02488" name="l02488"></a><span class="lineno"> 2488</span>}</div>
 <div class="line"><a id="l02489" name="l02489"></a><span class="lineno"> 2489</span> </div>
 <div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE5(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>{</div>
-<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CFEIF5);</div>
+<div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CFEIF5);</div>
 <div class="line"><a id="l02499" name="l02499"></a><span class="lineno"> 2499</span>}</div>
 <div class="line"><a id="l02500" name="l02500"></a><span class="lineno"> 2500</span> </div>
 <div class="line"><a id="l02507" name="l02507"></a><span class="lineno"> 2507</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE6(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02508" name="l02508"></a><span class="lineno"> 2508</span>{</div>
-<div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CFEIF6);</div>
+<div class="line"><a id="l02509" name="l02509"></a><span class="lineno"> 2509</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CFEIF6);</div>
 <div class="line"><a id="l02510" name="l02510"></a><span class="lineno"> 2510</span>}</div>
 <div class="line"><a id="l02511" name="l02511"></a><span class="lineno"> 2511</span> </div>
 <div class="line"><a id="l02518" name="l02518"></a><span class="lineno"> 2518</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_ClearFlag_FE7(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx)</div>
 <div class="line"><a id="l02519" name="l02519"></a><span class="lineno"> 2519</span>{</div>
-<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">HIFCR</a> , DMA_HIFCR_CFEIF7);</div>
+<div class="line"><a id="l02520" name="l02520"></a><span class="lineno"> 2520</span>  WRITE_REG(DMAx-&gt;<a class="code hl_variable" href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">HIFCR</a> , DMA_HIFCR_CFEIF7);</div>
 <div class="line"><a id="l02521" name="l02521"></a><span class="lineno"> 2521</span>}</div>
 <div class="line"><a id="l02522" name="l02522"></a><span class="lineno"> 2522</span> </div>
 <div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>__STATIC_INLINE <span class="keywordtype">void</span> LL_DMA_EnableIT_HT(<a class="code hl_struct" href="struct_d_m_a___type_def.html">DMA_TypeDef</a> *DMAx, uint32_t Stream)</div>
@@ -1012,10 +1012,10 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astm32f4xx_8h_html"><div class="ttname"><a href="stm32f4xx_8h.html">stm32f4xx.h</a></div><div class="ttdoc">CMSIS STM32F4xx Device Peripheral Access Layer Header File.</div></div>
 <div class="ttc" id="astruct_d_m_a___stream___type_def_html"><div class="ttname"><a href="struct_d_m_a___stream___type_def.html">DMA_Stream_TypeDef</a></div><div class="ttdoc">DMA Controller.</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:346</div></div>
 <div class="ttc" id="astruct_d_m_a___type_def_html"><div class="ttname"><a href="struct_d_m_a___type_def.html">DMA_TypeDef</a></div><div class="ttdef"><b>Definition</b> stm32f407xx.h:356</div></div>
-<div class="ttc" id="astruct_d_m_a___type_def_html_a01a90a5fcd6459e10b81c0ab737dd2e3"><div class="ttname"><a href="struct_d_m_a___type_def.html#a01a90a5fcd6459e10b81c0ab737dd2e3">DMA_TypeDef::HISR</a></div><div class="ttdeci">__IO uint32_t HISR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:358</div></div>
-<div class="ttc" id="astruct_d_m_a___type_def_html_a11adb689c874d38b49fa44990323b653"><div class="ttname"><a href="struct_d_m_a___type_def.html#a11adb689c874d38b49fa44990323b653">DMA_TypeDef::LIFCR</a></div><div class="ttdeci">__IO uint32_t LIFCR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:359</div></div>
-<div class="ttc" id="astruct_d_m_a___type_def_html_a1e4f50b935bab2520788ae936f2e55c1"><div class="ttname"><a href="struct_d_m_a___type_def.html#a1e4f50b935bab2520788ae936f2e55c1">DMA_TypeDef::HIFCR</a></div><div class="ttdeci">__IO uint32_t HIFCR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:360</div></div>
-<div class="ttc" id="astruct_d_m_a___type_def_html_aacb4a0977d281bc809cb5974e178bc2b"><div class="ttname"><a href="struct_d_m_a___type_def.html#aacb4a0977d281bc809cb5974e178bc2b">DMA_TypeDef::LISR</a></div><div class="ttdeci">__IO uint32_t LISR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:357</div></div>
+<div class="ttc" id="astruct_d_m_a___type_def_html_a5cdef358e9e95b570358e1f6a3a7f492"><div class="ttname"><a href="struct_d_m_a___type_def.html#a5cdef358e9e95b570358e1f6a3a7f492">DMA_TypeDef::LISR</a></div><div class="ttdeci">__IO uint32_t LISR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:357</div></div>
+<div class="ttc" id="astruct_d_m_a___type_def_html_a6fe40f7ac1a18c2726b328b5ec02b262"><div class="ttname"><a href="struct_d_m_a___type_def.html#a6fe40f7ac1a18c2726b328b5ec02b262">DMA_TypeDef::HISR</a></div><div class="ttdeci">__IO uint32_t HISR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:358</div></div>
+<div class="ttc" id="astruct_d_m_a___type_def_html_ac4f7bf4cb172024bfc940c00167cd04e"><div class="ttname"><a href="struct_d_m_a___type_def.html#ac4f7bf4cb172024bfc940c00167cd04e">DMA_TypeDef::LIFCR</a></div><div class="ttdeci">__IO uint32_t LIFCR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:359</div></div>
+<div class="ttc" id="astruct_d_m_a___type_def_html_ac55c27aeea4107813c1e7da3fcf46961"><div class="ttname"><a href="struct_d_m_a___type_def.html#ac55c27aeea4107813c1e7da3fcf46961">DMA_TypeDef::HIFCR</a></div><div class="ttdeci">__IO uint32_t HIFCR</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:360</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

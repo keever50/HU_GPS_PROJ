@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: RCC Extended MCOx Clock Config</title>
+<title>HUGPS: RCC Extended MCOx Clock Config</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -119,7 +119,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                 MODIFY_REG(RCC-&gt;CFGR, (RCC_CFGR_MCO1 | RCC_CFGR_MCO1PRE), ((__MCOCLKSOURCE__) | (__MCODIV__)))</div>
+<b>Value:</b><div class="fragment"><div class="line">  MODIFY_REG(RCC-&gt;CFGR, (RCC_CFGR_MCO1 | RCC_CFGR_MCO1PRE), ((__MCOCLKSOURCE__) | (__MCODIV__)))</div>
 </div><!-- fragment -->
 <p>Macro to configure the MCO1 clock. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -163,7 +163,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    MODIFY_REG(RCC-&gt;CFGR, (RCC_CFGR_MCO2 | RCC_CFGR_MCO2PRE), ((__MCOCLKSOURCE__) | ((__MCODIV__) &lt;&lt; 3U)));</div>
+<b>Value:</b><div class="fragment"><div class="line">  MODIFY_REG(RCC-&gt;CFGR, (RCC_CFGR_MCO2 | RCC_CFGR_MCO2PRE), ((__MCOCLKSOURCE__) | ((__MCODIV__) &lt;&lt; 3U)));</div>
 </div><!-- fragment -->
 <p>Macro to configure the MCO2 clock. </p>
 <dl class="params"><dt>Parameters</dt><dd>

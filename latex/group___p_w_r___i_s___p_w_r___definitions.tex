@@ -67,7 +67,9 @@
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(((ENTRY)\ ==\ PWR\_SLEEPENTRY\_WFI)\ ||\ ((ENTRY)\ ==\ PWR\_SLEEPENTRY\_WFE))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((ENTRY)\ ==\ PWR\_SLEEPENTRY\_WFI)\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ENTRY)\ ==\ PWR\_SLEEPENTRY\_WFE)\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ENTRY)\ ==\ PWR\_SLEEPENTRY\_WFE\_NO\_EVT\_CLEAR))}
 
 \end{DoxyCode}
 \Hypertarget{group___p_w_r___i_s___p_w_r___definitions_ga4a94eb1f400dec6e486fbc229cbea8a0}\index{PWR Private macros to check input parameters@{PWR Private macros to check input parameters}!IS\_PWR\_STOP\_ENTRY@{IS\_PWR\_STOP\_ENTRY}}
@@ -78,6 +80,8 @@
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(((ENTRY)\ ==\ PWR\_STOPENTRY\_WFI)\ ||\ ((ENTRY)\ ==\ PWR\_STOPENTRY\_WFE))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((ENTRY)\ ==\ PWR\_STOPENTRY\_WFI)\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ENTRY)\ ==\ PWR\_STOPENTRY\_WFE)\ ||\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((ENTRY)\ ==\ PWR\_STOPENTRY\_WFE\_NO\_EVT\_CLEAR))}
 
 \end{DoxyCode}

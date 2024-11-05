@@ -17,14 +17,14 @@
 \DoxyCodeLine{00038\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{00047\ \{}
-\DoxyCodeLine{00048\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_abcd2a46537eee4ed23fa1642c5234ea8}{Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00051\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a8fc84bad7ae403ab4231b37077f9d99f}{Standard}};\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00054\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_aa968e67a06e23282776bd7b615a8c1cc}{DataFormat}};\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00057\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_ad0d868889f53bdda32fa5c201efa2a12}{MCLKOutput}};\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00060\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a5c42be6d3eb4713f0d4fc202cae95553}{AudioFreq}};\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00063\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_aff339ae5b4099da49e6970dd59c41afe}{CPOL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00066\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a6a0c9c91b9530465cc2347c758a2fdf3}{ClockSource}};\ \ \ \ \ }
-\DoxyCodeLine{00068\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a3126fcf92721ac72c91cc870fcef1ffe}{FullDuplexMode}};\ \ }
+\DoxyCodeLine{00048\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a937bc4b8b3805b877696eb68ab31ac89}{Standard}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_ab38ce2ed0475202a3ccb010de2c615ba}{DataFormat}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a9a4697df7f6640aa47c429e4ec197e43}{MCLKOutput}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a3309da751a8fc31e4e34015481e0eb76}{AudioFreq}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a816478ce3c6267bc9f66be53517dec36}{CPOL}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_afe27815154e535b96e8fa1b4d2fdd596}{ClockSource}};\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ uint32\_t\ \mbox{\hyperlink{struct_i2_s___init_type_def_a3e194808623e05acbdd222df0f4fe0de}{FullDuplexMode}};\ \ }
 \DoxyCodeLine{00070\ \}\ \mbox{\hyperlink{struct_i2_s___init_type_def}{I2S\_InitTypeDef}};}
 \DoxyCodeLine{00071\ }
 \DoxyCodeLine{00075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
@@ -41,20 +41,20 @@
 \DoxyCodeLine{00086\ }
 \DoxyCodeLine{00090\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____i2_s___handle_type_def}{\_\_I2S\_HandleTypeDef}}}
 \DoxyCodeLine{00091\ \{}
-\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{struct_s_p_i___type_def}{SPI\_TypeDef}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_a8c1609087f90105e6c3bd82f204d8816}{Instance}};\ \ \ \ }
-\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{struct_i2_s___init_type_def}{I2S\_InitTypeDef}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a52d858be741f4b3567e90f88a8fba71a}{Init}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00096\ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_ae16e02f79a15bc093107daaece074914}{pTxBuffPtr}};\ \ }
-\DoxyCodeLine{00098\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_afe629648b19b7f099562294a8cc2c773}{TxXferSize}};\ \ \ }
-\DoxyCodeLine{00100\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a450f0ddcbc23f69bb0f0dff274f65306}{TxXferCount}};\ \ }
-\DoxyCodeLine{00102\ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_acd0c69efb14f7826a24dce4e0046f3eb}{pRxBuffPtr}};\ \ }
-\DoxyCodeLine{00104\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a48cd9c3dd7e96293dc4e65f4ab0b47e7}{RxXferSize}};\ \ \ }
-\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a0bc678555f31c1de9a784b86181c0000}{RxXferCount}};\ \ }
-\DoxyCodeLine{00112\ \ \ void\ (*\mbox{\hyperlink{struct_____i2_s___handle_type_def_ac5352bec21daa476d2d993ea15d3b9f5}{IrqHandlerISR}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____i2_s___handle_type_def}{\_\_I2S\_HandleTypeDef}}\ *hi2s);\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00114\ \ \ \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}\ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_aa650704b3a3679477b1d76af7bbf867d}{hdmatx}};\ \ \ \ \ \ }
-\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}\ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_a3ff52b81753a72aec6ddaeae0f96fba6}{hdmarx}};\ \ \ \ \ \ }
-\DoxyCodeLine{00118\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_ac0754c45a3816448b07d74203a136272}{Lock}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00120\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{group___i2_s___exported___types_ga2588a0c71baf7cd6d2c1b9b11120bef0}{HAL\_I2S\_StateTypeDef}}\ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_aee7a449f3c7fab6129898b32e0f29c0c}{State}};\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00122\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a5b4a8a5764e8cd8764b0c1c5ee495cd0}{ErrorCode}};\ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{struct_s_p_i___type_def}{SPI\_TypeDef}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_aa5c715deaf693cc2dbfa90f40681ee1d}{Instance}};\ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{struct_i2_s___init_type_def}{I2S\_InitTypeDef}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a578c0cfc11e016a6ea29e052a9f652c7}{Init}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_a18ef962d60fea84ef86146de2f90d883}{pTxBuffPtr}};\ \ }
+\DoxyCodeLine{00098\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a1d38bf13df64f7bd58b6722b1fd8c2ab}{TxXferSize}};\ \ \ }
+\DoxyCodeLine{00100\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a1823437fbed80bdd1510782ced4e5532}{TxXferCount}};\ \ }
+\DoxyCodeLine{00102\ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_a5d6fc2bd3b9dae2d28fb939b32867a77}{pRxBuffPtr}};\ \ }
+\DoxyCodeLine{00104\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a0c194e8f6f444cce318dbd261e1d8ba4}{RxXferSize}};\ \ \ }
+\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_ad95a26d6b12b7087bba3d1b769175db2}{RxXferCount}};\ \ }
+\DoxyCodeLine{00112\ \ \ void\ (*\mbox{\hyperlink{struct_____i2_s___handle_type_def_aed7b18dc763064a4e581ee381b38dc2d}{IrqHandlerISR}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____i2_s___handle_type_def}{\_\_I2S\_HandleTypeDef}}\ *hi2s);\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}\ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_a33e13c28b1a70e6164417abb026d7a22}{hdmatx}};\ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}\ \ \ \ \ \ \ \ \ \ *\mbox{\hyperlink{struct_____i2_s___handle_type_def_abd0aeec20298a55d89a440320e35634f}{hdmarx}};\ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a2fcaf7965ee94947d34e5dc6eb75c313}{Lock}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{group___i2_s___exported___types_ga2588a0c71baf7cd6d2c1b9b11120bef0}{HAL\_I2S\_StateTypeDef}}\ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_af312c98864464dac5591cbfe1b32bde3}{State}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_____i2_s___handle_type_def_a123c5063e6a3b1901b2fbe5f88c53a7e}{ErrorCode}};\ \ \ \ }
 \DoxyCodeLine{00125\ \textcolor{preprocessor}{\#if\ (USE\_HAL\_I2S\_REGISTER\_CALLBACKS\ ==\ 1U)}}
 \DoxyCodeLine{00126\ \ \ void\ (*\ TxCpltCallback)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____i2_s___handle_type_def}{\_\_I2S\_HandleTypeDef}}\ *hi2s);\ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00127\ \ \ void\ (*\ RxCpltCallback)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____i2_s___handle_type_def}{\_\_I2S\_HandleTypeDef}}\ *hi2s);\ \ \ \ \ \ \ \ \ \ \ \ \ }

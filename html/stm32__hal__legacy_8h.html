@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h File Reference</title>
+<title>HUGPS: Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -1434,14 +1434,11 @@ Macros</h2></td></tr>
 <tr class="memitem:ga36e9938d6f099aab9f801d547d0a88a5" id="r_ga36e9938d6f099aab9f801d547d0a88a5"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TXFIFO_IDLE</b>&#160;&#160;&#160;0x00000000U  /* Tx FIFO read status: Idle */</td></tr>
 <tr class="separator:ga36e9938d6f099aab9f801d547d0a88a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga162f3eb163f0fc63e0ef21f640ee3b35" id="r_ga162f3eb163f0fc63e0ef21f640ee3b35"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TXFIFO_READ</b>&#160;&#160;&#160;0x00100000U  /* Tx FIFO read status: Read (transferring data to the MAC transmitter) */</td></tr>
+<tr class="memitem:ga162f3eb163f0fc63e0ef21f640ee3b35" id="r_ga162f3eb163f0fc63e0ef21f640ee3b35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga162f3eb163f0fc63e0ef21f640ee3b35">ETH_MAC_TXFIFO_READ</a></td></tr>
 <tr class="separator:ga162f3eb163f0fc63e0ef21f640ee3b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga732d203562136a49e6fdfe08cbbdb007" id="r_ga732d203562136a49e6fdfe08cbbdb007"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TXFIFO_WAITING</b>&#160;&#160;&#160;0x00200000U  /* Tx FIFO read status: Waiting for TxStatus from MAC transmitter */</td></tr>
+<tr class="memitem:ga732d203562136a49e6fdfe08cbbdb007" id="r_ga732d203562136a49e6fdfe08cbbdb007"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga732d203562136a49e6fdfe08cbbdb007">ETH_MAC_TXFIFO_WAITING</a></td></tr>
 <tr class="separator:ga732d203562136a49e6fdfe08cbbdb007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa98e266d20386f08f1e7d07924ae7fd8" id="r_gaa98e266d20386f08f1e7d07924ae7fd8"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TXFIFO_WRITING</b>&#160;&#160;&#160;0x00300000U  /* Tx FIFO read status: Writing the received TxStatus or flushing the TxFIFO */</td></tr>
+<tr class="memitem:gaa98e266d20386f08f1e7d07924ae7fd8" id="r_gaa98e266d20386f08f1e7d07924ae7fd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#gaa98e266d20386f08f1e7d07924ae7fd8">ETH_MAC_TXFIFO_WRITING</a></td></tr>
 <tr class="separator:gaa98e266d20386f08f1e7d07924ae7fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga858c30b0c902a609fbf5e9de54c873fc" id="r_ga858c30b0c902a609fbf5e9de54c873fc"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TRANSMISSION_PAUSE</b>&#160;&#160;&#160;0x00080000U  /* MAC transmitter in pause */</td></tr>
@@ -1449,14 +1446,11 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3b6682322869b2f8ff8a34239418b229" id="r_ga3b6682322869b2f8ff8a34239418b229"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TRANSMITFRAMECONTROLLER_IDLE</b>&#160;&#160;&#160;0x00000000U  /* MAC transmit frame controller: Idle */</td></tr>
 <tr class="separator:ga3b6682322869b2f8ff8a34239418b229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga51af5af4f0244add557e29f1c1085c76" id="r_ga51af5af4f0244add557e29f1c1085c76"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TRANSMITFRAMECONTROLLER_WAITING</b>&#160;&#160;&#160;0x00020000U  /* MAC transmit frame controller: Waiting for Status of previous frame or IFG/backoff period to be over */</td></tr>
+<tr class="memitem:ga51af5af4f0244add557e29f1c1085c76" id="r_ga51af5af4f0244add557e29f1c1085c76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga51af5af4f0244add557e29f1c1085c76">ETH_MAC_TRANSMITFRAMECONTROLLER_WAITING</a></td></tr>
 <tr class="separator:ga51af5af4f0244add557e29f1c1085c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga30f5421c685cc87345a62034f03e9ede" id="r_ga30f5421c685cc87345a62034f03e9ede"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TRANSMITFRAMECONTROLLER_GENRATING_PCF</b>&#160;&#160;&#160;0x00040000U  /* MAC transmit frame controller: Generating and transmitting a Pause control frame (in full duplex mode) */</td></tr>
+<tr class="memitem:ga30f5421c685cc87345a62034f03e9ede" id="r_ga30f5421c685cc87345a62034f03e9ede"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga30f5421c685cc87345a62034f03e9ede">ETH_MAC_TRANSMITFRAMECONTROLLER_GENRATING_PCF</a></td></tr>
 <tr class="separator:ga30f5421c685cc87345a62034f03e9ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga813acc11409391a70e9c8f4e2c769cf1" id="r_ga813acc11409391a70e9c8f4e2c769cf1"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_TRANSMITFRAMECONTROLLER_TRANSFERRING</b>&#160;&#160;&#160;0x00060000U  /* MAC transmit frame controller: Transferring input frame for transmission */</td></tr>
+<tr class="memitem:ga813acc11409391a70e9c8f4e2c769cf1" id="r_ga813acc11409391a70e9c8f4e2c769cf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga813acc11409391a70e9c8f4e2c769cf1">ETH_MAC_TRANSMITFRAMECONTROLLER_TRANSFERRING</a></td></tr>
 <tr class="separator:ga813acc11409391a70e9c8f4e2c769cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga569a78f6147f1068ddeed3897776b6f3" id="r_ga569a78f6147f1068ddeed3897776b6f3"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_MII_TRANSMIT_ACTIVE</b>&#160;&#160;&#160;0x00010000U  /* MAC MII transmit engine active */</td></tr>
@@ -1464,11 +1458,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gab0663cbb0510f2d3bdc9fdaea103725e" id="r_gab0663cbb0510f2d3bdc9fdaea103725e"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_RXFIFO_EMPTY</b>&#160;&#160;&#160;0x00000000U  /* Rx FIFO fill level: empty */</td></tr>
 <tr class="separator:gab0663cbb0510f2d3bdc9fdaea103725e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ac34f74c22709a45510fe557e6b1866" id="r_ga1ac34f74c22709a45510fe557e6b1866"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_RXFIFO_BELOW_THRESHOLD</b>&#160;&#160;&#160;0x00000100U  /* Rx FIFO fill level: fill-level below flow-control de-activate threshold */</td></tr>
+<tr class="memitem:ga1ac34f74c22709a45510fe557e6b1866" id="r_ga1ac34f74c22709a45510fe557e6b1866"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga1ac34f74c22709a45510fe557e6b1866">ETH_MAC_RXFIFO_BELOW_THRESHOLD</a></td></tr>
 <tr class="separator:ga1ac34f74c22709a45510fe557e6b1866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10d4ac5728fe85efe0ec19699e4c90f0" id="r_ga10d4ac5728fe85efe0ec19699e4c90f0"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_RXFIFO_ABOVE_THRESHOLD</b>&#160;&#160;&#160;0x00000200U  /* Rx FIFO fill level: fill-level above flow-control activate threshold */</td></tr>
+<tr class="memitem:ga10d4ac5728fe85efe0ec19699e4c90f0" id="r_ga10d4ac5728fe85efe0ec19699e4c90f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga10d4ac5728fe85efe0ec19699e4c90f0">ETH_MAC_RXFIFO_ABOVE_THRESHOLD</a></td></tr>
 <tr class="separator:ga10d4ac5728fe85efe0ec19699e4c90f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7b77138ec3256a713a8aa74ea94f0c1" id="r_gaa7b77138ec3256a713a8aa74ea94f0c1"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_RXFIFO_FULL</b>&#160;&#160;&#160;0x00000300U  /* Rx FIFO fill level: full */</td></tr>
@@ -1479,11 +1471,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga056b776e92442c623c3d848314e6c8f0" id="r_ga056b776e92442c623c3d848314e6c8f0"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_READCONTROLLER_READING_DATA</b>&#160;&#160;&#160;0x00000020U  /* Rx FIFO read controller Reading frame data */</td></tr>
 <tr class="separator:ga056b776e92442c623c3d848314e6c8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga441228e7ee2416d37f22f5081d739e2c" id="r_ga441228e7ee2416d37f22f5081d739e2c"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_READCONTROLLER_READING_STATUS</b>&#160;&#160;&#160;0x00000040U  /* Rx FIFO read controller Reading frame status (or time-stamp) */</td></tr>
+<tr class="memitem:ga441228e7ee2416d37f22f5081d739e2c" id="r_ga441228e7ee2416d37f22f5081d739e2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga441228e7ee2416d37f22f5081d739e2c">ETH_MAC_READCONTROLLER_READING_STATUS</a></td></tr>
 <tr class="separator:ga441228e7ee2416d37f22f5081d739e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7a4fe56723328085b9b80adbfb528a5d" id="r_ga7a4fe56723328085b9b80adbfb528a5d"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_READCONTROLLER_FLUSHING</b>&#160;&#160;&#160;0x00000060U  /* Rx FIFO read controller Flushing the frame data and status */</td></tr>
+<tr class="memitem:ga7a4fe56723328085b9b80adbfb528a5d" id="r_ga7a4fe56723328085b9b80adbfb528a5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_a_l___e_t_h___aliased___defines.html#ga7a4fe56723328085b9b80adbfb528a5d">ETH_MAC_READCONTROLLER_FLUSHING</a></td></tr>
 <tr class="separator:ga7a4fe56723328085b9b80adbfb528a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaed7a7d977c0411b7303270d6c35e19d2" id="r_gaed7a7d977c0411b7303270d6c35e19d2"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_RXFIFO_WRITE_ACTIVE</b>&#160;&#160;&#160;0x00000010U  /* Rx FIFO write controller active */</td></tr>
@@ -1503,6 +1493,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga69bdbf3c1abe74dde1f5e1d2a85a501e" id="r_ga69bdbf3c1abe74dde1f5e1d2a85a501e"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_MAC_MII_RECEIVE_PROTOCOL_ACTIVE</b>&#160;&#160;&#160;0x00000001U  /* MAC MII receive protocol engine active */</td></tr>
 <tr class="separator:ga69bdbf3c1abe74dde1f5e1d2a85a501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64ef456d86e31f19478b8ef50e8ccab6" id="r_ga64ef456d86e31f19478b8ef50e8ccab6"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETH_TxPacketConfig</b>&#160;&#160;&#160;ETH_TxPacketConfigTypeDef   /* Transmit Packet Configuration structure definition */</td></tr>
+<tr class="separator:ga64ef456d86e31f19478b8ef50e8ccab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5aea0676cf18867facb28620b5818396" id="r_ga5aea0676cf18867facb28620b5818396"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_DCMI_ERROR_OVF</b>&#160;&#160;&#160;HAL_DCMI_ERROR_OVR</td></tr>
 <tr class="separator:ga5aea0676cf18867facb28620b5818396"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5734,6 +5727,12 @@ Macros</h2></td></tr>
 <tr class="memitem:ga1e28079e8964fba6a2b3e0484843ddc4" id="r_ga1e28079e8964fba6a2b3e0484843ddc4"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_BREAKINPUTSOURCE_DFSDM</b>&#160;&#160;&#160;TIM_BREAKINPUTSOURCE_DFSDM1</td></tr>
 <tr class="separator:ga1e28079e8964fba6a2b3e0484843ddc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ac5cec9a2a20452a800daf0268e4549" id="r_ga4ac5cec9a2a20452a800daf0268e4549"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_OCMODE_ASSYMETRIC_PWM1</b>&#160;&#160;&#160;TIM_OCMODE_ASYMMETRIC_PWM1</td></tr>
+<tr class="separator:ga4ac5cec9a2a20452a800daf0268e4549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca5fb8f08451b9fff093bd79da4e574b" id="r_gaca5fb8f08451b9fff093bd79da4e574b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_OCMODE_ASSYMETRIC_PWM2</b>&#160;&#160;&#160;TIM_OCMODE_ASYMMETRIC_PWM2</td></tr>
+<tr class="separator:gaca5fb8f08451b9fff093bd79da4e574b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad96bacd190bd8ba2523e83be7b1432d8" id="r_gad96bacd190bd8ba2523e83be7b1432d8"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>__HAL_ETH_EXTI_ENABLE_IT</b>&#160;&#160;&#160;__HAL_ETH_WAKEUP_EXTI_ENABLE_IT</td></tr>
 <tr class="separator:gad96bacd190bd8ba2523e83be7b1432d8"><td class="memSeparator" colspan="2">&#160;</td></tr>

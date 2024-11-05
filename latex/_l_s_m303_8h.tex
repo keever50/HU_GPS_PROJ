@@ -1,0 +1,169 @@
+\doxysection{Core/\+My\+App/\+App/\+LSM303.h File Reference}
+\hypertarget{_l_s_m303_8h}{}\label{_l_s_m303_8h}\index{Core/MyApp/App/LSM303.h@{Core/MyApp/App/LSM303.h}}
+
+
+Magnetic sensor library Created on\+: Oct 11, 2024 Author\+: kevin.  
+
+
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlsm303__mag__vector}{lsm303\+\_\+mag\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Magnetic direction vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_l_s_m303_8h_aa920f6a6303b5b626b2bac0638ac1602}\label{_l_s_m303_8h_aa920f6a6303b5b626b2bac0638ac1602} 
+\#define {\bfseries LSM303\+\_\+\+MR\+\_\+\+REG\+\_\+M}~0x02
+\item 
+\Hypertarget{_l_s_m303_8h_afd745fd3922d3adf1e67ea030ba508a7}\label{_l_s_m303_8h_afd745fd3922d3adf1e67ea030ba508a7} 
+\#define {\bfseries LSM303\+\_\+\+MR\+\_\+\+REG\+\_\+\+M\+\_\+\+SLEEP}~0b11
+\item 
+\Hypertarget{_l_s_m303_8h_aaa68902aaa3e2db0de2c6573bf9ea7db}\label{_l_s_m303_8h_aaa68902aaa3e2db0de2c6573bf9ea7db} 
+\#define {\bfseries LSM303\+\_\+\+MR\+\_\+\+REG\+\_\+\+M\+\_\+\+CONTINUOUS}~0b00
+\item 
+\Hypertarget{_l_s_m303_8h_a3bd463256f09e357e7fdda2f8d55d5ac}\label{_l_s_m303_8h_a3bd463256f09e357e7fdda2f8d55d5ac} 
+\#define {\bfseries LSM303\+\_\+\+MR\+\_\+\+REG\+\_\+\+M\+\_\+\+SINGLE}~0b01
+\item 
+\Hypertarget{_l_s_m303_8h_ac891b0a1312a103d0040718ca7c12023}\label{_l_s_m303_8h_ac891b0a1312a103d0040718ca7c12023} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+X\+\_\+\+H\+\_\+M}~0x03
+\item 
+\Hypertarget{_l_s_m303_8h_a4b50b94b210d0267f953abe24a8a80c8}\label{_l_s_m303_8h_a4b50b94b210d0267f953abe24a8a80c8} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+X\+\_\+\+L\+\_\+M}~0x04
+\item 
+\Hypertarget{_l_s_m303_8h_a6465f98d5722ab5b693c0cfb03e9fee3}\label{_l_s_m303_8h_a6465f98d5722ab5b693c0cfb03e9fee3} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+Z\+\_\+\+H\+\_\+M}~0x05
+\item 
+\Hypertarget{_l_s_m303_8h_ac08756ae01ddbe6f86525eb5e08d0316}\label{_l_s_m303_8h_ac08756ae01ddbe6f86525eb5e08d0316} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+Z\+\_\+\+L\+\_\+M}~0x06
+\item 
+\Hypertarget{_l_s_m303_8h_af24393dfd08331d535981ebeed44dca4}\label{_l_s_m303_8h_af24393dfd08331d535981ebeed44dca4} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+Y\+\_\+\+H\+\_\+M}~0x07
+\item 
+\Hypertarget{_l_s_m303_8h_a16eb07271068bc4f1f7aadf390ed7763}\label{_l_s_m303_8h_a16eb07271068bc4f1f7aadf390ed7763} 
+\#define {\bfseries LSM303\+\_\+\+OUT\+\_\+\+Y\+\_\+\+L\+\_\+M}~0x08
+\item 
+\Hypertarget{_l_s_m303_8h_aed02cf763757311055a142f9b658aaae}\label{_l_s_m303_8h_aed02cf763757311055a142f9b658aaae} 
+\#define {\bfseries LSM303\+\_\+\+SR\+\_\+\+REG\+\_\+M}~0x09
+\item 
+\Hypertarget{_l_s_m303_8h_af9d92b42fda8ab65b9b889ff486956fe}\label{_l_s_m303_8h_af9d92b42fda8ab65b9b889ff486956fe} 
+\#define {\bfseries LSM303\+\_\+\+SR\+\_\+\+REG\+\_\+\+M\+\_\+\+DRDY\+\_\+\+BIT}~0b01
+\item 
+\Hypertarget{_l_s_m303_8h_ad8284a73c53bbabe460252491ca8a80f}\label{_l_s_m303_8h_ad8284a73c53bbabe460252491ca8a80f} 
+\#define {\bfseries LSM303\+\_\+\+SR\+\_\+\+REG\+\_\+\+M\+\_\+\+LOCK\+\_\+\+BIT}~0b10
+\item 
+\Hypertarget{_l_s_m303_8h_a66a42034f03122fc91f334882d34f0c1}\label{_l_s_m303_8h_a66a42034f03122fc91f334882d34f0c1} 
+\#define {\bfseries LSM303\+\_\+\+CRB\+\_\+\+REG\+\_\+M}~0x01
+\item 
+\Hypertarget{_l_s_m303_8h_a4daafec5cb894746e3f3a7ff86ebe042}\label{_l_s_m303_8h_a4daafec5cb894746e3f3a7ff86ebe042} 
+\#define {\bfseries LSM303\+\_\+\+CRB\+\_\+\+REG\+\_\+\+M\+\_\+\+MASK}~0x111
+\item 
+\Hypertarget{_l_s_m303_8h_a8e3b5f7e9a087b9ce5d2dac8abd9b2e3}\label{_l_s_m303_8h_a8e3b5f7e9a087b9ce5d2dac8abd9b2e3} 
+\#define {\bfseries LSM303\+\_\+\+CRB\+\_\+\+REG\+\_\+\+M\+\_\+\+OFFS}~5
+\item 
+\Hypertarget{_l_s_m303_8h_a4271673fc2115e237d2f8d2619fe78db}\label{_l_s_m303_8h_a4271673fc2115e237d2f8d2619fe78db} 
+\#define {\bfseries LSM303\+\_\+\+CRA\+\_\+\+REG\+\_\+M}~0x00
+\item 
+\Hypertarget{_l_s_m303_8h_a15b7a534f92315940bbe64645fa53a7c}\label{_l_s_m303_8h_a15b7a534f92315940bbe64645fa53a7c} 
+\#define {\bfseries LSM303\+\_\+\+CRA\+\_\+\+REG\+\_\+\+M\+\_\+\+DO\+\_\+\+MASK}~0x111
+\item 
+\Hypertarget{_l_s_m303_8h_a91bfe7ca2999f66011b84272d7a027f6}\label{_l_s_m303_8h_a91bfe7ca2999f66011b84272d7a027f6} 
+\#define {\bfseries LSM303\+\_\+\+CRA\+\_\+\+REG\+\_\+\+M\+\_\+\+DO\+\_\+\+OFFS}~2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_l_s_m303_8h_ae37fd54cb2ed3a74a6c2b21148925d04}\label{_l_s_m303_8h_ae37fd54cb2ed3a74a6c2b21148925d04} 
+enum {\bfseries lsm303\+\_\+mag\+\_\+mode} \{ {\bfseries e\+LSM303\+\_\+\+MAG\+\_\+\+MODE\+\_\+\+CONTINUOUS}
+, {\bfseries e\+LSM303\+\_\+\+MAG\+\_\+\+MODE\+\_\+\+SINGLE}
+, {\bfseries e\+LSM303\+\_\+\+MAG\+\_\+\+MODE\+\_\+\+SLEEP}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_l_s_m303_8h_adc47a632b300dbf8bb565b08e2bc2314}{lsm303\+\_\+mag\+\_\+datarate}} (uint8\+\_\+t rate)
+\begin{DoxyCompactList}\small\item\em Sets the datarate of the sensor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_l_s_m303_8h_a08c99b3805e7ea01a8ba662e6e474a70}{lsm303\+\_\+mag\+\_\+gain}} (uint8\+\_\+t gain)
+\begin{DoxyCompactList}\small\item\em sets the magnetic gain \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_l_s_m303_8h_a7e20d2f46813394e2e2a0387a709bf45}{lsm303\+\_\+mag\+\_\+init}} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}i2c, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Initializes the sensor. Required to be run once. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_l_s_m303_8h_a37ebf13076247ef130c2e749813bb104}{lsm303\+\_\+mag\+\_\+mode}} (enum lsm303\+\_\+mag\+\_\+mode mode)
+\begin{DoxyCompactList}\small\item\em Sets the mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_l_s_m303_8h_a7830903949c75db935625cb7dbdc75d3}{lsm303\+\_\+mag\+\_\+get\+\_\+vector}} (struct \mbox{\hyperlink{structlsm303__mag__vector}{lsm303\+\_\+mag\+\_\+vector}} \texorpdfstring{$\ast$}{*}vect)
+\begin{DoxyCompactList}\small\item\em Get the magnetic direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Magnetic sensor library Created on\+: Oct 11, 2024 Author\+: kevin. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_s_m303_8h_adc47a632b300dbf8bb565b08e2bc2314}\index{LSM303.h@{LSM303.h}!lsm303\_mag\_datarate@{lsm303\_mag\_datarate}}
+\index{lsm303\_mag\_datarate@{lsm303\_mag\_datarate}!LSM303.h@{LSM303.h}}
+\doxysubsubsection{\texorpdfstring{lsm303\_mag\_datarate()}{lsm303\_mag\_datarate()}}
+{\footnotesize\ttfamily \label{_l_s_m303_8h_adc47a632b300dbf8bb565b08e2bc2314} 
+int lsm303\+\_\+mag\+\_\+datarate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rate}{}\end{DoxyParamCaption})}
+
+
+
+Sets the datarate of the sensor. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_l_s_m303_8h_a08c99b3805e7ea01a8ba662e6e474a70}\index{LSM303.h@{LSM303.h}!lsm303\_mag\_gain@{lsm303\_mag\_gain}}
+\index{lsm303\_mag\_gain@{lsm303\_mag\_gain}!LSM303.h@{LSM303.h}}
+\doxysubsubsection{\texorpdfstring{lsm303\_mag\_gain()}{lsm303\_mag\_gain()}}
+{\footnotesize\ttfamily \label{_l_s_m303_8h_a08c99b3805e7ea01a8ba662e6e474a70} 
+int lsm303\+\_\+mag\+\_\+gain (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gain}{}\end{DoxyParamCaption})}
+
+
+
+sets the magnetic gain 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_l_s_m303_8h_a7830903949c75db935625cb7dbdc75d3}\index{LSM303.h@{LSM303.h}!lsm303\_mag\_get\_vector@{lsm303\_mag\_get\_vector}}
+\index{lsm303\_mag\_get\_vector@{lsm303\_mag\_get\_vector}!LSM303.h@{LSM303.h}}
+\doxysubsubsection{\texorpdfstring{lsm303\_mag\_get\_vector()}{lsm303\_mag\_get\_vector()}}
+{\footnotesize\ttfamily \label{_l_s_m303_8h_a7830903949c75db935625cb7dbdc75d3} 
+int lsm303\+\_\+mag\+\_\+get\+\_\+vector (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlsm303__mag__vector}{lsm303\+\_\+mag\+\_\+vector}} \texorpdfstring{$\ast$}{*}}]{vect}{}\end{DoxyParamCaption})}
+
+
+
+Get the magnetic direction. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_l_s_m303_8h_a7e20d2f46813394e2e2a0387a709bf45}\index{LSM303.h@{LSM303.h}!lsm303\_mag\_init@{lsm303\_mag\_init}}
+\index{lsm303\_mag\_init@{lsm303\_mag\_init}!LSM303.h@{LSM303.h}}
+\doxysubsubsection{\texorpdfstring{lsm303\_mag\_init()}{lsm303\_mag\_init()}}
+{\footnotesize\ttfamily \label{_l_s_m303_8h_a7e20d2f46813394e2e2a0387a709bf45} 
+int lsm303\+\_\+mag\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}}]{i2c}{, }\item[{uint16\+\_\+t}]{address}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the sensor. Required to be run once. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_l_s_m303_8h_a37ebf13076247ef130c2e749813bb104}\index{LSM303.h@{LSM303.h}!lsm303\_mag\_mode@{lsm303\_mag\_mode}}
+\index{lsm303\_mag\_mode@{lsm303\_mag\_mode}!LSM303.h@{LSM303.h}}
+\doxysubsubsection{\texorpdfstring{lsm303\_mag\_mode()}{lsm303\_mag\_mode()}}
+{\footnotesize\ttfamily \label{_l_s_m303_8h_a37ebf13076247ef130c2e749813bb104} 
+int lsm303\+\_\+mag\+\_\+mode (\begin{DoxyParamCaption}\item[{enum lsm303\+\_\+mag\+\_\+mode}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Sets the mode. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}

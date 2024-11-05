@@ -1,0 +1,32 @@
+\doxysection{QMC5883\+L.\+h}
+\hypertarget{_q_m_c5883_l_8h_source}{}\label{_q_m_c5883_l_8h_source}\index{Core/MyApp/App/QMC5883L.h@{Core/MyApp/App/QMC5883L.h}}
+\mbox{\hyperlink{_q_m_c5883_l_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MYAPP\_APP\_QMC5883L\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MYAPP\_APP\_QMC5883L\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ QMC58831\_XOUT\_LSB\ \ \ 0x00}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ QMC58831\_XOUT\_MSB\ \ \ 0x01}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ QMC58831\_YOUT\_LSB\ \ \ 0x02}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ QMC58831\_YOUT\_MSB\ \ \ 0x03}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ QMC58831\_ZOUT\_LSB\ \ \ 0x04}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ QMC58831\_ZOUT\_MSB\ \ \ 0x05}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ QMC58831\_CTRL\_REG\ \ \ 0x09}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#define\ QMC58831\_CTRL\_REG\_MODE\_MASK\ 0b11}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \#define\ QMC58831\_CTRL\_REG\_MODE\_SHIFT\ 0}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \#define\ QMC58831\_CTRL\_REG\_MODE\_STANDBY\ 0b00}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ \#define\ QMC58831\_CTRL\_REG\_MODE\_CONTINUOUS\ 0b01}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_q_m_c5883_l_8h_a8940e04b68d27dc77b6cce57d4a9329f}{qmc58831\_init}}(\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2C\_HandleTypeDef}}\ *i2c);}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_q_m_c5883_l_8h_a8b2407371d3882b521cbd22b37a3ae32}{qmc58831\_mode}}(uint8\_t\ mode);}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_q_m_c5883_l_8h_a5cdfbfa6f598e80658316d3752a2da7d}{qmc5883l\_get\_direction}}(int16\_t\ *x,\ int16\_t\ *y,\ int16\_t\ *z);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MYAPP\_APP\_QMC5883L\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

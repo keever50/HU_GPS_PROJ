@@ -12,54 +12,74 @@ Hier kunnen studenten hun eigen tasks aanmaken.
 {\ttfamily \#include "{}lcd.\+h"{}}\newline
 {\ttfamily \#include "{}buzzer.\+h"{}}\newline
 {\ttfamily \#include "{}lcdout.\+h"{}}\newline
-\doxysubsubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+s}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{student_8c_aa77f8bba4388250b35a6dd5baaf5cd1f}\label{student_8c_aa77f8bba4388250b35a6dd5baaf5cd1f} 
-typedef struct \mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+s}} {\bfseries vector2d\+\_\+t}
-\end{DoxyCompactItemize}
+{\ttfamily \#include "{}student.\+h"{}}\newline
+{\ttfamily \#include "{}LSM303.\+h"{}}\newline
+{\ttfamily \#include "{}direction.\+h"{}}\newline
+{\ttfamily \#include $<$betterbuzzer.\+h$>$}\newline
+{\ttfamily \#include $<$compass\+\_\+calib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$waypoints.\+h$>$}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{student_8c_a94752975a5474c37e39f4f93529e392e}{lon\+DMtoM}} (\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}gnrmc)
-\begin{DoxyCompactList}\small\item\em Oefentask voor studenten. \end{DoxyCompactList}\item 
+\Hypertarget{student_8c_a94752975a5474c37e39f4f93529e392e}\label{student_8c_a94752975a5474c37e39f4f93529e392e} 
+double {\bfseries lon\+DMtoM} (\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}gnrmc)
+\item 
 \Hypertarget{student_8c_a37b7c2e13f92ba72ae600c31aea13654}\label{student_8c_a37b7c2e13f92ba72ae600c31aea13654} 
 double {\bfseries lat\+DMtoM} (\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}gnrmc)
 \item 
-\Hypertarget{student_8c_a4cefa220befc6ac5b41b32559d40a0bd}\label{student_8c_a4cefa220befc6ac5b41b32559d40a0bd} 
-void {\bfseries waypoints\+Reset} ()
+\Hypertarget{student_8c_aea10095ef03d3bc42d5d795c7dfa0821}\label{student_8c_aea10095ef03d3bc42d5d795c7dfa0821} 
+void {\bfseries set\+\_\+servo\+\_\+angle} (double angle)
 \item 
-\Hypertarget{student_8c_aa82c355e081297404d10feecb9ab99fb}\label{student_8c_aa82c355e081297404d10feecb9ab99fb} 
-void {\bfseries LCD\+\_\+print\+\_\+fix} (char \texorpdfstring{$\ast$}{*}msg)
+\Hypertarget{student_8c_abc780da7ddfec5d5f78b4f19c39b507b}\label{student_8c_abc780da7ddfec5d5f78b4f19c39b507b} 
+int {\bfseries test\+\_\+orient} ()
 \item 
-\Hypertarget{student_8c_a292efb44fdf9fc4c2ff7a60513cd97bd}\label{student_8c_a292efb44fdf9fc4c2ff7a60513cd97bd} 
-void {\bfseries test\+\_\+gps\+\_\+coords} ()
+\Hypertarget{student_8c_ad08794513677e7c40396b99b37bf2801}\label{student_8c_ad08794513677e7c40396b99b37bf2801} 
+int {\bfseries test\+\_\+gps\+\_\+coords} ()
+\item 
+\Hypertarget{student_8c_a6312f5264e753576186b5147ced0eb83}\label{student_8c_a6312f5264e753576186b5147ced0eb83} 
+int {\bfseries student\+\_\+list\+\_\+waypoints} ()
+\item 
+\Hypertarget{student_8c_aca8fad90740cf7511cd2638ac22cffe9}\label{student_8c_aca8fad90740cf7511cd2638ac22cffe9} 
+int {\bfseries student\+\_\+send\+\_\+keys} (char key)
+\item 
+\Hypertarget{student_8c_a93a93e1ce22b90b67d2d601d3b8c380f}\label{student_8c_a93a93e1ce22b90b67d2d601d3b8c380f} 
+char {\bfseries student\+\_\+get\+\_\+key} ()
+\item 
+\Hypertarget{student_8c_addf01368d7dc2afae537f5116622feee}\label{student_8c_addf01368d7dc2afae537f5116622feee} 
+int {\bfseries next\+\_\+waypoint} ()
+\item 
+\Hypertarget{student_8c_a6587c477006105b60e62dd6ed5d38d93}\label{student_8c_a6587c477006105b60e62dd6ed5d38d93} 
+int {\bfseries start\+\_\+route} ()
+\item 
+\Hypertarget{student_8c_a3149b3bcaadf796191128e3b7c736c40}\label{student_8c_a3149b3bcaadf796191128e3b7c736c40} 
+int {\bfseries student\+\_\+start\+\_\+program} (int ID)
+\item 
+\Hypertarget{student_8c_a66aebff2740d10e65e6cdc29c760de73}\label{student_8c_a66aebff2740d10e65e6cdc29c760de73} 
+int {\bfseries student\+\_\+init} ()
 \item 
 \Hypertarget{student_8c_a282e21c3f1a0eb3054bbb9e40ffa9cc6}\label{student_8c_a282e21c3f1a0eb3054bbb9e40ffa9cc6} 
 void {\bfseries Student\+\_\+task1} (void \texorpdfstring{$\ast$}{*}argument)
 \item 
-\Hypertarget{student_8c_a54f345008105d79340880470b3b4e55e}\label{student_8c_a54f345008105d79340880470b3b4e55e} 
-void {\bfseries waypoint\+Set} ()
+\Hypertarget{student_8c_a97c0605f5dd7f351de7a42cb3b8584d6}\label{student_8c_a97c0605f5dd7f351de7a42cb3b8584d6} 
+void {\bfseries Setglobalvector} ()
 \item 
-\Hypertarget{student_8c_a2c7bbe6d98da379bc0caeaa6e0a5c2d1}\label{student_8c_a2c7bbe6d98da379bc0caeaa6e0a5c2d1} 
-void {\bfseries waypoint\+Get} (\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}vec)
+\Hypertarget{student_8c_aa93414af775a993682d7c860df3df73e}\label{student_8c_aa93414af775a993682d7c860df3df73e} 
+void {\bfseries Getglobalvector} (\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \texorpdfstring{$\ast$}{*}vec)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{student_8c_a8277754f25f3e1ac4a3236b8fdb92194}\label{student_8c_a8277754f25f3e1ac4a3236b8fdb92194} 
-\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} {\bfseries waypoints} \mbox{[}20\mbox{]}
-\item 
-\Hypertarget{student_8c_ad683d20f8c8f3dd5c70a7da875804f55}\label{student_8c_ad683d20f8c8f3dd5c70a7da875804f55} 
-\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} {\bfseries global\+Vec}
-\item 
+\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} \mbox{\hyperlink{student_8c_ad683d20f8c8f3dd5c70a7da875804f55}{global\+Vec}}
+\begin{DoxyCompactList}\small\item\em Oefentask voor studenten. \end{DoxyCompactList}\item 
 \Hypertarget{student_8c_a6621b8f3b3943c9d9bb7525f83d9f7ac}\label{student_8c_a6621b8f3b3943c9d9bb7525f83d9f7ac} 
 \mbox{\hyperlink{struct_queue_definition}{Semaphore\+Handle\+\_\+t}} {\bfseries student\+\_\+\+Semaphore\+Waypoints}
+\item 
+\Hypertarget{student_8c_a95ea9d312d8083abdccab77e7f02a287}\label{student_8c_a95ea9d312d8083abdccab77e7f02a287} 
+char {\bfseries student\+\_\+initialized} =0
+\item 
+\Hypertarget{student_8c_a8eba00099154cc4f7ac6cff5c8b56b9c}\label{student_8c_a8eba00099154cc4f7ac6cff5c8b56b9c} 
+\mbox{\hyperlink{struct_queue_definition}{Queue\+Handle\+\_\+t}} {\bfseries student\+\_\+keyQ}
 \end{DoxyCompactItemize}
 
 
@@ -74,12 +94,12 @@ MSC
 \end{DoxyDate}
 
 
-\doxysubsection{Function Documentation}
-\Hypertarget{student_8c_a94752975a5474c37e39f4f93529e392e}\index{student.c@{student.c}!lonDMtoM@{lonDMtoM}}
-\index{lonDMtoM@{lonDMtoM}!student.c@{student.c}}
-\doxysubsubsection{\texorpdfstring{lonDMtoM()}{lonDMtoM()}}
-{\footnotesize\ttfamily \label{student_8c_a94752975a5474c37e39f4f93529e392e} 
-double lon\+DMtoM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_n_r_m_c}{GNRMC}} \texorpdfstring{$\ast$}{*}}]{gnrmc}{}\end{DoxyParamCaption})}
+\doxysubsection{Variable Documentation}
+\Hypertarget{student_8c_ad683d20f8c8f3dd5c70a7da875804f55}\index{student.c@{student.c}!globalVec@{globalVec}}
+\index{globalVec@{globalVec}!student.c@{student.c}}
+\doxysubsubsection{\texorpdfstring{globalVec}{globalVec}}
+{\footnotesize\ttfamily \label{student_8c_ad683d20f8c8f3dd5c70a7da875804f55} 
+\mbox{\hyperlink{structvector2d__s}{vector2d\+\_\+t}} global\+Vec}
 
 
 

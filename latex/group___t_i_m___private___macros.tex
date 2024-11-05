@@ -43,6 +43,8 @@
 \item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_gab52ffb8447abc78141e296eff57c4371}{IS\+\_\+\+TIM\+\_\+\+OPM\+\_\+\+CHANNELS}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
 \item 
+\#define \mbox{\hyperlink{group___t_i_m___private___macros_gaf7c48e47778b71c5534c89c45a4f16c6}{IS\+\_\+\+TIM\+\_\+\+PERIOD}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+PERIOD\+\_\+\+\_\+)
+\item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_ga9fc980a033653d2bfc5d7afe9b65ca9f}{IS\+\_\+\+TIM\+\_\+\+COMPLEMENTARY\+\_\+\+CHANNELS}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
 \item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_gaebd00b3c8dd1c689e9d04850333ba719}{IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE}}(\+\_\+\+\_\+\+CLOCK\+\_\+\+\_\+)
@@ -694,6 +696,19 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_STATE\_\_)\ ==\ \mbox{\hyperlink{group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_ga5d21918f173eca946748a1fbc177daa5}{TIM\_OSSR\_ENABLE}})\ ||\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_STATE\_\_)\ ==\ \mbox{\hyperlink{group___t_i_m___o_s_s_r___off___state___selection__for___run__mode__state_gae11820b467ef6d74c90190c8cfce5e73}{TIM\_OSSR\_DISABLE}}))}
+
+\end{DoxyCode}
+\Hypertarget{group___t_i_m___private___macros_gaf7c48e47778b71c5534c89c45a4f16c6}\index{TIM Private Macros@{TIM Private Macros}!IS\_TIM\_PERIOD@{IS\_TIM\_PERIOD}}
+\index{IS\_TIM\_PERIOD@{IS\_TIM\_PERIOD}!TIM Private Macros@{TIM Private Macros}}
+\doxysubsubsubsubsection{\texorpdfstring{IS\_TIM\_PERIOD}{IS\_TIM\_PERIOD}}
+{\footnotesize\ttfamily \label{group___t_i_m___private___macros_gaf7c48e47778b71c5534c89c45a4f16c6} 
+\#define IS\+\_\+\+TIM\+\_\+\+PERIOD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+}{, }\item[{}]{\+\_\+\+\_\+\+PERIOD\+\_\+\+\_\+}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((IS\_TIM\_32B\_COUNTER\_INSTANCE(((\_\_HANDLE\_\_)-\/>Instance))\ ==\ 0U)\ ?\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((\_\_PERIOD\_\_)\ >\ 0U)\ \&\&\ ((\_\_PERIOD\_\_)\ <=\ 0x0000FFFFU))\ :\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\_\_PERIOD\_\_)\ >\ 0U))}
 
 \end{DoxyCode}
 \Hypertarget{group___t_i_m___private___macros_ga7274d2a669edfcb25bcf610ec85a528b}\index{TIM Private Macros@{TIM Private Macros}!IS\_TIM\_PWM\_MODE@{IS\_TIM\_PWM\_MODE}}

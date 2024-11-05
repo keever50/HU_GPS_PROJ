@@ -8,16 +8,16 @@
 \DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ \_\_STM32F4xx\_HAL\_FLASH\_H}}
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00023\ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
 \DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{00025\ }
 \DoxyCodeLine{00026\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00037\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
 \DoxyCodeLine{00046\ \{}
-\DoxyCodeLine{00047\ \ \ FLASH\_PROC\_NONE\ =\ 0U,\ }
+\DoxyCodeLine{00047\ \ \ FLASH\_PROC\_NONE\ =\ 0U,}
 \DoxyCodeLine{00048\ \ \ FLASH\_PROC\_SECTERASE,}
 \DoxyCodeLine{00049\ \ \ FLASH\_PROC\_MASSERASE,}
 \DoxyCodeLine{00050\ \ \ FLASH\_PROC\_PROGRAM}
@@ -25,23 +25,23 @@
 \DoxyCodeLine{00052\ }
 \DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
 \DoxyCodeLine{00057\ \{}
-\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}}\ ProcedureOnGoing;\ \ \ \textcolor{comment}{/*Internal\ variable\ to\ indicate\ which\ procedure\ is\ ongoing\ or\ not\ in\ IT\ context*/}}
-\DoxyCodeLine{00059\ \ \ }
-\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NbSectorsToErase;\ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ the\ remaining\ sectors\ to\ erase\ in\ IT\ context*/}}
-\DoxyCodeLine{00061\ \ \ }
-\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VoltageForErase;\ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ provide\ voltage\ range\ selected\ by\ user\ in\ IT\ context*/}}
-\DoxyCodeLine{00063\ \ \ }
-\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sector;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ define\ the\ current\ sector\ which\ is\ erasing*/}}
-\DoxyCodeLine{00065\ \ \ }
-\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Bank;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ current\ bank\ selected\ during\ mass\ erase*/}}
-\DoxyCodeLine{00067\ \ \ }
-\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Address;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ address\ selected\ for\ program*/}}
-\DoxyCodeLine{00069\ \ \ }
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}}\ ProcedureOnGoing;\ \ \ \textcolor{comment}{/*Internal\ variable\ to\ indicate\ which\ procedure\ is\ ongoing\ or\ not\ in\ IT\ context*/}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NbSectorsToErase;\ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ the\ remaining\ sectors\ to\ erase\ in\ IT\ context*/}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VoltageForErase;\ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ provide\ voltage\ range\ selected\ by\ user\ in\ IT\ context*/}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sector;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ define\ the\ current\ sector\ which\ is\ erasing*/}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Bank;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ current\ bank\ selected\ during\ mass\ erase*/}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Address;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Internal\ variable\ to\ save\ address\ selected\ for\ program*/}}
+\DoxyCodeLine{00069\ }
 \DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}\ \ \ \ \ \ \ \ \ \ \ \ \ Lock;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ FLASH\ locking\ object\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ErrorCode;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ FLASH\ error\ code\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ErrorCode;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ FLASH\ error\ code\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
 \DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \}\mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\_ProcessTypeDef}};}
+\DoxyCodeLine{00074\ \}\ \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\_ProcessTypeDef}};}
 \DoxyCodeLine{00075\ }
 \DoxyCodeLine{00080\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ HAL\_FLASH\_ERROR\_NONE\ \ \ \ \ \ \ \ \ 0x00000000U\ \ \ \ }}
@@ -95,11 +95,11 @@
 \DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ \_\_HAL\_FLASH\_DATA\_CACHE\_DISABLE()\ \ \ (FLASH-\/>ACR\ \&=\ (\string~FLASH\_ACR\_DCEN))}}
 \DoxyCodeLine{00220\ }
 \DoxyCodeLine{00226\ \textcolor{preprocessor}{\#define\ \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_RESET()\ do\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_ICRST;\ \ \(\backslash\)}}
-\DoxyCodeLine{00227\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_ICRST;\ \(\backslash\)}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_ICRST;\ \(\backslash\)}}
 \DoxyCodeLine{00228\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}while(0U)}}
 \DoxyCodeLine{00229\ }
 \DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ \_\_HAL\_FLASH\_DATA\_CACHE\_RESET()\ do\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_DCRST;\ \ \(\backslash\)}}
-\DoxyCodeLine{00236\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_DCRST;\ \(\backslash\)}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_DCRST;\ \(\backslash\)}}
 \DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}while(0U)}}
 \DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ \_\_HAL\_FLASH\_ENABLE\_IT(\_\_INTERRUPT\_\_)\ \ (FLASH-\/>CR\ |=\ (\_\_INTERRUPT\_\_))}}
 \DoxyCodeLine{00247\ }
@@ -118,7 +118,7 @@
 \DoxyCodeLine{00307\ \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}\ HAL\_FLASH\_Program\_IT(uint32\_t\ TypeProgram,\ uint32\_t\ Address,\ uint64\_t\ Data);}
 \DoxyCodeLine{00308\ \textcolor{comment}{/*\ FLASH\ IRQ\ handler\ method\ */}}
 \DoxyCodeLine{00309\ \textcolor{keywordtype}{void}\ HAL\_FLASH\_IRQHandler(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00310\ \textcolor{comment}{/*\ Callbacks\ in\ non\ blocking\ modes\ */}\ }
+\DoxyCodeLine{00310\ \textcolor{comment}{/*\ Callbacks\ in\ non\ blocking\ modes\ */}}
 \DoxyCodeLine{00311\ \textcolor{keywordtype}{void}\ HAL\_FLASH\_EndOfOperationCallback(uint32\_t\ ReturnValue);}
 \DoxyCodeLine{00312\ \textcolor{keywordtype}{void}\ HAL\_FLASH\_OperationErrorCallback(uint32\_t\ ReturnValue);}
 \DoxyCodeLine{00320\ \textcolor{comment}{/*\ Peripheral\ Control\ functions\ \ **********************************************/}}
@@ -134,7 +134,7 @@
 \DoxyCodeLine{00344\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00345\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00353\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ ACR\_BYTE0\_ADDRESS\ \ \ \ \ \ \ \ \ \ \ 0x40023C00U\ }}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#define\ ACR\_BYTE0\_ADDRESS\ \ \ \ \ \ \ \ \ \ \ 0x40023C00U}}
 \DoxyCodeLine{00365\ \textcolor{preprocessor}{\#define\ OPTCR\_BYTE0\_ADDRESS\ \ \ \ \ \ \ \ \ 0x40023C14U}}
 \DoxyCodeLine{00369\ \textcolor{preprocessor}{\#define\ OPTCR\_BYTE1\_ADDRESS\ \ \ \ \ \ \ \ \ 0x40023C15U}}
 \DoxyCodeLine{00373\ \textcolor{preprocessor}{\#define\ OPTCR\_BYTE2\_ADDRESS\ \ \ \ \ \ \ \ \ 0x40023C16U}}
@@ -144,7 +144,7 @@
 \DoxyCodeLine{00391\ \textcolor{preprocessor}{\#define\ IS\_FLASH\_TYPEPROGRAM(VALUE)(((VALUE)\ ==\ FLASH\_TYPEPROGRAM\_BYTE)\ ||\ \(\backslash\)}}
 \DoxyCodeLine{00392\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VALUE)\ ==\ FLASH\_TYPEPROGRAM\_HALFWORD)\ ||\ \(\backslash\)}}
 \DoxyCodeLine{00393\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VALUE)\ ==\ FLASH\_TYPEPROGRAM\_WORD)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00394\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VALUE)\ ==\ FLASH\_TYPEPROGRAM\_DOUBLEWORD))\ \ }}
+\DoxyCodeLine{00394\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((VALUE)\ ==\ FLASH\_TYPEPROGRAM\_DOUBLEWORD))}}
 \DoxyCodeLine{00403\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00420\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
 \DoxyCodeLine{00421\ \}}

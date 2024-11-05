@@ -1,0 +1,97 @@
+\doxysection{Core/\+My\+App/\+App/\+QMC5883L.c File Reference}
+\hypertarget{_q_m_c5883_l_8c}{}\label{_q_m_c5883_l_8c}\index{Core/MyApp/App/QMC5883L.c@{Core/MyApp/App/QMC5883L.c}}
+
+
+Compass sensor driver Created on\+: Nov 4, 2024 Author\+: kevin.  
+
+
+{\ttfamily \#include $<$QMC5883\+L.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include $<$semphr.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_q_m_c5883_l_8c_a905605f2ef4ce043817a289019d4263b}\label{_q_m_c5883_l_8c_a905605f2ef4ce043817a289019d4263b} 
+\#define {\bfseries QMC58831\+\_\+\+SM\+\_\+\+TAKE}~x\+Semaphore\+Take(\+\_\+qmc5883l\+\_\+semaphore, port\+MAX\+\_\+\+DELAY)
+\item 
+\Hypertarget{_q_m_c5883_l_8c_a43de642202dfcec421e06824e4a67b67}\label{_q_m_c5883_l_8c_a43de642202dfcec421e06824e4a67b67} 
+\#define {\bfseries QMC58831\+\_\+\+SM\+\_\+\+GIVE}~x\+Semaphore\+Give(\+\_\+qmc5883l\+\_\+semaphore)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_q_m_c5883_l_8c_adfd466e32eeb1d8018aff665dda78c91}\label{_q_m_c5883_l_8c_adfd466e32eeb1d8018aff665dda78c91} 
+int {\bfseries \+\_\+qmc58831\+\_\+write\+\_\+reg} (uint8\+\_\+t address, uint8\+\_\+t byte)
+\item 
+\Hypertarget{_q_m_c5883_l_8c_a4ffb64a3662349d482fc9eefffc93b2b}\label{_q_m_c5883_l_8c_a4ffb64a3662349d482fc9eefffc93b2b} 
+int {\bfseries \+\_\+qmc58831\+\_\+read\+\_\+reg} (uint8\+\_\+t address, uint8\+\_\+t \texorpdfstring{$\ast$}{*}byte)
+\item 
+int \mbox{\hyperlink{_q_m_c5883_l_8c_a8940e04b68d27dc77b6cce57d4a9329f}{qmc58831\+\_\+init}} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}i2c)
+\begin{DoxyCompactList}\small\item\em Initializes the driver. This is required to be run once. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q_m_c5883_l_8c_a8b2407371d3882b521cbd22b37a3ae32}{qmc58831\+\_\+mode}} (uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Changes the sensor mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_q_m_c5883_l_8c_a5cdfbfa6f598e80658316d3752a2da7d}{qmc5883l\+\_\+get\+\_\+direction}} (int16\+\_\+t \texorpdfstring{$\ast$}{*}x, int16\+\_\+t \texorpdfstring{$\ast$}{*}y, int16\+\_\+t \texorpdfstring{$\ast$}{*}z)
+\begin{DoxyCompactList}\small\item\em Gets the magnetic XYZ directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_q_m_c5883_l_8c_ab7fe52c7d82dbe704a3c0449ed134060}\label{_q_m_c5883_l_8c_ab7fe52c7d82dbe704a3c0449ed134060} 
+x\+Semaphore\+Handle {\bfseries \+\_\+qmc5883l\+\_\+semaphore}
+\item 
+\Hypertarget{_q_m_c5883_l_8c_a54b7b1eac72f8883ce6c0fa20734c1d9}\label{_q_m_c5883_l_8c_a54b7b1eac72f8883ce6c0fa20734c1d9} 
+\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*} {\bfseries \+\_\+qmc5883l\+\_\+selected\+\_\+i2c}
+\item 
+\Hypertarget{_q_m_c5883_l_8c_aa3db5d991b5c3d8eb53d2ce42d83a5a3}\label{_q_m_c5883_l_8c_aa3db5d991b5c3d8eb53d2ce42d83a5a3} 
+uint16\+\_\+t {\bfseries \+\_\+qmc5883l\+\_\+selected\+\_\+address} =0b0001101
+\item 
+\Hypertarget{_q_m_c5883_l_8c_a086f32742ac4575b3207aba5359c5726}\label{_q_m_c5883_l_8c_a086f32742ac4575b3207aba5359c5726} 
+char {\bfseries \+\_\+qmc5883l\+\_\+initialized} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compass sensor driver Created on\+: Nov 4, 2024 Author\+: kevin. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_q_m_c5883_l_8c_a8940e04b68d27dc77b6cce57d4a9329f}\index{QMC5883L.c@{QMC5883L.c}!qmc58831\_init@{qmc58831\_init}}
+\index{qmc58831\_init@{qmc58831\_init}!QMC5883L.c@{QMC5883L.c}}
+\doxysubsubsection{\texorpdfstring{qmc58831\_init()}{qmc58831\_init()}}
+{\footnotesize\ttfamily \label{_q_m_c5883_l_8c_a8940e04b68d27dc77b6cce57d4a9329f} 
+int qmc58831\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}}]{i2c}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the driver. This is required to be run once. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_q_m_c5883_l_8c_a8b2407371d3882b521cbd22b37a3ae32}\index{QMC5883L.c@{QMC5883L.c}!qmc58831\_mode@{qmc58831\_mode}}
+\index{qmc58831\_mode@{qmc58831\_mode}!QMC5883L.c@{QMC5883L.c}}
+\doxysubsubsection{\texorpdfstring{qmc58831\_mode()}{qmc58831\_mode()}}
+{\footnotesize\ttfamily \label{_q_m_c5883_l_8c_a8b2407371d3882b521cbd22b37a3ae32} 
+int qmc58831\+\_\+mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Changes the sensor mode. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}
+\Hypertarget{_q_m_c5883_l_8c_a5cdfbfa6f598e80658316d3752a2da7d}\index{QMC5883L.c@{QMC5883L.c}!qmc5883l\_get\_direction@{qmc5883l\_get\_direction}}
+\index{qmc5883l\_get\_direction@{qmc5883l\_get\_direction}!QMC5883L.c@{QMC5883L.c}}
+\doxysubsubsection{\texorpdfstring{qmc5883l\_get\_direction()}{qmc5883l\_get\_direction()}}
+{\footnotesize\ttfamily \label{_q_m_c5883_l_8c_a5cdfbfa6f598e80658316d3752a2da7d} 
+int qmc5883l\+\_\+get\+\_\+direction (\begin{DoxyParamCaption}\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{y}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{z}{}\end{DoxyParamCaption})}
+
+
+
+Gets the magnetic XYZ directions. 
+
+\begin{DoxyReturn}{Returns}
+error 
+\end{DoxyReturn}

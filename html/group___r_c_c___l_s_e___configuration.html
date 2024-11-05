@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: LSE Configuration</title>
+<title>HUGPS: LSE Configuration</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -112,22 +112,22 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                    <span class="keywordflow">do</span> {                                       \</div>
-<div class="line">                      if((__STATE__) == RCC_LSE_ON)            \</div>
-<div class="line">                      {                                        \</div>
-<div class="line">                        SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);    \</div>
-<div class="line">                      }                                        \</div>
-<div class="line">                      <span class="keywordflow">else</span> <span class="keywordflow">if</span>((__STATE__) == RCC_LSE_BYPASS)   \</div>
-<div class="line">                      {                                        \</div>
-<div class="line">                        SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEBYP);   \</div>
-<div class="line">                        SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);    \</div>
-<div class="line">                      }                                        \</div>
-<div class="line">                      <span class="keywordflow">else</span>                                     \</div>
-<div class="line">                      {                                        \</div>
-<div class="line">                        CLEAR_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);  \</div>
-<div class="line">                        CLEAR_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEBYP); \</div>
-<div class="line">                      }                                        \</div>
-<div class="line">                    } <span class="keywordflow">while</span>(0U)</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span> {                                       \</div>
+<div class="line">    if((__STATE__) == RCC_LSE_ON)            \</div>
+<div class="line">    {                                        \</div>
+<div class="line">      SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);    \</div>
+<div class="line">    }                                        \</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span>((__STATE__) == RCC_LSE_BYPASS)   \</div>
+<div class="line">    {                                        \</div>
+<div class="line">      SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEBYP);   \</div>
+<div class="line">      SET_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);    \</div>
+<div class="line">    }                                        \</div>
+<div class="line">    <span class="keywordflow">else</span>                                     \</div>
+<div class="line">    {                                        \</div>
+<div class="line">      CLEAR_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEON);  \</div>
+<div class="line">      CLEAR_BIT(RCC-&gt;BDCR, RCC_BDCR_LSEBYP); \</div>
+<div class="line">    }                                        \</div>
+<div class="line">  } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 <p>Macro to configure the External Low Speed oscillator (LSE). </p>
 <dl class="section note"><dt>Note</dt><dd>Transition LSE Bypass to LSE On and LSE On to LSE Bypass are not supported by this macro. User should request a transition to LSE Off first and then LSE On or LSE Bypass. </dd>

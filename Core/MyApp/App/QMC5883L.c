@@ -1,6 +1,6 @@
-/*
- * QMC5883L.c
- *
+/**
+ * @file QMC5883L.c
+ * @brief Compass sensor driver
  *  Created on: Nov 4, 2024
  *      Author: kevin
  */

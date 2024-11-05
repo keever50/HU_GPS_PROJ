@@ -1,6 +1,6 @@
-/*
- * LSM303.h
- *
+/**
+ * @file LSM303.h
+ * @brief Magnetic sensor library
  *  Created on: Oct 11, 2024
  *      Author: kevin
  */
@@ -43,15 +43,38 @@ enum lsm303_mag_mode
 	eLSM303_MAG_MODE_SLEEP
 };
 
+/**
+ * @brief Magnetic direction vector
+ */
 struct lsm303_mag_vector
 {
 	int16_t x, y, z;
 };
 
+/**
+ * @brief Sets the datarate of the sensor
+ * @return error
+ */
 int lsm303_mag_datarate(uint8_t rate);
+/**
+ * @brief sets the magnetic gain
+ * @return error
+ */
 int lsm303_mag_gain(uint8_t gain);
+/**
+ * @brief Initializes the sensor. Required to be run once.
+ * @return error
+ */
 int lsm303_mag_init(I2C_HandleTypeDef *i2c, uint16_t address);
+/**
+ * @brief Sets the mode
+ * @return error
+ */
 int lsm303_mag_mode(enum lsm303_mag_mode mode);
+/**
+ * @brief Get the magnetic direction
+ * @return error
+ */
 int lsm303_mag_get_vector(struct lsm303_mag_vector *vect);
 
 #endif /* MYAPP_APP_LSM303_H_ */

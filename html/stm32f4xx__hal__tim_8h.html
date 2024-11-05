@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h File Reference</title>
+<title>HUGPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -105,7 +105,7 @@ $(function(){ initResizable(false); });
 <p><a href="stm32f4xx__hal__tim_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_i_m___base___init_type_def.html">TIM_Base_InitTypeDef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM Time base Configuration Structure definition.  <a href="struct_t_i_m___base___init_type_def.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -764,6 +764,8 @@ Macros</h2></td></tr>
 <tr class="separator:ga3641d445a28293a77ddc2232e624a858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab52ffb8447abc78141e296eff57c4371" id="r_gab52ffb8447abc78141e296eff57c4371"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___private___macros.html#gab52ffb8447abc78141e296eff57c4371">IS_TIM_OPM_CHANNELS</a>(__CHANNEL__)</td></tr>
 <tr class="separator:gab52ffb8447abc78141e296eff57c4371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7c48e47778b71c5534c89c45a4f16c6" id="r_gaf7c48e47778b71c5534c89c45a4f16c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___private___macros.html#gaf7c48e47778b71c5534c89c45a4f16c6">IS_TIM_PERIOD</a>(__HANDLE__,  __PERIOD__)</td></tr>
+<tr class="separator:gaf7c48e47778b71c5534c89c45a4f16c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9fc980a033653d2bfc5d7afe9b65ca9f" id="r_ga9fc980a033653d2bfc5d7afe9b65ca9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___private___macros.html#ga9fc980a033653d2bfc5d7afe9b65ca9f">IS_TIM_COMPLEMENTARY_CHANNELS</a>(__CHANNEL__)</td></tr>
 <tr class="separator:ga9fc980a033653d2bfc5d7afe9b65ca9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaebd00b3c8dd1c689e9d04850333ba719" id="r_gaebd00b3c8dd1c689e9d04850333ba719"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___private___macros.html#gaebd00b3c8dd1c689e9d04850333ba719">IS_TIM_CLOCKSOURCE</a>(__CLOCK__)</td></tr>
@@ -892,11 +894,11 @@ Functions</h2></td></tr>
 <tr class="memitem:gaaf97adbc39e48456a1c83c54895de83b" id="r_gaaf97adbc39e48456a1c83c54895de83b"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_DeInit</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:gaaf97adbc39e48456a1c83c54895de83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga818f4d5d1e2f417438d281b4ac9efb9c" id="r_ga818f4d5d1e2f417438d281b4ac9efb9c"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_MspInit</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="memitem:ga818f4d5d1e2f417438d281b4ac9efb9c" id="r_ga818f4d5d1e2f417438d281b4ac9efb9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___exported___functions___group1.html#ga818f4d5d1e2f417438d281b4ac9efb9c">HAL_TIM_Base_MspInit</a> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="memdesc:ga818f4d5d1e2f417438d281b4ac9efb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP Initialization This function configures the hardware resources used in this example.  <br /></td></tr>
 <tr class="separator:ga818f4d5d1e2f417438d281b4ac9efb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13352a6c9cb3225511e5f29dbb894e84" id="r_ga13352a6c9cb3225511e5f29dbb894e84"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_MspDeInit</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="memitem:ga13352a6c9cb3225511e5f29dbb894e84" id="r_ga13352a6c9cb3225511e5f29dbb894e84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___exported___functions___group1.html#ga13352a6c9cb3225511e5f29dbb894e84">HAL_TIM_Base_MspDeInit</a> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="memdesc:ga13352a6c9cb3225511e5f29dbb894e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIM_Base MSP De-Initialization This function freeze the hardware resources used in this example.  <br /></td></tr>
 <tr class="separator:ga13352a6c9cb3225511e5f29dbb894e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf7e5ee80207a338050413e14f7bd24f9" id="r_gaf7e5ee80207a338050413e14f7bd24f9"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_Start</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
@@ -910,9 +912,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_MspDeIni
 <tr class="memitem:ga19443605c97f15b5ede7d8337534ece4" id="r_ga19443605c97f15b5ede7d8337534ece4"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_Stop_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:ga19443605c97f15b5ede7d8337534ece4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8246aece4afe559642a6da298f7b157a" id="r_ga8246aece4afe559642a6da298f7b157a"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t *pData, uint16_t Length)</td></tr>
-<tr class="separator:ga8246aece4afe559642a6da298f7b157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga263ffa0db8285daa9ca0010690079203" id="r_ga263ffa0db8285daa9ca0010690079203"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const uint32_t *pData, uint16_t Length)</td></tr>
+<tr class="separator:ga263ffa0db8285daa9ca0010690079203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7673776de6e35f5cbe887e62e13e87b5" id="r_ga7673776de6e35f5cbe887e62e13e87b5"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_Stop_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:ga7673776de6e35f5cbe887e62e13e87b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -940,9 +942,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_MspDeInit<
 <tr class="memitem:gacc324ef35c0b207a8331c657d86fc1bd" id="r_gacc324ef35c0b207a8331c657d86fc1bd"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_Stop_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
 <tr class="separator:gacc324ef35c0b207a8331c657d86fc1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f961349029a84317b7734abbfb9a02c" id="r_ga6f961349029a84317b7734abbfb9a02c"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</td></tr>
-<tr class="separator:ga6f961349029a84317b7734abbfb9a02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e4410b534d2381ff535bb987f340cba" id="r_ga1e4410b534d2381ff535bb987f340cba"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel, const uint32_t *pData, uint16_t Length)</td></tr>
+<tr class="separator:ga1e4410b534d2381ff535bb987f340cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27f1f66d2d38ec428580a5feb3628c48" id="r_ga27f1f66d2d38ec428580a5feb3628c48"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_Stop_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
 <tr class="separator:ga27f1f66d2d38ec428580a5feb3628c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -970,9 +972,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_MspDeInit
 <tr class="memitem:ga0559af125dc5fb2bb183a6a4b86808b5" id="r_ga0559af125dc5fb2bb183a6a4b86808b5"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_Stop_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
 <tr class="separator:ga0559af125dc5fb2bb183a6a4b86808b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4b542b3c0ae347ea580c9e7c8e88b17" id="r_gaa4b542b3c0ae347ea580c9e7c8e88b17"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel, uint32_t *pData, uint16_t Length)</td></tr>
-<tr class="separator:gaa4b542b3c0ae347ea580c9e7c8e88b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3621f6126e33c1abb80cb572499f335c" id="r_ga3621f6126e33c1abb80cb572499f335c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_Start_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel, const uint32_t *pData, uint16_t Length)</td></tr>
+<tr class="separator:ga3621f6126e33c1abb80cb572499f335c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad77367f9b8d8d17842a913f7d6ce274b" id="r_gad77367f9b8d8d17842a913f7d6ce274b"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_Stop_DMA</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
 <tr class="separator:gad77367f9b8d8d17842a913f7d6ce274b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1030,9 +1032,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OnePulse_MspD
 <tr class="memitem:ga6bbce5414404228fde71dadd8d1cddc7" id="r_ga6bbce5414404228fde71dadd8d1cddc7"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OnePulse_Stop_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t OutputChannel)</td></tr>
 <tr class="separator:ga6bbce5414404228fde71dadd8d1cddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga16beb79937c32f993bbc4fdc1e492c52" id="r_ga16beb79937c32f993bbc4fdc1e492c52"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_Init</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___encoder___init_type_def.html">TIM_Encoder_InitTypeDef</a> *sConfig)</td></tr>
-<tr class="separator:ga16beb79937c32f993bbc4fdc1e492c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabbd8d70ab36161f83e1c09087789955d" id="r_gabbd8d70ab36161f83e1c09087789955d"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_Init</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___encoder___init_type_def.html">TIM_Encoder_InitTypeDef</a> *sConfig)</td></tr>
+<tr class="separator:gabbd8d70ab36161f83e1c09087789955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaf99281fd7635e20c08e48bfc9ea11e3" id="r_gaaf99281fd7635e20c08e48bfc9ea11e3"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_DeInit</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:gaaf99281fd7635e20c08e48bfc9ea11e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1063,39 +1065,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_MspDe
 <tr class="memitem:ga2dc3ef34340412aa8a01d734d2ff8f88" id="r_ga2dc3ef34340412aa8a01d734d2ff8f88"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IRQHandler</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:ga2dc3ef34340412aa8a01d734d2ff8f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e22dfc93b7569da087a115348c3182f" id="r_ga6e22dfc93b7569da087a115348c3182f"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
-<tr class="separator:ga6e22dfc93b7569da087a115348c3182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac14a4959f65f51a54e8ff511242e2131" id="r_gac14a4959f65f51a54e8ff511242e2131"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
-<tr class="separator:gac14a4959f65f51a54e8ff511242e2131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga34805dabaf748c6eb823275dad2f19f5" id="r_ga34805dabaf748c6eb823275dad2f19f5"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IC_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___i_c___init_type_def.html">TIM_IC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
-<tr class="separator:ga34805dabaf748c6eb823275dad2f19f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fb64ba07b18cc24f8f9191369ed2d02" id="r_ga8fb64ba07b18cc24f8f9191369ed2d02"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
+<tr class="separator:ga8fb64ba07b18cc24f8f9191369ed2d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga258d2356d817adaa3d39d2d0b6de9223" id="r_ga258d2356d817adaa3d39d2d0b6de9223"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
+<tr class="separator:ga258d2356d817adaa3d39d2d0b6de9223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga031c508e41997d53c059665ebd3638a3" id="r_ga031c508e41997d53c059665ebd3638a3"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IC_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___i_c___init_type_def.html">TIM_IC_InitTypeDef</a> *sConfig, uint32_t Channel)</td></tr>
+<tr class="separator:ga031c508e41997d53c059665ebd3638a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaefb1913440053c45a4f9a50a8c05c6be" id="r_gaefb1913440053c45a4f9a50a8c05c6be"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OnePulse_ConfigChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___one_pulse___init_type_def.html">TIM_OnePulse_InitTypeDef</a> *sConfig, uint32_t OutputChannel, uint32_t InputChannel)</td></tr>
 <tr class="separator:gaefb1913440053c45a4f9a50a8c05c6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b960485369b4ebb1e5d41e5e9e49770" id="r_ga0b960485369b4ebb1e5d41e5e9e49770"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ConfigOCrefClear</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___clear_input_config_type_def.html">TIM_ClearInputConfigTypeDef</a> *sClearInputConfig, uint32_t Channel)</td></tr>
-<tr class="separator:ga0b960485369b4ebb1e5d41e5e9e49770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43403d13849f71285ea1da3f3cb1381f" id="r_ga43403d13849f71285ea1da3f3cb1381f"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ConfigClockSource</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___clock_config_type_def.html">TIM_ClockConfigTypeDef</a> *sClockSourceConfig)</td></tr>
-<tr class="separator:ga43403d13849f71285ea1da3f3cb1381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae194787f5481c163b6eec962ed7ff205" id="r_gae194787f5481c163b6eec962ed7ff205"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ConfigOCrefClear</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___clear_input_config_type_def.html">TIM_ClearInputConfigTypeDef</a> *sClearInputConfig, uint32_t Channel)</td></tr>
+<tr class="separator:gae194787f5481c163b6eec962ed7ff205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa29ed013caefca2a181a1cabac66d521" id="r_gaa29ed013caefca2a181a1cabac66d521"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ConfigClockSource</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___clock_config_type_def.html">TIM_ClockConfigTypeDef</a> *sClockSourceConfig)</td></tr>
+<tr class="separator:gaa29ed013caefca2a181a1cabac66d521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7dfab2adafd2f2e315a9531f1150c201" id="r_ga7dfab2adafd2f2e315a9531f1150c201"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ConfigTI1Input</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t TI1_Selection)</td></tr>
 <tr class="separator:ga7dfab2adafd2f2e315a9531f1150c201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga807bb9a9888b0939f6060b06c624df1b" id="r_ga807bb9a9888b0939f6060b06c624df1b"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_SlaveConfigSynchro</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___slave_config_type_def.html">TIM_SlaveConfigTypeDef</a> *sSlaveConfig)</td></tr>
-<tr class="separator:ga807bb9a9888b0939f6060b06c624df1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaceeb45044aea466d267537e7f35d9e3d" id="r_gaceeb45044aea466d267537e7f35d9e3d"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_SlaveConfigSynchro_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, <a class="el" href="struct_t_i_m___slave_config_type_def.html">TIM_SlaveConfigTypeDef</a> *sSlaveConfig)</td></tr>
-<tr class="separator:gaceeb45044aea466d267537e7f35d9e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d1a48bb07dcf9030de10b9c6918087c" id="r_ga8d1a48bb07dcf9030de10b9c6918087c"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurst_WriteStart</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t *BurstBuffer, uint32_t BurstLength)</td></tr>
-<tr class="separator:ga8d1a48bb07dcf9030de10b9c6918087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga957966339aa258a36b4bae550ad854cb" id="r_ga957966339aa258a36b4bae550ad854cb"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurst_MultiWriteStart</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, uint32_t *BurstBuffer, uint32_t BurstLength, uint32_t DataLength)</td></tr>
-<tr class="separator:ga957966339aa258a36b4bae550ad854cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50ddcf971c747fa974c7b89ff5d3fe18" id="r_ga50ddcf971c747fa974c7b89ff5d3fe18"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_SlaveConfigSynchro</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___slave_config_type_def.html">TIM_SlaveConfigTypeDef</a> *sSlaveConfig)</td></tr>
+<tr class="separator:ga50ddcf971c747fa974c7b89ff5d3fe18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ac6bc06273d5b5b848eda023a32fe2f" id="r_ga5ac6bc06273d5b5b848eda023a32fe2f"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_SlaveConfigSynchro_IT</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, const <a class="el" href="struct_t_i_m___slave_config_type_def.html">TIM_SlaveConfigTypeDef</a> *sSlaveConfig)</td></tr>
+<tr class="separator:ga5ac6bc06273d5b5b848eda023a32fe2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35788d18e435d06a76a40fda5d6c13e7" id="r_ga35788d18e435d06a76a40fda5d6c13e7"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurst_WriteStart</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, const uint32_t *BurstBuffer, uint32_t BurstLength)</td></tr>
+<tr class="separator:ga35788d18e435d06a76a40fda5d6c13e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c198603c11b2e0140dabd8dcdb5a0ff" id="r_ga0c198603c11b2e0140dabd8dcdb5a0ff"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurst_MultiWriteStart</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t BurstBaseAddress, uint32_t BurstRequestSrc, const uint32_t *BurstBuffer, uint32_t BurstLength, uint32_t DataLength)</td></tr>
+<tr class="separator:ga0c198603c11b2e0140dabd8dcdb5a0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f5649baaf219f2559bbe9e8e2c3658e" id="r_ga8f5649baaf219f2559bbe9e8e2c3658e"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurst_WriteStop</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t BurstRequestSrc)</td></tr>
 <tr class="separator:ga8f5649baaf219f2559bbe9e8e2c3658e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1111,9 +1113,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IRQHandler</b
 <tr class="memitem:gab4a60fe7cbb64a321bdce2ee1b9c8730" id="r_gab4a60fe7cbb64a321bdce2ee1b9c8730"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_GenerateEvent</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t EventSource)</td></tr>
 <tr class="separator:gab4a60fe7cbb64a321bdce2ee1b9c8730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6528480e73e4e51d5ce8aaca00d64d13" id="r_ga6528480e73e4e51d5ce8aaca00d64d13"><td class="memItemLeft" align="right" valign="top">
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ReadCapturedValue</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
-<tr class="separator:ga6528480e73e4e51d5ce8aaca00d64d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga726cf270b20654c4094da3eca1648f92" id="r_ga726cf270b20654c4094da3eca1648f92"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ReadCapturedValue</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
+<tr class="separator:ga726cf270b20654c4094da3eca1648f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8a3b0ad512a6e6c6157440b68d395eac" id="r_ga8a3b0ad512a6e6c6157440b68d395eac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___exported___functions___group9.html#ga8a3b0ad512a6e6c6157440b68d395eac">HAL_TIM_PeriodElapsedCallback</a> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="memdesc:ga8a3b0ad512a6e6c6157440b68d395eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Period elapsed callback in non blocking mode.  <br /></td></tr>
 <tr class="separator:ga8a3b0ad512a6e6c6157440b68d395eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1144,42 +1146,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_TriggerHalfCp
 <tr class="memitem:ga6f0868af383d592940700dbb52fac016" id="r_ga6f0868af383d592940700dbb52fac016"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_ErrorCallback</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
 <tr class="separator:ga6f0868af383d592940700dbb52fac016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabf71ed10e30d23139f7b327878901c89" id="r_gabf71ed10e30d23139f7b327878901c89"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:gabf71ed10e30d23139f7b327878901c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9dbca6a4ca949a13fda097d9cc7959a0" id="r_ga9dbca6a4ca949a13fda097d9cc7959a0"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga9dbca6a4ca949a13fda097d9cc7959a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga207c64afb37d15e35b5380d4805e6eaf" id="r_ga207c64afb37d15e35b5380d4805e6eaf"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga207c64afb37d15e35b5380d4805e6eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f6d20b8e4f3255f1f0f3ced8ea684e8" id="r_ga8f6d20b8e4f3255f1f0f3ced8ea684e8"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IC_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga8f6d20b8e4f3255f1f0f3ced8ea684e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab66fcfc1ee00512f50ef56f4397a0e9f" id="r_gab66fcfc1ee00512f50ef56f4397a0e9f"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OnePulse_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:gab66fcfc1ee00512f50ef56f4397a0e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1925971e419b85db7fed57919ba765ef" id="r_ga1925971e419b85db7fed57919ba765ef"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_GetState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga1925971e419b85db7fed57919ba765ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59769a997e85351e1b32ee5244b86df6" id="r_ga59769a997e85351e1b32ee5244b86df6"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_GetActiveChannel</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga59769a997e85351e1b32ee5244b86df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacae2a7b08fe873c9c16b523d0d6b8355" id="r_gacae2a7b08fe873c9c16b523d0d6b8355"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#ga1a70fcbe9952e18af5c890e216a15f34">HAL_TIM_ChannelStateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_GetChannelState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
-<tr class="separator:gacae2a7b08fe873c9c16b523d0d6b8355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d71f889d3b0ab0d08c5830cdf96b1f6" id="r_ga7d71f889d3b0ab0d08c5830cdf96b1f6"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___t_i_m___exported___types.html#ga9b87df539778a60ea940a9d5ba793f7c">HAL_TIM_DMABurstStateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurstState</b> (<a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
-<tr class="separator:ga7d71f889d3b0ab0d08c5830cdf96b1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga057e4b4da135186e8fb88327c5fd0684" id="r_ga057e4b4da135186e8fb88327c5fd0684"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_Base_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, <a class="el" href="struct_t_i_m___base___init_type_def.html">TIM_Base_InitTypeDef</a> *Structure)</td></tr>
-<tr class="separator:ga057e4b4da135186e8fb88327c5fd0684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42bb3b65bc8be378b82748feb9898b75" id="r_ga42bb3b65bc8be378b82748feb9898b75"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Base_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga42bb3b65bc8be378b82748feb9898b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1aa07ea9327c409b78b36fe0ed78a6e" id="r_gad1aa07ea9327c409b78b36fe0ed78a6e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OC_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:gad1aa07ea9327c409b78b36fe0ed78a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga795c42446ffd11385c8b66087fe695f6" id="r_ga795c42446ffd11385c8b66087fe695f6"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_PWM_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga795c42446ffd11385c8b66087fe695f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39d5fb67dc3867b6f9bd6a0a99fa0b82" id="r_ga39d5fb67dc3867b6f9bd6a0a99fa0b82"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_IC_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga39d5fb67dc3867b6f9bd6a0a99fa0b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28deed8246fb5225ee2ae354250e8e37" id="r_ga28deed8246fb5225ee2ae354250e8e37"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_OnePulse_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga28deed8246fb5225ee2ae354250e8e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga727c46df756e06eb4730ab5413c52b6d" id="r_ga727c46df756e06eb4730ab5413c52b6d"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_Encoder_GetState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga727c46df756e06eb4730ab5413c52b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga878b1bc139a257de3a427b235cd639f3" id="r_ga878b1bc139a257de3a427b235cd639f3"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_GetActiveChannel</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:ga878b1bc139a257de3a427b235cd639f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ce6635814be512115f217d3ad798a64" id="r_ga3ce6635814be512115f217d3ad798a64"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#ga1a70fcbe9952e18af5c890e216a15f34">HAL_TIM_ChannelStateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_GetChannelState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim, uint32_t Channel)</td></tr>
+<tr class="separator:ga3ce6635814be512115f217d3ad798a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac66bce244fd83b4a1ef9cc5a594f8ac5" id="r_gac66bce244fd83b4a1ef9cc5a594f8ac5"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___t_i_m___exported___types.html#ga9b87df539778a60ea940a9d5ba793f7c">HAL_TIM_DMABurstStateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_TIM_DMABurstState</b> (const <a class="el" href="struct_t_i_m___handle_type_def.html">TIM_HandleTypeDef</a> *htim)</td></tr>
+<tr class="separator:gac66bce244fd83b4a1ef9cc5a594f8ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0f82ff07c1973cf4fb132740a8e24ae" id="r_gae0f82ff07c1973cf4fb132740a8e24ae"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_Base_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, const <a class="el" href="struct_t_i_m___base___init_type_def.html">TIM_Base_InitTypeDef</a> *Structure)</td></tr>
+<tr class="separator:gae0f82ff07c1973cf4fb132740a8e24ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga83c847710a92f0558c862dd0dc889ff3" id="r_ga83c847710a92f0558c862dd0dc889ff3"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_TI1_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, uint32_t TIM_ICPolarity, uint32_t TIM_ICSelection, uint32_t TIM_ICFilter)</td></tr>
 <tr class="separator:ga83c847710a92f0558c862dd0dc889ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga20370137a5c000fa4739d30669e67b8c" id="r_ga20370137a5c000fa4739d30669e67b8c"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_OC2_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *OC_Config)</td></tr>
-<tr class="separator:ga20370137a5c000fa4739d30669e67b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d921b105aeea15c381e7a265af9092e" id="r_ga5d921b105aeea15c381e7a265af9092e"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_OC2_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, const <a class="el" href="struct_t_i_m___o_c___init_type_def.html">TIM_OC_InitTypeDef</a> *OC_Config)</td></tr>
+<tr class="separator:ga5d921b105aeea15c381e7a265af9092e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0dc6b90093e2510142a5b21d75e025e0" id="r_ga0dc6b90093e2510142a5b21d75e025e0"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TIM_ETR_SetConfig</b> (<a class="el" href="struct_t_i_m___type_def.html">TIM_TypeDef</a> *TIMx, uint32_t TIM_ExtTRGPrescaler, uint32_t TIM_ExtTRGPolarity, uint32_t ExtTRGFilter)</td></tr>
 <tr class="separator:ga0dc6b90093e2510142a5b21d75e025e0"><td class="memSeparator" colspan="2">&#160;</td></tr>

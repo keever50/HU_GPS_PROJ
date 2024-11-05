@@ -1,6 +1,6 @@
-/*
- * LSM303.c
- *
+/**
+ * @file LSM303.c
+ * @brief Magnetic sensor library
  *  Created on: Oct 11, 2024
  *      Author: kevin
  */

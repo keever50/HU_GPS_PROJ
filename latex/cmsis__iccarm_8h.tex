@@ -6,7 +6,7 @@ CMSIS compiler ICCARM (IAR Compiler for Arm) header file.
 
 
 {\ttfamily \#include $<$intrinsics.\+h$>$}\newline
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
@@ -29,6 +29,8 @@ struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
 \Hypertarget{cmsis__iccarm_8h_a1378040bcf22428955c6e3ce9c2053cd}\label{cmsis__iccarm_8h_a1378040bcf22428955c6e3ce9c2053cd} 
 \#define {\bfseries \+\_\+\+\_\+\+ASM}~\+\_\+\+\_\+asm
 \item 
+\#define \mbox{\hyperlink{cmsis__iccarm_8h_a6516fb12ab0dd45c734f8cef7d921af6}{\+\_\+\+\_\+\+COMPILER\+\_\+\+BARRIER}}()
+\item 
 \Hypertarget{cmsis__iccarm_8h_ade2d8d7118f8ff49547f60aa0c3382bb}\label{cmsis__iccarm_8h_ade2d8d7118f8ff49547f60aa0c3382bb} 
 \#define {\bfseries \+\_\+\+\_\+\+INLINE}~inline
 \item 
@@ -45,7 +47,7 @@ struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
 \#define {\bfseries \+\_\+\+\_\+\+PACKED\+\_\+\+UNION}~\+\_\+\+\_\+packed union
 \item 
 \Hypertarget{cmsis__iccarm_8h_a378ac21329d33f561f90265eef89f564}\label{cmsis__iccarm_8h_a378ac21329d33f561f90265eef89f564} 
-\#define {\bfseries \+\_\+\+\_\+\+RESTRICT}~\+\_\+\+\_\+restrict
+\#define {\bfseries \+\_\+\+\_\+\+RESTRICT}~restrict
 \item 
 \Hypertarget{cmsis__iccarm_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c}\label{cmsis__iccarm_8h_aba87361bfad2ae52cfe2f40c1a1dbf9c} 
 \#define {\bfseries \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE}~static inline
@@ -72,6 +74,21 @@ struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
 \Hypertarget{cmsis__iccarm_8h_ac607bf387b29162be6a9b77fc7999539}\label{cmsis__iccarm_8h_ac607bf387b29162be6a9b77fc7999539} 
 \#define {\bfseries \+\_\+\+\_\+\+WEAK}~\+\_\+\+Pragma("{}\+\_\+\+\_\+weak"{})
 \item 
+\Hypertarget{cmsis__iccarm_8h_a72db8b026c5e100254080fefabd9fd88}\label{cmsis__iccarm_8h_a72db8b026c5e100254080fefabd9fd88} 
+\#define {\bfseries \+\_\+\+\_\+\+PROGRAM\+\_\+\+START}~\+\_\+\+\_\+iar\+\_\+program\+\_\+start
+\item 
+\Hypertarget{cmsis__iccarm_8h_a1002e751427b1189f92787d4e4eef965}\label{cmsis__iccarm_8h_a1002e751427b1189f92787d4e4eef965} 
+\#define {\bfseries \+\_\+\+\_\+\+INITIAL\+\_\+\+SP}~CSTACK\$\$\+Limit
+\item 
+\Hypertarget{cmsis__iccarm_8h_a84b0bad4aa39632d3faea46aa1e102a8}\label{cmsis__iccarm_8h_a84b0bad4aa39632d3faea46aa1e102a8} 
+\#define {\bfseries \+\_\+\+\_\+\+STACK\+\_\+\+LIMIT}~CSTACK\$\$\+Base
+\item 
+\Hypertarget{cmsis__iccarm_8h_ab94ebeb20055f1848d7b707d3c7cfc5d}\label{cmsis__iccarm_8h_ab94ebeb20055f1848d7b707d3c7cfc5d} 
+\#define {\bfseries \+\_\+\+\_\+\+VECTOR\+\_\+\+TABLE}~\+\_\+\+\_\+vector\+\_\+table
+\item 
+\Hypertarget{cmsis__iccarm_8h_a4f65c96effa79fbd610fea43ee7d745b}\label{cmsis__iccarm_8h_a4f65c96effa79fbd610fea43ee7d745b} 
+\#define {\bfseries \+\_\+\+\_\+\+VECTOR\+\_\+\+TABLE\+\_\+\+ATTRIBUTE}~@"{}.intvec"{}
+\item 
 \Hypertarget{cmsis__iccarm_8h_a2cf5e66520f87c928ab4395d5787e4df}\label{cmsis__iccarm_8h_a2cf5e66520f87c928ab4395d5787e4df} 
 \#define {\bfseries \+\_\+\+\_\+\+ICCARM\+\_\+\+INTRINSICS\+\_\+\+VERSION\+\_\+\+\_\+}~0
 \item 
@@ -84,16 +101,20 @@ struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
 \item 
 \#define \mbox{\hyperlink{cmsis__iccarm_8h_a1cfee62c8cc63a1f72c134ffa096b911}{\+\_\+\+\_\+set\+\_\+\+FPSCR}}(VALUE)
 \item 
-\#define \mbox{\hyperlink{cmsis__iccarm_8h_a6c141f2890d12b9c0f56eaed4e4846c8}{\+\_\+\+\_\+enable\+\_\+irq}}
-\item 
-\#define \mbox{\hyperlink{cmsis__iccarm_8h_a6cb98c1adc8a28bc3b48649a3421195d}{\+\_\+\+\_\+disable\+\_\+irq}}
-\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga63ab98aec1a5bde0e191fb22e693f480}{\+\_\+\+\_\+enable\+\_\+irq}}
+\begin{DoxyCompactList}\small\item\em Enable IRQ Interrupts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga9a8f966bf50cc372e7ac092f612efd1a}{\+\_\+\+\_\+disable\+\_\+irq}}
+\begin{DoxyCompactList}\small\item\em Disable IRQ Interrupts. \end{DoxyCompactList}\item 
 \Hypertarget{cmsis__iccarm_8h_abd585ddc865fb9b7f2493af1eee1a572}\label{cmsis__iccarm_8h_abd585ddc865fb9b7f2493af1eee1a572} 
 \#define {\bfseries \+\_\+\+\_\+\+NOP}~\+\_\+\+\_\+no\+\_\+operation
 \item 
 \#define \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_gae0d8e20f8c3c2a502075dabcff733c05}{\+\_\+\+\_\+get\+\_\+x\+PSR}}
 \begin{DoxyCompactList}\small\item\em Get x\+PSR Register. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{cmsis__iccarm_8h_a15ea6bd3c507d3e81c3b3a1258e46397}{\+\_\+\+\_\+\+BKPT}}(value)
+\item 
+\#define \mbox{\hyperlink{cmsis__iccarm_8h_a6cfc7fe62ef04578af6a1f360dc38245}{\+\_\+\+\_\+\+SXTB16\+\_\+\+RORn}}(ARG1,  ARG2)
+\item 
+\#define \mbox{\hyperlink{cmsis__iccarm_8h_aefefc7eb15bebfb76044494b9491496e}{\+\_\+\+\_\+\+SXTAB16\+\_\+\+RORn}}(ARG1,  ARG2,  ARG3)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -125,10 +146,10 @@ struct \mbox{\hyperlink{struct____iar__u32}{\+\_\+\+\_\+iar\+\_\+u32}}
 CMSIS compiler ICCARM (IAR Compiler for Arm) header file. 
 
 \begin{DoxyVersion}{Version}
-V5.\+0.\+7 
+V5.\+3.\+0 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-19. June 2018 
+14. April 2021 
 \end{DoxyDate}
 
 
@@ -144,26 +165,15 @@ V5.\+0.\+7
 \DoxyCodeLine{\_\_asm\ \textcolor{keyword}{volatile}\ (\textcolor{stringliteral}{"{}BKPT\ \ \ \ \ \%0"{}}\ :\ :\ \textcolor{stringliteral}{"{}i"{}}(value))}
 
 \end{DoxyCode}
-\Hypertarget{cmsis__iccarm_8h_a6cb98c1adc8a28bc3b48649a3421195d}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_disable\_irq@{\_\_disable\_irq}}
-\index{\_\_disable\_irq@{\_\_disable\_irq}!cmsis\_iccarm.h@{cmsis\_iccarm.h}}
-\doxysubsubsection{\texorpdfstring{\_\_disable\_irq}{\_\_disable\_irq}}
-{\footnotesize\ttfamily \label{cmsis__iccarm_8h_a6cb98c1adc8a28bc3b48649a3421195d} 
-\#define \+\_\+\+\_\+disable\+\_\+irq(\begin{DoxyParamCaption}\item[{}]{void}{}\end{DoxyParamCaption})}
+\Hypertarget{cmsis__iccarm_8h_a6516fb12ab0dd45c734f8cef7d921af6}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_COMPILER\_BARRIER@{\_\_COMPILER\_BARRIER}}
+\index{\_\_COMPILER\_BARRIER@{\_\_COMPILER\_BARRIER}!cmsis\_iccarm.h@{cmsis\_iccarm.h}}
+\doxysubsubsection{\texorpdfstring{\_\_COMPILER\_BARRIER}{\_\_COMPILER\_BARRIER}}
+{\footnotesize\ttfamily \label{cmsis__iccarm_8h_a6516fb12ab0dd45c734f8cef7d921af6} 
+\#define \+\_\+\+\_\+\+COMPILER\+\_\+\+BARRIER(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\_\_disable\_interrupt}
-
-\end{DoxyCode}
-\Hypertarget{cmsis__iccarm_8h_a6c141f2890d12b9c0f56eaed4e4846c8}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_enable\_irq@{\_\_enable\_irq}}
-\index{\_\_enable\_irq@{\_\_enable\_irq}!cmsis\_iccarm.h@{cmsis\_iccarm.h}}
-\doxysubsubsection{\texorpdfstring{\_\_enable\_irq}{\_\_enable\_irq}}
-{\footnotesize\ttfamily \label{cmsis__iccarm_8h_a6c141f2890d12b9c0f56eaed4e4846c8} 
-\#define \+\_\+\+\_\+enable\+\_\+irq(\begin{DoxyParamCaption}\item[{}]{void}{}\end{DoxyParamCaption})}
-
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\_\_enable\_interrupt}
+\DoxyCodeLine{\_\_ASM\ \textcolor{keyword}{volatile}(\textcolor{stringliteral}{"{}"{}}:::\textcolor{stringliteral}{"{}memory"{}})}
 
 \end{DoxyCode}
 \Hypertarget{cmsis__iccarm_8h_af56e3c942846b8643cbf8f5208d6a63b}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_get\_FPSCR@{\_\_get\_FPSCR}}
@@ -197,6 +207,28 @@ V5.\+0.\+7
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{((void)VALUE)}
+
+\end{DoxyCode}
+\Hypertarget{cmsis__iccarm_8h_aefefc7eb15bebfb76044494b9491496e}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_SXTAB16\_RORn@{\_\_SXTAB16\_RORn}}
+\index{\_\_SXTAB16\_RORn@{\_\_SXTAB16\_RORn}!cmsis\_iccarm.h@{cmsis\_iccarm.h}}
+\doxysubsubsection{\texorpdfstring{\_\_SXTAB16\_RORn}{\_\_SXTAB16\_RORn}}
+{\footnotesize\ttfamily \label{cmsis__iccarm_8h_aefefc7eb15bebfb76044494b9491496e} 
+\#define \+\_\+\+\_\+\+SXTAB16\+\_\+\+RORn(\begin{DoxyParamCaption}\item[{}]{ARG1}{, }\item[{}]{ARG2}{, }\item[{}]{ARG3}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_SXTAB16(ARG1,\ \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga95b9bd281ddeda378b85afdb8f2ced86}{\_\_ROR}}(ARG2,\ ARG3))}
+
+\end{DoxyCode}
+\Hypertarget{cmsis__iccarm_8h_a6cfc7fe62ef04578af6a1f360dc38245}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_SXTB16\_RORn@{\_\_SXTB16\_RORn}}
+\index{\_\_SXTB16\_RORn@{\_\_SXTB16\_RORn}!cmsis\_iccarm.h@{cmsis\_iccarm.h}}
+\doxysubsubsection{\texorpdfstring{\_\_SXTB16\_RORn}{\_\_SXTB16\_RORn}}
+{\footnotesize\ttfamily \label{cmsis__iccarm_8h_a6cfc7fe62ef04578af6a1f360dc38245} 
+\#define \+\_\+\+\_\+\+SXTB16\+\_\+\+RORn(\begin{DoxyParamCaption}\item[{}]{ARG1}{, }\item[{}]{ARG2}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_SXTB16(\mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga95b9bd281ddeda378b85afdb8f2ced86}{\_\_ROR}}(ARG1,\ ARG2))}
 
 \end{DoxyCode}
 \Hypertarget{cmsis__iccarm_8h_affc86c22f56e906edc36b79fc834ac54}\index{cmsis\_iccarm.h@{cmsis\_iccarm.h}!\_\_UNALIGNED\_UINT16\_READ@{\_\_UNALIGNED\_UINT16\_READ}}

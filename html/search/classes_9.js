@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['i2c_5fhandletypedef_0',['I2C_HandleTypeDef',['../struct_i2_c___handle_type_def.html',1,'']]],
-  ['i2c_5finittypedef_1',['I2C_InitTypeDef',['../struct_i2_c___init_type_def.html',1,'']]],
-  ['i2c_5ftypedef_2',['I2C_TypeDef',['../struct_i2_c___type_def.html',1,'']]],
-  ['i2s_5finittypedef_3',['I2S_InitTypeDef',['../struct_i2_s___init_type_def.html',1,'']]],
-  ['ipsr_5ftype_4',['IPSR_Type',['../union_i_p_s_r___type.html',1,'']]],
-  ['itm_5ftype_5',['ITM_Type',['../struct_i_t_m___type.html',1,'']]],
-  ['iwdg_5ftypedef_6',['IWDG_TypeDef',['../struct_i_w_d_g___type_def.html',1,'']]]
+  ['ll_5futils_5fclkinittypedef_0',['LL_UTILS_ClkInitTypeDef',['../struct_l_l___u_t_i_l_s___clk_init_type_def.html',1,'']]],
+  ['ll_5futils_5fpllinittypedef_1',['LL_UTILS_PLLInitTypeDef',['../struct_l_l___u_t_i_l_s___p_l_l_init_type_def.html',1,'']]],
+  ['lsm303_5fmag_5fvector_2',['lsm303_mag_vector',['../structlsm303__mag__vector.html',1,'']]]
 ];

@@ -55,8 +55,7 @@ Clear the specified FLASH flags.
 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the FLASH flags to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
-\item FLASH\+\_\+\+FLAG\+\_\+\+EOP \+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR \+: FLASH operation Error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protected error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming Alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGPERR\+: FLASH Programming Parallelism error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming Sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR \+: FLASH Read Protection error flag (PCROP) (\texorpdfstring{$\ast$}{*}) (\texorpdfstring{$\ast$}{*}) FLASH\+\_\+\+FLAG\+\_\+\+RDERR is not available for STM32\+F405xx/407xx/415xx/417xx devices ~\newline
- \end{DoxyItemize}
+\item FLASH\+\_\+\+FLAG\+\_\+\+EOP \+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR \+: FLASH operation Error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protected error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming Alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGPERR\+: FLASH Programming Parallelism error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming Sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR \+: FLASH Read Protection error flag (PCROP) (\texorpdfstring{$\ast$}{*}) (\texorpdfstring{$\ast$}{*}) FLASH\+\_\+\+FLAG\+\_\+\+RDERR is not available for STM32\+F405xx/407xx/415xx/417xx devices \end{DoxyItemize}
 \\
 \hline
 \end{DoxyParams}
@@ -113,8 +112,8 @@ Enable the FLASH data cache.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_DCRST;\ \ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_DCRST;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_DCRST;\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_DCRST;\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{while}(0U)}
 
 \end{DoxyCode}
@@ -123,8 +122,7 @@ Enable the FLASH data cache.
 Resets the FLASH data Cache. 
 
 \begin{DoxyNote}{Note}
-This function must be used only when the data Cache is disabled. ~\newline
- 
+This function must be used only when the data Cache is disabled. 
 \end{DoxyNote}
 
 \begin{DoxyRetVals}{Return values}
@@ -149,8 +147,7 @@ Disable the specified FLASH interrupt.
 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & FLASH interrupt This parameter can be any combination of the following values\+: \begin{DoxyItemize}
-\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ERR\+: Error Interrupt ~\newline
- \end{DoxyItemize}
+\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ERR\+: Error Interrupt \end{DoxyItemize}
 \\
 \hline
 \end{DoxyParams}
@@ -177,8 +174,7 @@ Enable the specified FLASH interrupt.
 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & FLASH interrupt This parameter can be any combination of the following values\+: \begin{DoxyItemize}
-\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ERR\+: Error Interrupt ~\newline
- \end{DoxyItemize}
+\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ERR\+: Error Interrupt \end{DoxyItemize}
 \\
 \hline
 \end{DoxyParams}
@@ -205,8 +201,7 @@ Get the specified FLASH flag status.
 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the FLASH flags to check. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
-\item FLASH\+\_\+\+FLAG\+\_\+\+EOP \+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR \+: FLASH operation Error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protected error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming Alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGPERR\+: FLASH Programming Parallelism error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming Sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR \+: FLASH Read Protection error flag (PCROP) (\texorpdfstring{$\ast$}{*}) \item FLASH\+\_\+\+FLAG\+\_\+\+BSY \+: FLASH Busy flag (\texorpdfstring{$\ast$}{*}) FLASH\+\_\+\+FLAG\+\_\+\+RDERR is not available for STM32\+F405xx/407xx/415xx/417xx devices ~\newline
- \end{DoxyItemize}
+\item FLASH\+\_\+\+FLAG\+\_\+\+EOP \+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR \+: FLASH operation Error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protected error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming Alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGPERR\+: FLASH Programming Parallelism error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming Sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR \+: FLASH Read Protection error flag (PCROP) (\texorpdfstring{$\ast$}{*}) \item FLASH\+\_\+\+FLAG\+\_\+\+BSY \+: FLASH Busy flag (\texorpdfstring{$\ast$}{*}) FLASH\+\_\+\+FLAG\+\_\+\+RDERR is not available for STM32\+F405xx/407xx/415xx/417xx devices \end{DoxyItemize}
 \\
 \hline
 \end{DoxyParams}
@@ -283,8 +278,8 @@ Enable the FLASH instruction cache.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_ICRST;\ \ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_ICRST;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}\ \{FLASH-\/>ACR\ |=\ FLASH\_ACR\_ICRST;\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FLASH-\/>ACR\ \&=\ \string~FLASH\_ACR\_ICRST;\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{while}(0U)}
 
 \end{DoxyCode}
@@ -293,8 +288,7 @@ Enable the FLASH instruction cache.
 Resets the FLASH instruction Cache. 
 
 \begin{DoxyNote}{Note}
-This function must be used only when the Instruction Cache is disabled. ~\newline
- 
+This function must be used only when the Instruction Cache is disabled. 
 \end{DoxyNote}
 
 \begin{DoxyRetVals}{Return values}
@@ -349,7 +343,7 @@ Enable the FLASH prefetch buffer.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\mbox{\hyperlink{group___f_l_a_s_h___private___constants_gaeaca61fbcff69df08100280868bff214}{ACR\_BYTE0\_ADDRESS}}\ =\ (uint8\_t)(\_\_LATENCY\_\_))}
+\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\mbox{\hyperlink{group___f_l_a_s_h___private___constants_gaeaca61fbcff69df08100280868bff214}{ACR\_BYTE0\_ADDRESS}}\ =\ (uint8\_t)(\_\_LATENCY\_\_))}
 
 \end{DoxyCode}
 

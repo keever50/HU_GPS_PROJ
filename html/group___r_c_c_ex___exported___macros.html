@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: RCCEx Exported Macros</title>
+<title>HUGPS: RCCEx Exported Macros</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -134,10 +134,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                            (RCC-&gt;PLLCFGR = (0x20000000U | (__RCC_PLLSource__) | (__PLLM__)| \</div>
-<div class="line">                            ((__PLLN__) &lt;&lt; RCC_PLLCFGR_PLLN_Pos)                | \</div>
-<div class="line">                            ((((__PLLP__) &gt;&gt; 1U) -1U) &lt;&lt; RCC_PLLCFGR_PLLP_Pos)    | \</div>
-<div class="line">                            ((__PLLQ__) &lt;&lt; RCC_PLLCFGR_PLLQ_Pos)))</div>
+<b>Value:</b><div class="fragment"><div class="line">  (RCC-&gt;PLLCFGR = (0x20000000U | (__RCC_PLLSource__) | (__PLLM__)| \</div>
+<div class="line">                   ((__PLLN__) &lt;&lt; RCC_PLLCFGR_PLLN_Pos)                | \</div>
+<div class="line">                   ((((__PLLP__) &gt;&gt; 1U) -1U) &lt;&lt; RCC_PLLCFGR_PLLP_Pos)    | \</div>
+<div class="line">                   ((__PLLQ__) &lt;&lt; RCC_PLLCFGR_PLLQ_Pos)))</div>
 </div><!-- fragment -->
 <p>Macro to configure the main PLL clock source, multiplication and division factors. </p>
 <dl class="section note"><dt>Note</dt><dd>This function must be used only when the main PLL is disabled. </dd></dl>
@@ -151,8 +151,7 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This clock source (RCC_PLLSource) is common for the main PLL and PLLI2S. <br  />
- </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This clock source (RCC_PLLSource) is common for the main PLL and PLLI2S. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">__PLLM__</td><td>specifies the division factor for PLL VCO input clock This parameter must be a number between Min_Data = 2 and Max_Data = 63. </td></tr>
@@ -196,8 +195,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                               (RCC-&gt;PLLI2SCFGR = (((__PLLI2SN__) &lt;&lt; RCC_PLLI2SCFGR_PLLI2SN_Pos)  |\</div>
-<div class="line">                               ((__PLLI2SR__) &lt;&lt; RCC_PLLI2SCFGR_PLLI2SR_Pos)))</div>
+<b>Value:</b><div class="fragment"><div class="line">  (RCC-&gt;PLLI2SCFGR = (((__PLLI2SN__) &lt;&lt; RCC_PLLI2SCFGR_PLLI2SN_Pos)  |\</div>
+<div class="line">                      ((__PLLI2SR__) &lt;&lt; RCC_PLLI2SCFGR_PLLI2SR_Pos)))</div>
 </div><!-- fragment -->
 <p>Macro to configure the PLLI2S clock multiplication and division factors . </p>
 <dl class="section note"><dt>Note</dt><dd>This macro must be used only when the PLLI2S is disabled. </dd>

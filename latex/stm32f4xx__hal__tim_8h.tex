@@ -7,7 +7,7 @@ Header file of TIM HAL module.
 
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+def.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+tim\+\_\+ex.\+h"{}}\newline
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\+\_\+\+Base\+\_\+\+Init\+Type\+Def}}
@@ -601,6 +601,8 @@ struct \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\
 \item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_gab52ffb8447abc78141e296eff57c4371}{IS\+\_\+\+TIM\+\_\+\+OPM\+\_\+\+CHANNELS}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
 \item 
+\#define \mbox{\hyperlink{group___t_i_m___private___macros_gaf7c48e47778b71c5534c89c45a4f16c6}{IS\+\_\+\+TIM\+\_\+\+PERIOD}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+PERIOD\+\_\+\+\_\+)
+\item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_ga9fc980a033653d2bfc5d7afe9b65ca9f}{IS\+\_\+\+TIM\+\_\+\+COMPLEMENTARY\+\_\+\+CHANNELS}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
 \item 
 \#define \mbox{\hyperlink{group___t_i_m___private___macros_gaebd00b3c8dd1c689e9d04850333ba719}{IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE}}(\+\_\+\+\_\+\+CLOCK\+\_\+\+\_\+)
@@ -721,10 +723,10 @@ enum \mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc9
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+De\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
-\item 
-void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
-\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group1_ga818f4d5d1e2f417438d281b4ac9efb9c}{HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+Init}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em TIM\+\_\+\+Base MSP Initialization This function configures the hardware resources used in this example. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group1_ga13352a6c9cb3225511e5f29dbb894e84}{HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em TIM\+\_\+\+Base MSP De-\/\+Initialization This function freeze the hardware resources used in this example. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Start} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Stop} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
@@ -733,7 +735,7 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+De\+Init} (\mbox{\hyperli
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Stop\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Stop\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
@@ -753,7 +755,7 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlink
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Stop\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, const uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Stop\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
@@ -773,7 +775,7 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlin
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Stop\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Start\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel, const uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Length)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Stop\+\_\+\+DMA} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
@@ -813,7 +815,7 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+One\+Pulse\+\_\+\+Msp\+De\+Init} (\mbox{\h
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+One\+Pulse\+\_\+\+Stop\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Output\+Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def}{TIM\+\_\+\+Encoder\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def}{TIM\+\_\+\+Encoder\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+De\+Init} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
@@ -835,27 +837,27 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Msp\+De\+Init} (\mbox{\hype
 \item 
 void {\bfseries HAL\+\_\+\+TIM\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def}{TIM\+\_\+\+IC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def}{TIM\+\_\+\+IC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Channel)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+One\+Pulse\+\_\+\+Config\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def}{TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Config, uint32\+\_\+t Output\+Channel, uint32\+\_\+t Input\+Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Config\+OCref\+Clear} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def}{TIM\+\_\+\+Clear\+Input\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Clear\+Input\+Config, uint32\+\_\+t Channel)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Config\+OCref\+Clear} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def}{TIM\+\_\+\+Clear\+Input\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Clear\+Input\+Config, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Config\+Clock\+Source} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___clock_config_type_def}{TIM\+\_\+\+Clock\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Clock\+Source\+Config)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Config\+Clock\+Source} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___clock_config_type_def}{TIM\+\_\+\+Clock\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Clock\+Source\+Config)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Config\+TI1\+Input} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t TI1\+\_\+\+Selection)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Slave\+Config\+Synchro} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\+\_\+\+Slave\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Slave\+Config)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Slave\+Config\+Synchro} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\+\_\+\+Slave\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Slave\+Config)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Slave\+Config\+Synchro\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\+\_\+\+Slave\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Slave\+Config)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Slave\+Config\+Synchro\+\_\+\+IT} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, const \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\+\_\+\+Slave\+Config\+Type\+Def}} \texorpdfstring{$\ast$}{*}s\+Slave\+Config)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+\_\+\+Write\+Start} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Burst\+Base\+Address, uint32\+\_\+t Burst\+Request\+Src, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Burst\+Buffer, uint32\+\_\+t Burst\+Length)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+\_\+\+Write\+Start} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Burst\+Base\+Address, uint32\+\_\+t Burst\+Request\+Src, const uint32\+\_\+t \texorpdfstring{$\ast$}{*}Burst\+Buffer, uint32\+\_\+t Burst\+Length)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+\_\+\+Multi\+Write\+Start} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Burst\+Base\+Address, uint32\+\_\+t Burst\+Request\+Src, uint32\+\_\+t \texorpdfstring{$\ast$}{*}Burst\+Buffer, uint32\+\_\+t Burst\+Length, uint32\+\_\+t Data\+Length)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+\_\+\+Multi\+Write\+Start} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Burst\+Base\+Address, uint32\+\_\+t Burst\+Request\+Src, const uint32\+\_\+t \texorpdfstring{$\ast$}{*}Burst\+Buffer, uint32\+\_\+t Burst\+Length, uint32\+\_\+t Data\+Length)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+\_\+\+Write\+Stop} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Burst\+Request\+Src)
 \item 
@@ -867,7 +869,7 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_t_i_m
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Generate\+Event} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Event\+Source)
 \item 
-uint32\+\_\+t {\bfseries HAL\+\_\+\+TIM\+\_\+\+Read\+Captured\+Value} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+uint32\+\_\+t {\bfseries HAL\+\_\+\+TIM\+\_\+\+Read\+Captured\+Value} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
 void \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
@@ -889,29 +891,29 @@ void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Trigger\+Half\+Cplt\+Callback} (\mbox{\hyp
 \item 
 void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Error\+Callback} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+One\+Pulse\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+One\+Pulse\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Get\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc90a8cf9706}{HAL\+\_\+\+TIM\+\_\+\+Active\+Channel}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Get\+Active\+Channel} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc90a8cf9706}{HAL\+\_\+\+TIM\+\_\+\+Active\+Channel}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Get\+Active\+Channel} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\+\_\+\+TIM\+\_\+\+Channel\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Get\+Channel\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
+\mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\+\_\+\+TIM\+\_\+\+Channel\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+Get\+Channel\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim, uint32\+\_\+t Channel)
 \item 
-\mbox{\hyperlink{group___t_i_m___exported___types_ga9b87df539778a60ea940a9d5ba793f7c}{HAL\+\_\+\+TIM\+\_\+\+DMABurst\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+State} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\mbox{\hyperlink{group___t_i_m___exported___types_ga9b87df539778a60ea940a9d5ba793f7c}{HAL\+\_\+\+TIM\+\_\+\+DMABurst\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+TIM\+\_\+\+DMABurst\+State} (const \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
 \item 
-void {\bfseries TIM\+\_\+\+Base\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\+\_\+\+Base\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}Structure)
+void {\bfseries TIM\+\_\+\+Base\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, const \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\+\_\+\+Base\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}Structure)
 \item 
 void {\bfseries TIM\+\_\+\+TI1\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, uint32\+\_\+t TIM\+\_\+\+ICPolarity, uint32\+\_\+t TIM\+\_\+\+ICSelection, uint32\+\_\+t TIM\+\_\+\+ICFilter)
 \item 
-void {\bfseries TIM\+\_\+\+OC2\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}OC\+\_\+\+Config)
+void {\bfseries TIM\+\_\+\+OC2\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, const \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\+\_\+\+OC\+\_\+\+Init\+Type\+Def}} \texorpdfstring{$\ast$}{*}OC\+\_\+\+Config)
 \item 
 void {\bfseries TIM\+\_\+\+ETR\+\_\+\+Set\+Config} (\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\+\_\+\+Type\+Def}} \texorpdfstring{$\ast$}{*}TIMx, uint32\+\_\+t TIM\+\_\+\+Ext\+TRGPrescaler, uint32\+\_\+t TIM\+\_\+\+Ext\+TRGPolarity, uint32\+\_\+t Ext\+TRGFilter)
 \item 

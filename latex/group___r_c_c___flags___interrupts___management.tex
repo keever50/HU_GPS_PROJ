@@ -38,7 +38,7 @@ macros to manage the specified RCC Flags and interrupts.
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE2\_ADDRESS\ =\ (\_\_INTERRUPT\_\_))}
+\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE2\_ADDRESS\ =\ (\_\_INTERRUPT\_\_))}
 
 \end{DoxyCode}
 
@@ -75,7 +75,7 @@ Set RMVF bit to clear the reset flags\+: RCC\+\_\+\+FLAG\+\_\+\+PINRST, RCC\+\_\
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE1\_ADDRESS\ \&=\ (uint8\_t)(\string~(\_\_INTERRUPT\_\_)))}
+\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE1\_ADDRESS\ \&=\ (uint8\_t)(\string~(\_\_INTERRUPT\_\_)))}
 
 \end{DoxyCode}
 
@@ -97,7 +97,7 @@ Disable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR\mbox{[}14\+:8\mbox{
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv8mbl_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE1\_ADDRESS\ |=\ (\_\_INTERRUPT\_\_))}
+\DoxyCodeLine{(*(\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}\ uint8\_t\ *)\ RCC\_CIR\_BYTE1\_ADDRESS\ |=\ (\_\_INTERRUPT\_\_))}
 
 \end{DoxyCode}
 
@@ -119,7 +119,9 @@ Enable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR\mbox{[}14\+:8\mbox{]
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{(((((((\_\_FLAG\_\_)\ >>\ 5U)\ ==\ 1U)?\ RCC-\/>CR\ :((((\_\_FLAG\_\_)\ >>\ 5U)\ ==\ 2U)\ ?\ RCC-\/>BDCR\ :((((\_\_FLAG\_\_)\ >>\ 5U)\ ==\ 3U)?\ RCC-\/>CSR\ :RCC-\/>CIR)))\ \&\ (1U\ <<\ ((\_\_FLAG\_\_)\ \&\ \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga80017c6bf8a5c6f53a1a21bb8db93a82}{RCC\_FLAG\_MASK}})))!=\ 0U)?\ 1U\ :\ 0U)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (((((((\_\_FLAG\_\_)\ >>\ 5U)\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ==\ 1U)?\ RCC-\/>CR\ :((((\_\_FLAG\_\_)\ >>\ 5U)\ ==\ 2U)\ ?\ RCC-\/>BDCR\ :((((\_\_FLAG\_\_)\ >>\ 5U)\ ==\ 3U)?\ RCC-\/>CSR\ :RCC-\/>CIR)))\ \&\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1U\ <<\ ((\_\_FLAG\_\_)\ \&\ \mbox{\hyperlink{group___r_c_c___flags___interrupts___management_ga80017c6bf8a5c6f53a1a21bb8db93a82}{RCC\_FLAG\_MASK}})))!=\ 0U)?\ 1U\ :\ 0U)}
 
 \end{DoxyCode}
 \Hypertarget{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_GET\_IT@{\_\_HAL\_RCC\_GET\_IT}}

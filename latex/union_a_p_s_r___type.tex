@@ -7,157 +7,227 @@ Union type to access the Application Program Status Register (APSR).
 
 
 
-{\ttfamily \#include $<$core\+\_\+armv8mbl.\+h$>$}
+{\ttfamily \#include $<$core\+\_\+armv81mml.\+h$>$}
 
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaa0cafff627df6271eda96e47245ed644}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga84de5f534817cdbf8bd9064080effca2}{b}}\\
 
 \end{tabbing}\item 
-uint32\+\_\+t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae4c2ef8c9430d7b7bef5cbfbbaed3a94}{w}}
+uint32\+\_\+t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{w}}
 \item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:16\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gadcb98a5b9c93b0cb69cdb7af5638f32e}{APSR\_Type::GE}}:4\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac681f266e20b3b3591b961e13633ae13}{APSR\_Type::\_reserved1}}:7\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga85b15d453446a01d4e77b97a3b717e68}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7315cbd65fff89b9f8be36ac08cc5fc9}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga37c92a6ccab1d24079e1e1ac92011183}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga155224c8703c5227e075d53ad8d675af}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf9d6aa7cfea4fbd87e0083b9d9ba93d2}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf0fc10994a03d2ec1b5cc5ad2fd6d1dd}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gacc134ffa74a1005f323210c79c17e313}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2e022391834c5f2cece97f9eeec78cc5}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad3bb1abae380eb8245749f5a47700d93}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf2690deb99a9190d6239be381286a3b2}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:27\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga1cdebb4837d0d4f325f90d23a5dbd4ee}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac9cb3f497aa2489a7c538d0426d968fe}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:16\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gadcb98a5b9c93b0cb69cdb7af5638f32e}{APSR\_Type::GE}}:4\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac681f266e20b3b3591b961e13633ae13}{APSR\_Type::\_reserved1}}:7\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga3d79f852e6c2141a7e091297c3592c9c}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:27\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga1f4e7d7ea34db0d3c5acd234a77e535a}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:16\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gadcb98a5b9c93b0cb69cdb7af5638f32e}{APSR\_Type::GE}}:4\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac681f266e20b3b3591b961e13633ae13}{APSR\_Type::\_reserved1}}:7\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga74a86d55da7705e91c1f15a8d0443038}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga1625d2d78cd5b21f0c8de2b4fd5f0d4c}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:16\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gadcb98a5b9c93b0cb69cdb7af5638f32e}{APSR\_Type::GE}}:4\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac681f266e20b3b3591b961e13633ae13}{APSR\_Type::\_reserved1}}:7\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga2e9f9a0b6028c41b9641d0aabeff909d}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga3b79009399f8054e0d7dbccd33b42ace}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:28\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaa85c1d7b78526d57778f50922ac032e1}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga807aef2911011a7f14d7632ae77ba35e}{b}}\\
 
 \end{tabbing}\item 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{APSR\_Type::\_reserved0}}:27\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga22d10913489d24ab08bd83457daa88de}{APSR\_Type::Q}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{APSR\_Type::V}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{APSR\_Type::C}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{APSR\_Type::Z}}:1\\
-\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{APSR\_Type::N}}:1\\
-\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga6fb7a7c3ab8d36608db6b0ff0b472a02}{b}}\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga436e0183f7dac5dee028fbbb11729c45}{b}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga3a9b16b87611918369356203e1bd91a8}{b}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga57b2e41d1aa1671358fb895634074bc2}{b}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:28\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gab672fdac1144f781b3fb00783610f801}{b}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:27\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga88b0c955f313ae25ea69a388fe6b575b}{b}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:16\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa91800ec6e90e457c7a1acd1f2e17099}{GE}}:4\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga959a73d8faee56599b7e792a7c5a2d16}{\_reserved1}}:7\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1\\
+\>uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1\\
+\} \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga87b93dbd6fb53779c482ebc51187f3f7}{b}}\\
 
 \end{tabbing}\end{DoxyCompactItemize}
 
@@ -167,6 +237,7 @@ Union type to access the Application Program Status Register (APSR).
 
 The documentation for this union was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__armv81mml_8h}{core\+\_\+armv81mml.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__armv8mbl_8h}{core\+\_\+armv8mbl.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__armv8mml_8h}{core\+\_\+armv8mml.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm0_8h}{core\+\_\+cm0.\+h}}\item 
@@ -175,7 +246,11 @@ Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm1_8h}{core\+\_\+cm1.\+h}}\ite
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm23_8h}{core\+\_\+cm23.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm3_8h}{core\+\_\+cm3.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm33_8h}{core\+\_\+cm33.\+h}}\item 
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm35p_8h}{core\+\_\+cm35p.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm4_8h}{core\+\_\+cm4.\+h}}\item 
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm55_8h}{core\+\_\+cm55.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm7_8h}{core\+\_\+cm7.\+h}}\item 
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__cm85_8h}{core\+\_\+cm85.\+h}}\item 
 Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__sc000_8h}{core\+\_\+sc000.\+h}}\item 
-Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__sc300_8h}{core\+\_\+sc300.\+h}}\end{DoxyCompactItemize}
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__sc300_8h}{core\+\_\+sc300.\+h}}\item 
+Drivers/\+CMSIS/\+Include/\mbox{\hyperlink{core__starmc1_8h}{core\+\_\+starmc1.\+h}}\end{DoxyCompactItemize}

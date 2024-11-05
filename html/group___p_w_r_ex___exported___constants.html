@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: PWREx Exported Constants</title>
+<title>HUGPS: PWREx Exported Constants</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -119,13 +119,13 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                                            <span class="keywordflow">do</span> {                                                     \</div>
-<div class="line">                                                            <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U;                        \</div>
+<div class="line">                                                            <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U;                        \</div>
 <div class="line">                                                            MODIFY_REG(PWR-&gt;CR, <a class="code hl_define" href="group___peripheral___registers___bits___definition.html#gaccc33f1ba4e374e116ffa50f3a503030">PWR_CR_VOS</a>, (__REGULATOR__));   \</div>
 <div class="line">                                                            <span class="comment">/* Delay after an RCC peripheral clock enabling */</span>  \</div>
 <div class="line">                                                            tmpreg = READ_BIT(PWR-&gt;CR, <a class="code hl_define" href="group___peripheral___registers___bits___definition.html#gaccc33f1ba4e374e116ffa50f3a503030">PWR_CR_VOS</a>);             \</div>
 <div class="line">                                                            UNUSED(tmpreg);                                     \</div>
 <div class="line">                                                          } <span class="keywordflow">while</span>(0U)</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
 <div class="ttc" id="agroup___peripheral___registers___bits___definition_html_gaccc33f1ba4e374e116ffa50f3a503030"><div class="ttname"><a href="group___peripheral___registers___bits___definition.html#gaccc33f1ba4e374e116ffa50f3a503030">PWR_CR_VOS</a></div><div class="ttdeci">#define PWR_CR_VOS</div><div class="ttdef"><b>Definition</b> stm32f407xx.h:9400</div></div>
 </div><!-- fragment -->
 <p>macros configure the main internal regulator output voltage. </p>

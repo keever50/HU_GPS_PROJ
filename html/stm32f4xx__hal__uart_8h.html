@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h File Reference</title>
+<title>HUGPS: Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
@@ -105,7 +105,7 @@ $(function(){ initResizable(false); });
 <p><a href="stm32f4xx__hal__uart_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_u_a_r_t___init_type_def.html">UART_InitTypeDef</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART Init Structure definition.  <a href="struct_u_a_r_t___init_type_def.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,10 +247,17 @@ Macros</h2></td></tr>
 <tr class="memitem:ga8eb26d8edd9bf78ae8d3ad87dd51b618" id="r_ga8eb26d8edd9bf78ae8d3ad87dd51b618"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>UART_IT_ERR</b>&#160;&#160;&#160;((uint32_t)(UART_CR3_REG_INDEX &lt;&lt; 28U | <a class="el" href="group___peripheral___registers___bits___definition.html#gaaed1a39c551b1641128f81893ff558d0">USART_CR3_EIE</a>))</td></tr>
 <tr class="separator:ga8eb26d8edd9bf78ae8d3ad87dd51b618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae25ccd542b3d0e6180e38871da6070d2" id="r_gae25ccd542b3d0e6180e38871da6070d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___r_e_c_e_p_t_i_o_n___t_y_p_e___values.html#gae25ccd542b3d0e6180e38871da6070d2">HAL_UART_RECEPTION_STANDARD</a>&#160;&#160;&#160;(0x00000000U)</td></tr>
+<tr class="memitem:gae25ccd542b3d0e6180e38871da6070d2" id="r_gae25ccd542b3d0e6180e38871da6070d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___reception___type___values.html#gae25ccd542b3d0e6180e38871da6070d2">HAL_UART_RECEPTION_STANDARD</a>&#160;&#160;&#160;(0x00000000U)</td></tr>
 <tr class="separator:gae25ccd542b3d0e6180e38871da6070d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b12e95686ebebc1d6c8c77331e5bac6" id="r_ga0b12e95686ebebc1d6c8c77331e5bac6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___r_e_c_e_p_t_i_o_n___t_y_p_e___values.html#ga0b12e95686ebebc1d6c8c77331e5bac6">HAL_UART_RECEPTION_TOIDLE</a>&#160;&#160;&#160;(0x00000001U)</td></tr>
+<tr class="memitem:ga0b12e95686ebebc1d6c8c77331e5bac6" id="r_ga0b12e95686ebebc1d6c8c77331e5bac6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___reception___type___values.html#ga0b12e95686ebebc1d6c8c77331e5bac6">HAL_UART_RECEPTION_TOIDLE</a>&#160;&#160;&#160;(0x00000001U)</td></tr>
 <tr class="separator:ga0b12e95686ebebc1d6c8c77331e5bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb1603ee7c4bcd848380033a2e6b3736" id="r_gacb1603ee7c4bcd848380033a2e6b3736"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___rx_event___type___values.html#gacb1603ee7c4bcd848380033a2e6b3736">HAL_UART_RXEVENT_TC</a>&#160;&#160;&#160;(0x00000000U)</td></tr>
+<tr class="separator:gacb1603ee7c4bcd848380033a2e6b3736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c892e22044c836a9cc922859663562c" id="r_ga2c892e22044c836a9cc922859663562c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___rx_event___type___values.html#ga2c892e22044c836a9cc922859663562c">HAL_UART_RXEVENT_HT</a>&#160;&#160;&#160;(0x00000001U)</td></tr>
+<tr class="separator:ga2c892e22044c836a9cc922859663562c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c0c16c839b49a4ad14cdcb479b3e8d0" id="r_ga3c0c16c839b49a4ad14cdcb479b3e8d0"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_RXEVENT_IDLE</b>&#160;&#160;&#160;(0x00000002U)</td></tr>
+<tr class="separator:ga3c0c16c839b49a4ad14cdcb479b3e8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga19deab848407b106998416c78092fa9b" id="r_ga19deab848407b106998416c78092fa9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___exported___macros.html#ga19deab848407b106998416c78092fa9b">__HAL_UART_RESET_HANDLE_STATE</a>(__HANDLE__)</td></tr>
 <tr class="memdesc:ga19deab848407b106998416c78092fa9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset UART handle gstate &amp; RxState.  <br /></td></tr>
 <tr class="separator:ga19deab848407b106998416c78092fa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -372,6 +379,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga9f272475ea543a68fd8cb19f03a9bce9" id="r_ga9f272475ea543a68fd8cb19f03a9bce9"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___exported___types.html#ga9f272475ea543a68fd8cb19f03a9bce9">HAL_UART_RxTypeTypeDef</a></td></tr>
 <tr class="memdesc:ga9f272475ea543a68fd8cb19f03a9bce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL UART Reception type definition.  <br /></td></tr>
 <tr class="separator:ga9f272475ea543a68fd8cb19f03a9bce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadddf3d5480235c945dc8eec58f961203" id="r_gadddf3d5480235c945dc8eec58f961203"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_a_r_t___exported___types.html#gadddf3d5480235c945dc8eec58f961203">HAL_UART_RxEventTypeTypeDef</a></td></tr>
+<tr class="memdesc:gadddf3d5480235c945dc8eec58f961203"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL UART Rx Event type definition.  <br /></td></tr>
+<tr class="separator:gadddf3d5480235c945dc8eec58f961203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5de4a49eb132735325e706f406c69d6e" id="r_ga5de4a49eb132735325e706f406c69d6e"><td class="memItemLeft" align="right" valign="top">
 typedef struct <a class="el" href="struct_____u_a_r_t___handle_type_def.html">__UART_HandleTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UART_HandleTypeDef</b></td></tr>
 <tr class="memdesc:ga5de4a49eb132735325e706f406c69d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART handle Structure definition. <br /></td></tr>
@@ -453,6 +463,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf482a22a09d594e0aa687937aef17949" id="r_gaf482a22a09d594e0aa687937aef17949"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UARTEx_ReceiveToIdle_DMA</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart, uint8_t *pData, uint16_t Size)</td></tr>
 <tr class="separator:gaf482a22a09d594e0aa687937aef17949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31c033bf82e6ec4ce88d7cd6083b2c16" id="r_ga31c033bf82e6ec4ce88d7cd6083b2c16"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___u_a_r_t___exported___types.html#gadddf3d5480235c945dc8eec58f961203">HAL_UART_RxEventTypeTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UARTEx_GetRxEventType</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
+<tr class="separator:ga31c033bf82e6ec4ce88d7cd6083b2c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2d7be1f59fc810f49dadc580307a4862" id="r_ga2d7be1f59fc810f49dadc580307a4862"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_Abort</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
 <tr class="separator:ga2d7be1f59fc810f49dadc580307a4862"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -516,12 +529,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UARTEx_RxEventCal
 <tr class="memitem:ga396ebbcdbe352c3393ad3007614383ac" id="r_ga396ebbcdbe352c3393ad3007614383ac"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_HalfDuplex_EnableReceiver</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
 <tr class="separator:ga396ebbcdbe352c3393ad3007614383ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8fcec96f9d249f41ecf0c7598ab421e5" id="r_ga8fcec96f9d249f41ecf0c7598ab421e5"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group___u_a_r_t___exported___types.html#gaf55d844a35379c204c90be5d1e8e50ba">HAL_UART_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_GetState</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
-<tr class="separator:ga8fcec96f9d249f41ecf0c7598ab421e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c5f93a76a0bd01ad2d1351adddfa63f" id="r_ga6c5f93a76a0bd01ad2d1351adddfa63f"><td class="memItemLeft" align="right" valign="top">
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_GetError</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
-<tr class="separator:ga6c5f93a76a0bd01ad2d1351adddfa63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2799699d4d4b3c9d7fac0c3523fe45e" id="r_gad2799699d4d4b3c9d7fac0c3523fe45e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group___u_a_r_t___exported___types.html#gaf55d844a35379c204c90be5d1e8e50ba">HAL_UART_StateTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_GetState</b> (const <a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
+<tr class="separator:gad2799699d4d4b3c9d7fac0c3523fe45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7297bf8c1679501a19c34f737c2eeea7" id="r_ga7297bf8c1679501a19c34f737c2eeea7"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>HAL_UART_GetError</b> (const <a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart)</td></tr>
+<tr class="separator:ga7297bf8c1679501a19c34f737c2eeea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6629cec6016bd4dc0ea1bbce9e20898f" id="r_ga6629cec6016bd4dc0ea1bbce9e20898f"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UART_Start_Receive_IT</b> (<a class="el" href="group___u_a_r_t___exported___types.html#ga5de4a49eb132735325e706f406c69d6e">UART_HandleTypeDef</a> *huart, uint8_t *pData, uint16_t Size)</td></tr>
 <tr class="separator:ga6629cec6016bd4dc0ea1bbce9e20898f"><td class="memSeparator" colspan="2">&#160;</td></tr>

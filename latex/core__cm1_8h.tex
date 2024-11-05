@@ -8,7 +8,7 @@ CMSIS Cortex-\/\+M1 Core Peripheral Access Layer Header File.
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include "{}cmsis\+\_\+version.\+h"{}}\newline
 {\ttfamily \#include "{}cmsis\+\_\+compiler.\+h"{}}\newline
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 union \mbox{\hyperlink{union_a_p_s_r___type}{APSR\+\_\+\+Type}}
@@ -212,10 +212,6 @@ struct \mbox{\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}}
 \item 
 \#define \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_ga50a243e317b9a70781b02758d45b05ee}{SCB\+\_\+\+SCR\+\_\+\+SLEEPONEXIT\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_ga3680a15114d7fdc1e25043b881308fe9}{SCB\+\_\+\+SCR\+\_\+\+SLEEPONEXIT\+\_\+\+Pos}})
 \item 
-\#define \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_gac2d20a250960a432cc74da59d20e2f86}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos}}~9U
-\item 
-\#define \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_ga33cf22d3d46af158a03aad25ddea1bcb}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_gac2d20a250960a432cc74da59d20e2f86}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos}})
-\item 
 \#define \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_gac4e4928b864ea10fc24dbbc57d976229}{SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Pos}}~3U
 \item 
 \#define \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_ga68c96ad594af70c007923979085c99e0}{SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___c_o_r_e_gac4e4928b864ea10fc24dbbc57d976229}{SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Pos}})
@@ -307,6 +303,14 @@ struct \mbox{\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}}
 \#define {\bfseries NVIC\+\_\+\+Get\+Vector}~\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga44b665d2afb708121d9b10c76ff00ee5}{\+\_\+\+\_\+\+NVIC\+\_\+\+Get\+Vector}}
 \item 
 \#define {\bfseries NVIC\+\_\+\+USER\+\_\+\+IRQ\+\_\+\+OFFSET}~16
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gac2d20a250960a432cc74da59d20e2f86}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos}}~9U
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga33cf22d3d46af158a03aad25ddea1bcb}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gac2d20a250960a432cc74da59d20e2f86}{SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos}})
 \item 
 \#define {\bfseries EXC\+\_\+\+RETURN\+\_\+\+HANDLER}~(0x\+FFFFFFF1\+UL)     /\texorpdfstring{$\ast$}{*} return to Handler mode, uses MSP after return                               \texorpdfstring{$\ast$}{*}/
 \item 
@@ -374,10 +378,10 @@ struct \mbox{\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}}
 CMSIS Cortex-\/\+M1 Core Peripheral Access Layer Header File. 
 
 \begin{DoxyVersion}{Version}
-V1.\+0.\+0 
+V1.\+0.\+1 
 \end{DoxyVersion}
 \begin{DoxyDate}{Date}
-23. July 2018 
+12. November 2018 
 \end{DoxyDate}
 
 
@@ -395,7 +399,7 @@ V1.\+0.\+0
 
 \end{DoxyCode}
 \begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000015}{Deprecated}}]CMSIS HAL version number \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{deprecated__deprecated000239}{Deprecated}}]CMSIS HAL version number \end{DoxyRefDesc}
 \Hypertarget{core__cm1_8h_ab6ddd130b9f1f7ac55bfc1379ff020c5}\index{core\_cm1.h@{core\_cm1.h}!\_\_CM1\_CMSIS\_VERSION\_MAIN@{\_\_CM1\_CMSIS\_VERSION\_MAIN}}
 \index{\_\_CM1\_CMSIS\_VERSION\_MAIN@{\_\_CM1\_CMSIS\_VERSION\_MAIN}!core\_cm1.h@{core\_cm1.h}}
 \doxysubsubsection{\texorpdfstring{\_\_CM1\_CMSIS\_VERSION\_MAIN}{\_\_CM1\_CMSIS\_VERSION\_MAIN}}
@@ -403,7 +407,7 @@ V1.\+0.\+0
 \#define \+\_\+\+\_\+\+CM1\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+MAIN~(\mbox{\hyperlink{cmsis__version_8h_a85987c5fcc1e012d7ac01369ee6ca2b5}{\+\_\+\+\_\+\+CM\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+MAIN}})}
 
 \begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000013}{Deprecated}}]\mbox{[}31\+:16\mbox{]} CMSIS HAL main version \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{deprecated__deprecated000237}{Deprecated}}]\mbox{[}31\+:16\mbox{]} CMSIS HAL main version \end{DoxyRefDesc}
 \Hypertarget{core__cm1_8h_aa771981ad7c673c8c9c49e163bbfc8b3}\index{core\_cm1.h@{core\_cm1.h}!\_\_CM1\_CMSIS\_VERSION\_SUB@{\_\_CM1\_CMSIS\_VERSION\_SUB}}
 \index{\_\_CM1\_CMSIS\_VERSION\_SUB@{\_\_CM1\_CMSIS\_VERSION\_SUB}!core\_cm1.h@{core\_cm1.h}}
 \doxysubsubsection{\texorpdfstring{\_\_CM1\_CMSIS\_VERSION\_SUB}{\_\_CM1\_CMSIS\_VERSION\_SUB}}
@@ -411,7 +415,7 @@ V1.\+0.\+0
 \#define \+\_\+\+\_\+\+CM1\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB~(\mbox{\hyperlink{cmsis__version_8h_a22083cbe7f0606cfd538ec12b2e41608}{\+\_\+\+\_\+\+CM\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB}})}
 
 \begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000014}{Deprecated}}]\mbox{[}15\+:0\mbox{]} CMSIS HAL sub version \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{deprecated__deprecated000238}{Deprecated}}]\mbox{[}15\+:0\mbox{]} CMSIS HAL sub version \end{DoxyRefDesc}
 \Hypertarget{core__cm1_8h_a63ea62503c88acab19fcf3d5743009e3}\index{core\_cm1.h@{core\_cm1.h}!\_\_CORTEX\_M@{\_\_CORTEX\_M}}
 \index{\_\_CORTEX\_M@{\_\_CORTEX\_M}!core\_cm1.h@{core\_cm1.h}}
 \doxysubsubsection{\texorpdfstring{\_\_CORTEX\_M}{\_\_CORTEX\_M}}

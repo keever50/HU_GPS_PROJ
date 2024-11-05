@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: AHB1 Peripheral Clock Enable Disable</title>
+<title>HUGPS: AHB1 Peripheral Clock Enable Disable</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -156,14 +156,14 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA1EN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA1EN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                          <span class="keywordflow">do</span> { \</div>
+<div class="line">                                          <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                          SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA1EN);\</div>
+<div class="line">                                          <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                          tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA1EN);\</div>
+<div class="line">                                          UNUSED(tmpreg); \</div>
 <div class="line">                                         } <span class="keywordflow">while</span>(0U)</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -199,13 +199,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA2EN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA2EN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
-<div class="line">                                          } <span class="keywordflow">while</span>(0U)</div>
+<b>Value:</b><div class="fragment"><div class="line">                                             <span class="keywordflow">do</span> { \</div>
+<div class="line">                                             <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                             SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA2EN);\</div>
+<div class="line">                                             <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                             tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_DMA2EN);\</div>
+<div class="line">                                             UNUSED(tmpreg); \</div>
+<div class="line">                                           } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,12 +241,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOAEN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOAEN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                            <span class="keywordflow">do</span> { \</div>
+<div class="line">                                            <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                            SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOAEN);\</div>
+<div class="line">                                            <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                            tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOAEN);\</div>
+<div class="line">                                            UNUSED(tmpreg); \</div>
 <div class="line">                                          } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 </div>
@@ -283,12 +283,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOBEN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOBEN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                            <span class="keywordflow">do</span> { \</div>
+<div class="line">                                            <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                            SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOBEN);\</div>
+<div class="line">                                            <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                            tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOBEN);\</div>
+<div class="line">                                            UNUSED(tmpreg); \</div>
 <div class="line">                                          } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 </div>
@@ -325,12 +325,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOCEN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOCEN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                           <span class="keywordflow">do</span> { \</div>
+<div class="line">                                           <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                           SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOCEN);\</div>
+<div class="line">                                           <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                           tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOCEN);\</div>
+<div class="line">                                           UNUSED(tmpreg); \</div>
 <div class="line">                                          } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 </div>
@@ -367,12 +367,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span> { \</div>
-<div class="line">                                        <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
-<div class="line">                                        SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOHEN);\</div>
-<div class="line">                                        <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
-<div class="line">                                        tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOHEN);\</div>
-<div class="line">                                        UNUSED(tmpreg); \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                           <span class="keywordflow">do</span> { \</div>
+<div class="line">                                           <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U; \</div>
+<div class="line">                                           SET_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOHEN);\</div>
+<div class="line">                                           <span class="comment">/* Delay after an RCC peripheral clock enabling */</span> \</div>
+<div class="line">                                           tmpreg = READ_BIT(RCC-&gt;AHB1ENR, RCC_AHB1ENR_GPIOHEN);\</div>
+<div class="line">                                           UNUSED(tmpreg); \</div>
 <div class="line">                                         } <span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 </div>

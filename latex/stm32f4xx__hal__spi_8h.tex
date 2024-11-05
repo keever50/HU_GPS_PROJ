@@ -6,7 +6,7 @@ Header file of SPI HAL module.
 
 
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+def.\+h"{}}\newline
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_s_p_i___init_type_def}{SPI\+\_\+\+Init\+Type\+Def}}
@@ -201,23 +201,23 @@ void \mbox{\hyperlink{group___s_p_i___exported___functions___group1_ga17f583be14
 \begin{DoxyCompactList}\small\item\em SPI MSP Initialization This function configures the hardware resources used in this example. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{group___s_p_i___exported___functions___group1_gabadc4d4974af1afd943e8d13589068e1}{HAL\+\_\+\+SPI\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
 \begin{DoxyCompactList}\small\item\em SPI MSP De-\/\+Initialization This function freeze the hardware resources used in this example. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Receive} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+IT} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+IT} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+IT} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+IT} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+IT} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+DMA} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+DMA} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+DMA} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint16\+\_\+t Size)
 \item 
-\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+DMA} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size)
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+DMA} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Tx\+Data, uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+Rx\+Data, uint16\+\_\+t Size)
 \item 
 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+DMAPause} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
 \item 
@@ -247,9 +247,9 @@ void {\bfseries HAL\+\_\+\+SPI\+\_\+\+Error\+Callback} (\mbox{\hyperlink{group__
 \item 
 void {\bfseries HAL\+\_\+\+SPI\+\_\+\+Abort\+Cplt\+Callback} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
 \item 
-\mbox{\hyperlink{group___s_p_i___exported___types_ga8891cb64e76198a860172d94c638c9b4}{HAL\+\_\+\+SPI\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Get\+State} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
+\mbox{\hyperlink{group___s_p_i___exported___types_ga8891cb64e76198a860172d94c638c9b4}{HAL\+\_\+\+SPI\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+SPI\+\_\+\+Get\+State} (const \mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
 \item 
-uint32\+\_\+t {\bfseries HAL\+\_\+\+SPI\+\_\+\+Get\+Error} (\mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
+uint32\+\_\+t {\bfseries HAL\+\_\+\+SPI\+\_\+\+Get\+Error} (const \mbox{\hyperlink{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}{SPI\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}hspi)
 \end{DoxyCompactItemize}
 
 

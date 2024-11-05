@@ -129,103 +129,106 @@
 \DoxyCodeLine{00284\ \textcolor{preprocessor}{\#if\ (\_\_MPU\_PRESENT\ ==\ 1U)}}
 \DoxyCodeLine{00285\ \textcolor{keywordtype}{void}\ HAL\_MPU\_Enable(uint32\_t\ MPU\_Control);}
 \DoxyCodeLine{00286\ \textcolor{keywordtype}{void}\ HAL\_MPU\_Disable(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00287\ \textcolor{keywordtype}{void}\ HAL\_MPU\_ConfigRegion(MPU\_Region\_InitTypeDef\ *MPU\_Init);}
-\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{00297\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00298\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00299\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00300\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00304\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_PRIORITY\_GROUP(GROUP)\ (((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_0)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00305\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_1)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00306\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_2)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00307\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_3)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00308\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_4))}}
-\DoxyCodeLine{00309\ }
-\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_PREEMPTION\_PRIORITY(PRIORITY)\ \ ((PRIORITY)\ <\ 0x10U)}}
-\DoxyCodeLine{00311\ }
-\DoxyCodeLine{00312\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_SUB\_PRIORITY(PRIORITY)\ \ \ \ \ \ \ \ \ ((PRIORITY)\ <\ 0x10U)}}
-\DoxyCodeLine{00313\ }
-\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_DEVICE\_IRQ(IRQ)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((IRQ)\ >=\ (IRQn\_Type)0x00U)}}
-\DoxyCodeLine{00315\ }
-\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#define\ IS\_SYSTICK\_CLK\_SOURCE(SOURCE)\ (((SOURCE)\ ==\ SYSTICK\_CLKSOURCE\_HCLK)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00317\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SOURCE)\ ==\ SYSTICK\_CLKSOURCE\_HCLK\_DIV8))}}
+\DoxyCodeLine{00287\ \textcolor{keywordtype}{void}\ HAL\_MPU\_EnableRegion(uint32\_t\ RegionNumber);}
+\DoxyCodeLine{00288\ \textcolor{keywordtype}{void}\ HAL\_MPU\_DisableRegion(uint32\_t\ RegionNumber);}
+\DoxyCodeLine{00289\ \textcolor{keywordtype}{void}\ HAL\_MPU\_ConfigRegion(MPU\_Region\_InitTypeDef\ *MPU\_Init);}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00291\ \textcolor{keywordtype}{void}\ HAL\_CORTEX\_ClearEvent(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00300\ \textcolor{comment}{/*\ Private\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00301\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00302\ \textcolor{comment}{/*\ Private\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00303\ \textcolor{comment}{/*\ Private\ macros\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00307\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_PRIORITY\_GROUP(GROUP)\ (((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_0)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00308\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_1)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_2)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_3)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00311\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((GROUP)\ ==\ NVIC\_PRIORITYGROUP\_4))}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_PREEMPTION\_PRIORITY(PRIORITY)\ \ ((PRIORITY)\ <\ 0x10U)}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_SUB\_PRIORITY(PRIORITY)\ \ \ \ \ \ \ \ \ ((PRIORITY)\ <\ 0x10U)}}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \textcolor{preprocessor}{\#define\ IS\_NVIC\_DEVICE\_IRQ(IRQ)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((IRQ)\ >=\ (IRQn\_Type)0x00U)}}
 \DoxyCodeLine{00318\ }
-\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#if\ (\_\_MPU\_PRESENT\ ==\ 1U)}}
-\DoxyCodeLine{00320\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_ENABLE(STATE)\ (((STATE)\ ==\ MPU\_REGION\_ENABLE)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00321\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_REGION\_DISABLE))}}
-\DoxyCodeLine{00322\ }
-\DoxyCodeLine{00323\ \textcolor{preprocessor}{\#define\ IS\_MPU\_INSTRUCTION\_ACCESS(STATE)\ (((STATE)\ ==\ MPU\_INSTRUCTION\_ACCESS\_ENABLE)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00324\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_INSTRUCTION\_ACCESS\_DISABLE))}}
+\DoxyCodeLine{00319\ \textcolor{preprocessor}{\#define\ IS\_SYSTICK\_CLK\_SOURCE(SOURCE)\ (((SOURCE)\ ==\ SYSTICK\_CLKSOURCE\_HCLK)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00320\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SOURCE)\ ==\ SYSTICK\_CLKSOURCE\_HCLK\_DIV8))}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \textcolor{preprocessor}{\#if\ (\_\_MPU\_PRESENT\ ==\ 1U)}}
+\DoxyCodeLine{00323\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_ENABLE(STATE)\ (((STATE)\ ==\ MPU\_REGION\_ENABLE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00324\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_REGION\_DISABLE))}}
 \DoxyCodeLine{00325\ }
-\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_SHAREABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_SHAREABLE)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00327\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_SHAREABLE))}}
+\DoxyCodeLine{00326\ \textcolor{preprocessor}{\#define\ IS\_MPU\_INSTRUCTION\_ACCESS(STATE)\ (((STATE)\ ==\ MPU\_INSTRUCTION\_ACCESS\_ENABLE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00327\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_INSTRUCTION\_ACCESS\_DISABLE))}}
 \DoxyCodeLine{00328\ }
-\DoxyCodeLine{00329\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_CACHEABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_CACHEABLE)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00330\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_CACHEABLE))}}
+\DoxyCodeLine{00329\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_SHAREABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_SHAREABLE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00330\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_SHAREABLE))}}
 \DoxyCodeLine{00331\ }
-\DoxyCodeLine{00332\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_BUFFERABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_BUFFERABLE)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_BUFFERABLE))}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_CACHEABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_CACHEABLE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_CACHEABLE))}}
 \DoxyCodeLine{00334\ }
-\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ IS\_MPU\_TEX\_LEVEL(TYPE)\ (((TYPE)\ ==\ MPU\_TEX\_LEVEL0)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00336\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_TEX\_LEVEL1)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00337\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_TEX\_LEVEL2))}}
-\DoxyCodeLine{00338\ }
-\DoxyCodeLine{00339\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_PERMISSION\_ATTRIBUTE(TYPE)\ (((TYPE)\ ==\ MPU\_REGION\_NO\_ACCESS)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00340\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RW)\ \ \ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00341\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RW\_URO)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00342\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_FULL\_ACCESS)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00343\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RO)\ \ \ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00344\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RO\_URO))}}
-\DoxyCodeLine{00345\ }
-\DoxyCodeLine{00346\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_NUMBER(NUMBER)\ \ \ \ (((NUMBER)\ ==\ MPU\_REGION\_NUMBER0)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00347\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER1)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00348\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER2)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00349\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER3)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00350\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER4)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00351\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER5)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00352\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER6)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00353\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER7))}}
-\DoxyCodeLine{00354\ }
-\DoxyCodeLine{00355\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_SIZE(SIZE)\ \ \ \ (((SIZE)\ ==\ MPU\_REGION\_SIZE\_32B)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00356\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64B)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00357\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128B)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00358\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256B)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00359\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512B)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00360\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1KB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00361\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2KB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00362\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4KB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00363\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_8KB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00364\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_16KB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00365\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_32KB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00366\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64KB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00367\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128KB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00368\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256KB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00369\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512KB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00370\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1MB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00371\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2MB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00372\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4MB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00373\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_8MB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00374\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_16MB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00375\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_32MB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00376\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64MB)\ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00377\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128MB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00378\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256MB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00379\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512MB)\ ||\ \(\backslash\)}}
-\DoxyCodeLine{00380\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1GB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00381\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2GB)\ \ \ ||\ \(\backslash\)}}
-\DoxyCodeLine{00382\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4GB))}}
-\DoxyCodeLine{00383\ }
-\DoxyCodeLine{00384\ \textcolor{preprocessor}{\#define\ IS\_MPU\_SUB\_REGION\_DISABLE(SUBREGION)\ \ ((SUBREGION)\ <\ (uint16\_t)0x00FF)}}
-\DoxyCodeLine{00385\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00335\ \textcolor{preprocessor}{\#define\ IS\_MPU\_ACCESS\_BUFFERABLE(STATE)\ \ \ (((STATE)\ ==\ MPU\_ACCESS\_BUFFERABLE)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00336\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((STATE)\ ==\ MPU\_ACCESS\_NOT\_BUFFERABLE))}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \textcolor{preprocessor}{\#define\ IS\_MPU\_TEX\_LEVEL(TYPE)\ (((TYPE)\ ==\ MPU\_TEX\_LEVEL0)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00339\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_TEX\_LEVEL1)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00340\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_TEX\_LEVEL2))}}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_PERMISSION\_ATTRIBUTE(TYPE)\ (((TYPE)\ ==\ MPU\_REGION\_NO\_ACCESS)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RW)\ \ \ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00344\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RW\_URO)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00345\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_FULL\_ACCESS)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00346\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RO)\ \ \ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00347\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((TYPE)\ ==\ MPU\_REGION\_PRIV\_RO\_URO))}}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00349\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_NUMBER(NUMBER)\ \ \ \ (((NUMBER)\ ==\ MPU\_REGION\_NUMBER0)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00350\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER1)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER2)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00352\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER3)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER4)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00354\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER5)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00355\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER6)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((NUMBER)\ ==\ MPU\_REGION\_NUMBER7))}}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\#define\ IS\_MPU\_REGION\_SIZE(SIZE)\ \ \ \ (((SIZE)\ ==\ MPU\_REGION\_SIZE\_32B)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00359\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64B)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00360\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128B)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256B)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00362\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512B)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00363\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1KB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00364\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2KB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4KB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00366\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_8KB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00367\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_16KB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00368\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_32KB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00369\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64KB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00370\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128KB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00371\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256KB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00372\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512KB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00373\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1MB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2MB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00375\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4MB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_8MB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00377\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_16MB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_32MB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00379\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_64MB)\ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00380\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_128MB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00381\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_256MB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00382\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_512MB)\ ||\ \(\backslash\)}}
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_1GB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_2GB)\ \ \ ||\ \(\backslash\)}}
+\DoxyCodeLine{00385\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((SIZE)\ ==\ MPU\_REGION\_SIZE\_4GB))}}
 \DoxyCodeLine{00386\ }
-\DoxyCodeLine{00391\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00392\ }
-\DoxyCodeLine{00401\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
-\DoxyCodeLine{00402\ \}}
-\DoxyCodeLine{00403\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00404\ }
-\DoxyCodeLine{00405\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_STM32F4xx\_HAL\_CORTEX\_H\ */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{00406\ \ }
+\DoxyCodeLine{00387\ \textcolor{preprocessor}{\#define\ IS\_MPU\_SUB\_REGION\_DISABLE(SUBREGION)\ \ ((SUBREGION)\ <\ (uint16\_t)0x00FF)}}
+\DoxyCodeLine{00388\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MPU\_PRESENT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00394\ \textcolor{comment}{/*\ Private\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00404\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00405\ \}}
+\DoxyCodeLine{00406\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{00407\ }
+\DoxyCodeLine{00408\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_STM32F4xx\_HAL\_CORTEX\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00409\ \ }
+\DoxyCodeLine{00410\ }
 
 \end{DoxyCode}

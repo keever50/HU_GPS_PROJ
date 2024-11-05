@@ -9,77 +9,77 @@ UART Init Structure definition.
 
 {\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+uart.\+h$>$}
 
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_ae460c2e4d7ddc67bca9f5756f45b1d83}{Baud\+Rate}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_aaad609733f3fd8146c8745e953a91b2a}{Baud\+Rate}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a0f1cd85e62aa4fd4b36ee9e610e7789f}{Word\+Length}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}{Word\+Length}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a6717dfe595617c7b2d57139d9cd306ef}{Stop\+Bits}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}{Stop\+Bits}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_adc92243425cb18cb8b5f03692841db48}{Parity}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}{Parity}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_ab2ee6ea5a5d4ca5ee6b759be197bcfcb}{Mode}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_adbf4734130666b94201c6658464c1622}{Hw\+Flow\+Ctl}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a0a933d213b17470c582c8fec23a24d09}{Hw\+Flow\+Ctl}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a77c2c86a2186e09cbf022e27c0c82324}{Over\+Sampling}}
+uint32\+\_\+t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a35770b237370fda7fd0fabad22898490}{Over\+Sampling}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 UART Init Structure definition. 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{struct_u_a_r_t___init_type_def_ae460c2e4d7ddc67bca9f5756f45b1d83}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!BaudRate@{BaudRate}}
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_u_a_r_t___init_type_def_aaad609733f3fd8146c8745e953a91b2a}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!BaudRate@{BaudRate}}
 \index{BaudRate@{BaudRate}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{BaudRate}{BaudRate}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_ae460c2e4d7ddc67bca9f5756f45b1d83} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Baud\+Rate}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_aaad609733f3fd8146c8745e953a91b2a} 
+uint32\+\_\+t Baud\+Rate}
 
 This member configures the UART communication baud rate. The baud rate is computed using the following formula\+:
 \begin{DoxyItemize}
 \item Integer\+Divider = ((PCLKx) / (8 \texorpdfstring{$\ast$}{*} (OVR8+1) \texorpdfstring{$\ast$}{*} (huart-\/\texorpdfstring{$>$}{>}Init.\+Baud\+Rate)))
 \item Fractional\+Divider = ((Integer\+Divider -\/ ((uint32\+\_\+t) Integer\+Divider)) \texorpdfstring{$\ast$}{*} 8 \texorpdfstring{$\ast$}{*} (OVR8+1)) + 0.\+5 Where OVR8 is the "{}oversampling by 8 mode"{} configuration bit in the CR1 register. 
-\end{DoxyItemize}\Hypertarget{struct_u_a_r_t___init_type_def_adbf4734130666b94201c6658464c1622}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!HwFlowCtl@{HwFlowCtl}}
+\end{DoxyItemize}\Hypertarget{struct_u_a_r_t___init_type_def_a0a933d213b17470c582c8fec23a24d09}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!HwFlowCtl@{HwFlowCtl}}
 \index{HwFlowCtl@{HwFlowCtl}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{HwFlowCtl}{HwFlowCtl}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_adbf4734130666b94201c6658464c1622} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Hw\+Flow\+Ctl}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a0a933d213b17470c582c8fec23a24d09} 
+uint32\+\_\+t Hw\+Flow\+Ctl}
 
-Specifies whether the hardware flow control mode is enabled or disabled. This parameter can be a value of \doxylink{group___u_a_r_t___hardware___flow___control}{UART Hardware Flow Control} \Hypertarget{struct_u_a_r_t___init_type_def_ab2ee6ea5a5d4ca5ee6b759be197bcfcb}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Mode@{Mode}}
+Specifies whether the hardware flow control mode is enabled or disabled. This parameter can be a value of \doxylink{group___u_a_r_t___hardware___flow___control}{UART Hardware Flow Control} \Hypertarget{struct_u_a_r_t___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Mode@{Mode}}
 \index{Mode@{Mode}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{Mode}{Mode}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_ab2ee6ea5a5d4ca5ee6b759be197bcfcb} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Mode}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839} 
+uint32\+\_\+t Mode}
 
-Specifies whether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \doxylink{group___u_a_r_t___mode}{UART Transfer Mode} \Hypertarget{struct_u_a_r_t___init_type_def_a77c2c86a2186e09cbf022e27c0c82324}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!OverSampling@{OverSampling}}
+Specifies whether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \doxylink{group___u_a_r_t___mode}{UART Transfer Mode} \Hypertarget{struct_u_a_r_t___init_type_def_a35770b237370fda7fd0fabad22898490}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!OverSampling@{OverSampling}}
 \index{OverSampling@{OverSampling}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{OverSampling}{OverSampling}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a77c2c86a2186e09cbf022e27c0c82324} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Over\+Sampling}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a35770b237370fda7fd0fabad22898490} 
+uint32\+\_\+t Over\+Sampling}
 
-Specifies whether the Over sampling 8 is enabled or disabled, to achieve higher speed (up to f\+PCLK/8). This parameter can be a value of \doxylink{group___u_a_r_t___over___sampling}{UART Over Sampling} \Hypertarget{struct_u_a_r_t___init_type_def_adc92243425cb18cb8b5f03692841db48}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Parity@{Parity}}
+Specifies whether the Over sampling 8 is enabled or disabled, to achieve higher speed (up to f\+PCLK/8). This parameter can be a value of \doxylink{group___u_a_r_t___over___sampling}{UART Over Sampling} \Hypertarget{struct_u_a_r_t___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Parity@{Parity}}
 \index{Parity@{Parity}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{Parity}{Parity}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_adc92243425cb18cb8b5f03692841db48} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Parity}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a1d60a99b8f3965f01ab23444b154ba79} 
+uint32\+\_\+t Parity}
 
 Specifies the parity mode. This parameter can be a value of \doxylink{group___u_a_r_t___parity}{UART Parity} \begin{DoxyNote}{Note}
 When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). 
 \end{DoxyNote}
-\Hypertarget{struct_u_a_r_t___init_type_def_a6717dfe595617c7b2d57139d9cd306ef}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!StopBits@{StopBits}}
+\Hypertarget{struct_u_a_r_t___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!StopBits@{StopBits}}
 \index{StopBits@{StopBits}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{StopBits}{StopBits}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a6717dfe595617c7b2d57139d9cd306ef} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Stop\+Bits}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019} 
+uint32\+\_\+t Stop\+Bits}
 
-Specifies the number of stop bits transmitted. This parameter can be a value of \doxylink{group___u_a_r_t___stop___bits}{UART Number of Stop Bits} \Hypertarget{struct_u_a_r_t___init_type_def_a0f1cd85e62aa4fd4b36ee9e610e7789f}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!WordLength@{WordLength}}
+Specifies the number of stop bits transmitted. This parameter can be a value of \doxylink{group___u_a_r_t___stop___bits}{UART Number of Stop Bits} \Hypertarget{struct_u_a_r_t___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}\index{UART\_InitTypeDef@{UART\_InitTypeDef}!WordLength@{WordLength}}
 \index{WordLength@{WordLength}!UART\_InitTypeDef@{UART\_InitTypeDef}}
 \doxysubsubsection{\texorpdfstring{WordLength}{WordLength}}
-{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_a0f1cd85e62aa4fd4b36ee9e610e7789f} 
-uint32\+\_\+t UART\+\_\+\+Init\+Type\+Def\+::\+Word\+Length}
+{\footnotesize\ttfamily \label{struct_u_a_r_t___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a} 
+uint32\+\_\+t Word\+Length}
 
 Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of \doxylink{group___u_a_r_t___word___length}{UART Word Length} 
 

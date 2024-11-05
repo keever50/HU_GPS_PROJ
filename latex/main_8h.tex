@@ -16,6 +16,9 @@
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{main_8h_a4e990ae117898a3b983950b68c9453c5}\label{main_8h_a4e990ae117898a3b983950b68c9453c5} 
+\#define {\bfseries USE\+\_\+\+CUSTOM\+\_\+\+MOTION\+\_\+\+SENSOR\+\_\+\+LSM303\+AGR\+\_\+\+MAG\+\_\+0}~1
+\item 
 \Hypertarget{main_8h_a5dae5c66a2fb82ae243304f213f3eb2c}\label{main_8h_a5dae5c66a2fb82ae243304f213f3eb2c} 
 \#define {\bfseries CS\+\_\+\+I2\+C\+\_\+\+SPI\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+3
 \item 
@@ -109,6 +112,12 @@
 \Hypertarget{main_8h_a238728ef54305e7dd137cac7cc80e6fb}\label{main_8h_a238728ef54305e7dd137cac7cc80e6fb} 
 \#define {\bfseries CLK\+\_\+\+IN\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
 \item 
+\Hypertarget{main_8h_af72ebf8e6dc69c0b0917b360025fd2a1}\label{main_8h_af72ebf8e6dc69c0b0917b360025fd2a1} 
+\#define {\bfseries bumper\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\Hypertarget{main_8h_a54df89ab75c43e81c6df793f00feb66e}\label{main_8h_a54df89ab75c43e81c6df793f00feb66e} 
+\#define {\bfseries bumper\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
 \Hypertarget{main_8h_a6664d0311f9f672b321e0daff34b7ad4}\label{main_8h_a6664d0311f9f672b321e0daff34b7ad4} 
 \#define {\bfseries LD4\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+12
 \item 
@@ -120,12 +129,6 @@
 \item 
 \Hypertarget{main_8h_ae851c2d6146e6d4fac9f4a9983f5cf1f}\label{main_8h_ae851c2d6146e6d4fac9f4a9983f5cf1f} 
 \#define {\bfseries LD3\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
-\item 
-\Hypertarget{main_8h_aee7b888dd4dbc9a801963f319ed98b11}\label{main_8h_aee7b888dd4dbc9a801963f319ed98b11} 
-\#define {\bfseries LD5\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+14
-\item 
-\Hypertarget{main_8h_a58b48323bdbf7421c8d6e9e3e050ebad}\label{main_8h_a58b48323bdbf7421c8d6e9e3e050ebad} 
-\#define {\bfseries LD5\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
 \item 
 \Hypertarget{main_8h_af752fb7d74e778ecaf48784c6f2fa107}\label{main_8h_af752fb7d74e778ecaf48784c6f2fa107} 
 \#define {\bfseries LD6\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+15
@@ -244,8 +247,13 @@
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{main_8h_ae70bce6c39d0b570a7523b86738cec4b}{HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}htim)
+\item 
 void \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
-\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\item 
+\Hypertarget{main_8h_a5058f4c74be2aa14f0c08f09c525cfd5}\label{main_8h_a5058f4c74be2aa14f0c08f09c525cfd5} 
+void {\bfseries set\+\_\+servo} (double pwm)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -274,3 +282,16 @@ This function is executed in case of error occurrence.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
+\Hypertarget{main_8h_ae70bce6c39d0b570a7523b86738cec4b}\index{main.h@{main.h}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
+\index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
+{\footnotesize\ttfamily \label{main_8h_ae70bce6c39d0b570a7523b86738cec4b} 
+void HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} \texorpdfstring{$\ast$}{*}}]{htim}{}\end{DoxyParamCaption})}
+
+TIM3 GPIO Configuration PC8 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH3
+
+TIM4 GPIO Configuration PD14 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH3
+
+TIM3 GPIO Configuration PC8 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH3
+
+TIM4 GPIO Configuration PD14 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH3

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: Flags Interrupts Management</title>
+<title>HUGPS: Flags Interrupts Management</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -133,8 +133,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE2_ADDRESS = (__INTERRUPT__))</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE2_ADDRESS = (__INTERRUPT__))</div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
 </div><!-- fragment -->
 <p>Clear the RCC's interrupt pending bits (Perform Byte access to RCC_CIR[23:16] bits to clear the selected interrupt pending bits. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -189,7 +189,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE1_ADDRESS &amp;= (uint8_t)(~(__INTERRUPT__)))</div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE1_ADDRESS &amp;= (uint8_t)(~(__INTERRUPT__)))</div>
 </div><!-- fragment -->
 <p>Disable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to disable the selected interrupts). </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -223,7 +223,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE1_ADDRESS |= (__INTERRUPT__))</div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *) RCC_CIR_BYTE1_ADDRESS |= (__INTERRUPT__))</div>
 </div><!-- fragment -->
 <p>Enable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to enable the selected interrupts). </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -257,8 +257,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(((((((__FLAG__) &gt;&gt; 5U) == 1U)? RCC-&gt;CR :((((__FLAG__) &gt;&gt; 5U) == 2U) ? RCC-&gt;BDCR :((((__FLAG__) &gt;&gt; 5U) == 3U)? RCC-&gt;CSR :RCC-&gt;CIR))) &amp; (1U &lt;&lt; ((__FLAG__) &amp; <a class="code hl_define" href="#ga80017c6bf8a5c6f53a1a21bb8db93a82">RCC_FLAG_MASK</a>)))!= 0U)? 1U : 0U)</div>
-<div class="ttc" id="agroup___r_c_c___flags___interrupts___management_html_ga80017c6bf8a5c6f53a1a21bb8db93a82"><div class="ttname"><a href="#ga80017c6bf8a5c6f53a1a21bb8db93a82">RCC_FLAG_MASK</a></div><div class="ttdeci">#define RCC_FLAG_MASK</div><div class="ttdoc">Check RCC flag is set or not.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_rcc.h:1225</div></div>
+<b>Value:</b><div class="fragment"><div class="line">                                          (((((((__FLAG__) &gt;&gt; 5U)\</div>
+<div class="line">                                          == 1U)? RCC-&gt;CR :((((__FLAG__) &gt;&gt; 5U) == 2U) ? RCC-&gt;BDCR :((((__FLAG__) &gt;&gt; 5U) == 3U)? RCC-&gt;CSR :RCC-&gt;CIR))) &amp;\</div>
+<div class="line">                                        (1U &lt;&lt; ((__FLAG__) &amp; <a class="code hl_define" href="#ga80017c6bf8a5c6f53a1a21bb8db93a82">RCC_FLAG_MASK</a>)))!= 0U)? 1U : 0U)</div>
+<div class="ttc" id="agroup___r_c_c___flags___interrupts___management_html_ga80017c6bf8a5c6f53a1a21bb8db93a82"><div class="ttname"><a href="#ga80017c6bf8a5c6f53a1a21bb8db93a82">RCC_FLAG_MASK</a></div><div class="ttdeci">#define RCC_FLAG_MASK</div><div class="ttdoc">Check RCC flag is set or not.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_rcc.h:1222</div></div>
 </div><!-- fragment -->
 </div>
 </div>

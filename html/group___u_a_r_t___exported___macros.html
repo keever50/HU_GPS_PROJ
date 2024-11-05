@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: UART Exported Macros</title>
+<title>HUGPS: UART Exported Macros</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -170,7 +170,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaba5e19c60e0f37341b1585a380b84d49">__HAL_UART_CLEAR_PEFLAG</a>(__HANDLE__)</div>
-<div class="ttc" id="agroup___u_a_r_t___exported___macros_html_gaba5e19c60e0f37341b1585a380b84d49"><div class="ttname"><a href="#gaba5e19c60e0f37341b1585a380b84d49">__HAL_UART_CLEAR_PEFLAG</a></div><div class="ttdeci">#define __HAL_UART_CLEAR_PEFLAG(__HANDLE__)</div><div class="ttdoc">Clears the UART PE pending flag.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_uart.h:479</div></div>
+<div class="ttc" id="agroup___u_a_r_t___exported___macros_html_gaba5e19c60e0f37341b1585a380b84d49"><div class="ttname"><a href="#gaba5e19c60e0f37341b1585a380b84d49">__HAL_UART_CLEAR_PEFLAG</a></div><div class="ttdeci">#define __HAL_UART_CLEAR_PEFLAG(__HANDLE__)</div><div class="ttdoc">Clears the UART PE pending flag.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_uart.h:502</div></div>
 </div><!-- fragment -->
 <p>Clears the UART FE pending flag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -349,12 +349,12 @@ TXE flag is cleared only by a write to the USART_DR register.</dd></dl>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">do</span>{                                           \</div>
-<div class="line">    <a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U;               \</div>
+<div class="line">    <a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint32_t tmpreg = 0x00U;               \</div>
 <div class="line">    tmpreg = (__HANDLE__)-&gt;Instance-&gt;SR;        \</div>
 <div class="line">    tmpreg = (__HANDLE__)-&gt;Instance-&gt;DR;        \</div>
 <div class="line">    UNUSED(tmpreg);                             \</div>
 <div class="line">  } <span class="keywordflow">while</span>(0U)</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
 </div><!-- fragment -->
 <p>Clears the UART PE pending flag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -425,7 +425,7 @@ TXE flag is cleared only by a write to the USART_DR register.</dd></dl>
 <b>Value:</b><div class="fragment"><div class="line">                                                           ((((__INTERRUPT__) &gt;&gt; 28U) == UART_CR1_REG_INDEX)? ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;= ~((__INTERRUPT__) &amp; <a class="code hl_define" href="group___u_a_r_t___private___constants.html#ga869439269c26e8dee93d49b1c7e67448">UART_IT_MASK</a>)): \</div>
 <div class="line">                                                           (((__INTERRUPT__) &gt;&gt; 28U) == UART_CR2_REG_INDEX)? ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= ~((__INTERRUPT__) &amp; <a class="code hl_define" href="group___u_a_r_t___private___constants.html#ga869439269c26e8dee93d49b1c7e67448">UART_IT_MASK</a>)): \</div>
 <div class="line">                                                           ((__HANDLE__)-&gt;Instance-&gt;CR3 &amp;= ~ ((__INTERRUPT__) &amp; <a class="code hl_define" href="group___u_a_r_t___private___constants.html#ga869439269c26e8dee93d49b1c7e67448">UART_IT_MASK</a>)))</div>
-<div class="ttc" id="agroup___u_a_r_t___private___constants_html_ga869439269c26e8dee93d49b1c7e67448"><div class="ttname"><a href="group___u_a_r_t___private___constants.html#ga869439269c26e8dee93d49b1c7e67448">UART_IT_MASK</a></div><div class="ttdeci">#define UART_IT_MASK</div><div class="ttdoc">UART interruptions flag mask.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_uart.h:796</div></div>
+<div class="ttc" id="agroup___u_a_r_t___private___constants_html_ga869439269c26e8dee93d49b1c7e67448"><div class="ttname"><a href="group___u_a_r_t___private___constants.html#ga869439269c26e8dee93d49b1c7e67448">UART_IT_MASK</a></div><div class="ttdeci">#define UART_IT_MASK</div><div class="ttdoc">UART interruptions flag mask.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_uart.h:821</div></div>
 </div><!-- fragment -->
 <p>Disable the specified UART interrupt. </p>
 <dl class="params"><dt>Parameters</dt><dd>

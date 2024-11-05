@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HU_GPS: FLASH Exported Macros</title>
+<title>HUGPS: FLASH Exported Macros</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">HU_GPS
+   <div id="projectname">HUGPS
    </div>
   </td>
  </tr>
@@ -163,8 +163,7 @@ Macros</h2></td></tr>
 <li>FLASH_FLAG_PGAERR: FLASH Programming Alignment error flag </li>
 <li>FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag </li>
 <li>FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag </li>
-<li>FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) (*) (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices <br  />
- </li>
+<li>FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) (*) (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices </li>
 </ul>
 </td></tr>
   </table>
@@ -245,13 +244,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                           <span class="keywordflow">do</span> {FLASH-&gt;ACR |= FLASH_ACR_DCRST;  \</div>
-<div class="line">                                           FLASH-&gt;ACR &amp;= ~FLASH_ACR_DCRST; \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                            <span class="keywordflow">do</span> {FLASH-&gt;ACR |= FLASH_ACR_DCRST;  \</div>
+<div class="line">                                            FLASH-&gt;ACR &amp;= ~FLASH_ACR_DCRST; \</div>
 <div class="line">                                          }<span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 <p>Resets the FLASH data Cache. </p>
-<dl class="section note"><dt>Note</dt><dd>This function must be used only when the data Cache is disabled. <br  />
- </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function must be used only when the data Cache is disabled. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -282,8 +280,7 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">__INTERRUPT__</td><td>FLASH interrupt This parameter can be any combination of the following values: <ul>
 <li>FLASH_IT_EOP: End of FLASH Operation Interrupt </li>
-<li>FLASH_IT_ERR: Error Interrupt <br  />
- </li>
+<li>FLASH_IT_ERR: Error Interrupt </li>
 </ul>
 </td></tr>
   </table>
@@ -319,8 +316,7 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">__INTERRUPT__</td><td>FLASH interrupt This parameter can be any combination of the following values: <ul>
 <li>FLASH_IT_EOP: End of FLASH Operation Interrupt </li>
-<li>FLASH_IT_ERR: Error Interrupt <br  />
- </li>
+<li>FLASH_IT_ERR: Error Interrupt </li>
 </ul>
 </td></tr>
   </table>
@@ -362,8 +358,7 @@ Macros</h2></td></tr>
 <li>FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag </li>
 <li>FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag </li>
 <li>FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) (*) </li>
-<li>FLASH_FLAG_BSY : FLASH Busy flag (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices <br  />
- </li>
+<li>FLASH_FLAG_BSY : FLASH Busy flag (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices </li>
 </ul>
 </td></tr>
   </table>
@@ -470,13 +465,12 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                                                  <span class="keywordflow">do</span> {FLASH-&gt;ACR |= FLASH_ACR_ICRST;  \</div>
-<div class="line">                                                  FLASH-&gt;ACR &amp;= ~FLASH_ACR_ICRST; \</div>
+<b>Value:</b><div class="fragment"><div class="line">                                                   <span class="keywordflow">do</span> {FLASH-&gt;ACR |= FLASH_ACR_ICRST;  \</div>
+<div class="line">                                                   FLASH-&gt;ACR &amp;= ~FLASH_ACR_ICRST; \</div>
 <div class="line">                                                 }<span class="keywordflow">while</span>(0U)</div>
 </div><!-- fragment -->
 <p>Resets the FLASH instruction Cache. </p>
-<dl class="section note"><dt>Note</dt><dd>This function must be used only when the Instruction Cache is disabled. <br  />
- </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function must be used only when the Instruction Cache is disabled. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -552,9 +546,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *)<a class="code hl_define" href="group___f_l_a_s_h___private___constants.html#gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</a> = (uint8_t)(__LATENCY__))</div>
-<div class="ttc" id="acore__armv8mbl_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv8mbl_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv8mbl.h:196</div></div>
-<div class="ttc" id="agroup___f_l_a_s_h___private___constants_html_gaeaca61fbcff69df08100280868bff214"><div class="ttname"><a href="group___f_l_a_s_h___private___constants.html#gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</a></div><div class="ttdeci">#define ACR_BYTE0_ADDRESS</div><div class="ttdoc">ACR register byte 0 (Bits[7:0]) base address</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_flash.h:361</div></div>
+<b>Value:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a> uint8_t *)<a class="code hl_define" href="group___f_l_a_s_h___private___constants.html#gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</a> = (uint8_t)(__LATENCY__))</div>
+<div class="ttc" id="acore__armv81mml_8h_html_aec43007d9998a0a0e01faede4133d6be"><div class="ttname"><a href="core__armv81mml_8h.html#aec43007d9998a0a0e01faede4133d6be">__IO</a></div><div class="ttdeci">#define __IO</div><div class="ttdef"><b>Definition</b> core_armv81mml.h:290</div></div>
+<div class="ttc" id="agroup___f_l_a_s_h___private___constants_html_gaeaca61fbcff69df08100280868bff214"><div class="ttname"><a href="group___f_l_a_s_h___private___constants.html#gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</a></div><div class="ttdeci">#define ACR_BYTE0_ADDRESS</div><div class="ttdoc">ACR register byte 0 (Bits[7:0]) base address.</div><div class="ttdef"><b>Definition</b> stm32f4xx_hal_flash.h:361</div></div>
 </div><!-- fragment -->
 <p>Set the FLASH Latency. </p>
 <dl class="params"><dt>Parameters</dt><dd>

@@ -1,4 +1,4 @@
-/*
+/**
  *  @file direction.c
  *	@brief functies die de hoek berekenen tussen waypoints of eigen positie
  *  Created on: Oct 15, 2024
