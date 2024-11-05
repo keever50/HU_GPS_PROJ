@@ -188,7 +188,7 @@ int start_route()
 				break;
 			}
 
-			double dir = dir_direction(&our_pos, &WP);
+			double dir = -dir_direction(&our_pos, &WP);
 
 //			// Turn around
 			if(dir>90)
@@ -196,14 +196,12 @@ int start_route()
 				dir = dir - 180;
 				buzzer_buzz(200, 2000);
 				lcdout_printf("Turn around");
-				dir = -dir;
 			}
 			if(dir<-90)
 			{
 				dir = dir + 180;
 				buzzer_buzz(200, 2000);
 				lcdout_printf("Turn around");
-				dir = -dir;
 			}
 
 			buzzer_buzz(200, (WP_RADIUS/dist)*1000);
